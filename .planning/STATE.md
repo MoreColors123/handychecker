@@ -3,16 +3,16 @@ gsd_state_version: "1.0"
 current_phase: 01
 current_phase_name: Foundation Shell, PWA Identity & First Deploy
 status: executing
-stopped_at: Completed 01-02-PLAN.md
-last_updated: "2026-09-28T12:24:35.481Z"
+stopped_at: Completed 01-03-PLAN.md
+last_updated: "2026-09-28T12:40:00.853Z"
 last_activity: 2026-09-28
 last_activity_desc: Phase 01 execution started
-state_head: 5e0b5551f5e08be5285b816e118b4bc5a5672235
+state_head: 872ff3e15283ad15a31c946e28784dc0e252feee
 progress:
   total_phases: 4
   completed_phases: 0
   total_plans: 4
-  completed_plans: 2
+  completed_plans: 3
   percent: 0
 ---
 
@@ -28,7 +28,7 @@ See: .planning/PROJECT.md (updated 2026-09-28)
 ## Current Position
 
 Phase: 01 (Foundation Shell, PWA Identity & First Deploy) — EXECUTING
-Plan: 3 of 4
+Plan: 4 of 4
 Status: Ready to execute
 Last activity: 2026-09-28 — Phase 01 execution started
 
@@ -58,6 +58,7 @@ Progress: [░░░░░░░░░░] 0%
 |------|----------|-------|-------|
 | Phase 01 P01 | 6min | 2 tasks | 8 files |
 | Phase 01 P02 | 8min | 2 tasks | 4 files |
+| Phase 01 P03 | 11min | 3 tasks | 9 files |
 
 ## Accumulated Context
 
@@ -75,6 +76,10 @@ Full log in PROJECT.md Key Decisions. Recent decisions affecting current work:
 - [Phase 01]: 01-02: in-app Start link reuses the existing .card class (>=48px tap target) instead of adding header CSS - keeps the PWA-02 tap-target guarantee with zero scope creep
 - [Phase 01]: 01-02: 404 permalink honored at the _site/ output root - Eleventy 3.1.6 does not apply pathPrefix to permalinks (GitHub Pages custom-404 contract holds)
 - [Phase 01]: 01-02: Impressum omits conditional DDG section-5 items 3-8 (register/court/USt-ID) - a natural-person parent needs only name+address+email placeholders; multi-line commit messages go through git commit -F temp files on this shell (D-12)
+- [Phase 01]: 01-03: Happi head drawn r=152 at (256,272), not the approximate ~r180 at (256,256) - the 204.8px maskable safe-zone cap leaves an r180 head no ear room; r152 gives real ear tips at 203.1 from center while keeping all art inside the safe zone
+- [Phase 01]: 01-03: Inkscape 1.4 stamps every PNG with a tEXt Software chunk and has no suppression flag - committed tools/strip-png-meta.cjs strips only metadata chunks (never IHDR/IDAT) after every regen so shipped binaries stay metadata-clean (T-03-03)
+- [Phase 01]: 01-03: Task 1 svg verify refined - the xmlns identifier is a required XML namespace name (never fetched), so the check requires xmlns and tests fetchable references instead of raw http substrings (plan self-contradiction, Rule 3)
+- [Phase 01]: 01-03: manifest is the minimal member set only (no description/screenshots/share_target/shortcuts) with all-relative paths - privacy-minimal install prompt, subpath-safe by construction (T-03-04, Pattern 1)
 
 ### Pending Todos
 
@@ -94,6 +99,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-09-28T12:24:35.456Z
-Stopped at: Completed 01-02-PLAN.md
+Last session: 2026-09-28T12:40:00.829Z
+Stopped at: Completed 01-03-PLAN.md
 Resume file: None

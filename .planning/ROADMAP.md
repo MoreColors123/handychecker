@@ -35,7 +35,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: TBD
 - [x] 01-01-PLAN.md
 - [x] 01-02-PLAN.md
-- [ ] 01-03-PLAN.md
+- [x] 01-03-PLAN.md
 - [ ] 01-04-PLAN.md
 
 **UI hint**: yes
@@ -113,7 +113,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation Shell, PWA Identity & First Deploy | 2/4 | In Progress|  |
+| 1. Foundation Shell, PWA Identity & First Deploy | 3/4 | In Progress|  |
 | 2. Interactive Widgets + Reference Topic (+ Voice Spec) | TBD | Not started | - |
 | 3. Content Build-Out — Remaining Four Topics | TBD | Not started | - |
 | 4. Offline Decision, Polish & Real-Device QA | TBD | Not started | - |
