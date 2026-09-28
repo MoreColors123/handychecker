@@ -93,24 +93,24 @@ Welche Phasen welche Anforderungen abdecken. Wird bei der Roadmap-Erstellung akt
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CONT-01 | — | Pending |
-| CONT-02 | — | Pending |
-| CONT-03 | — | Pending |
-| CONT-04 | — | Pending |
-| SELF-01 | — | Pending |
-| TIPS-01 | — | Pending |
-| PWA-01 | — | Pending |
-| PWA-02 | — | Pending |
-| LEGAL-01 | — | Pending |
-| LEGAL-02 | — | Pending |
-| VOICE-01 | — | Pending |
-| PRIV-01 | — | Pending |
+| CONT-01 | Phase 3 | Pending |
+| CONT-02 | Phase 3 | Pending |
+| CONT-03 | Phase 3 | Pending |
+| CONT-04 | Phase 3 | Pending |
+| SELF-01 | Phase 2 | Pending |
+| TIPS-01 | Phase 2 | Pending |
+| PWA-01 | Phase 1 | Pending |
+| PWA-02 | Phase 1 | Pending |
+| LEGAL-01 | Phase 1 | Pending |
+| LEGAL-02 | Phase 1 | Pending |
+| VOICE-01 | Phase 2 | Pending |
+| PRIV-01 | Phase 1 | Pending |
 
 **Coverage:**
 - v1 requirements: 12 total
-- Mapped to phases: 0
-- Unmapped: 12 ⚠️
+- Mapped to phases: 12 (Phase 4 is the hardware-verification boundary closing PWA-01/PWA-02/PRIV-01 — see ROADMAP.md Coverage note)
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-09-28*
-*Last updated: 2026-09-28 after initial definition*
+*Last updated: 2026-09-28 after roadmap creation*
