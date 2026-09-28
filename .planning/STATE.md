@@ -74,5 +74,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-09-28
-Stopped at: ROADMAP.md + STATE.md written; awaiting orchestrator approval of the roadmap, then /gsd-plan-phase 1
-Resume file: .planning/.continue-here.md
+Stopped at: Project initialized — roadmap approved and committed (a076de7). Initialization complete; proceeding to phase planning.
+Resume file: none (checkpoint consumed)
