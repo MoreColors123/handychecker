@@ -214,3 +214,12 @@ None - no external service configuration required (the GitHub repo/deploy human 
 ---
 *Phase: 01-foundation-shell-pwa-identity-first-deploy*
 *Completed: 2026-09-28*
+
+## Self-Check: PASSED
+
+- SUMMARY.md exists: `.planning/phases/01-foundation-shell-pwa-identity-first-deploy/01-01-SUMMARY.md` ✓
+- Commit `4ea86e8` (Task 1 — scaffold + home page) found in git log ✓
+- Commit `4c030ae` (Task 2 — tokens + base CSS) found in git log ✓
+- Commit `4c5bc5f` (SUMMARY) found in git log ✓
+- `npm.cmd run build` green at close; measured `commits: 2` from ledger `eebc7ef..HEAD` ✓
+- WINDOWS.md ledger entry appended for the documented interim dead-end links (open_count: 1) ✓

@@ -3,3 +3,4 @@ _site/
 
 # GSD orchestration runtime state (not project source)
 .gsd/
+.planning/milestone.lock

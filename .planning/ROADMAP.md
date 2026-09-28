@@ -20,6 +20,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 ## Phase Details
 
 ### Phase 1: Foundation Shell, PWA Identity & First Deploy
+
 **Goal**: An installable, mobile-first German app shell is live on a real public HTTPS URL — with legal pages in place and the zero-data foundation baked in.
 **Mode**: mvp
 **Depends on**: Nothing (first phase)
@@ -30,10 +31,17 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. A load of any page from a fresh browser profile shows zero requests to third-party domains in the network tab — fonts and assets are system or self-hosted (no Google Fonts, no embeds, no analytics).
   4. The web-app manifest validates and the full icon set (192/512 PNG, maskable SVG, apple-touch-icon 180×180, favicon) plus iOS meta tags are served on every page; a PWA-installability check passes on the manifest members.
   5. On a narrow phone viewport the site renders without horizontal scrolling and every interactive target is at least 48×48 px.
+
 **Plans**: TBD
+- [x] 01-01-PLAN.md
+- [ ] 01-02-PLAN.md
+- [ ] 01-03-PLAN.md
+- [ ] 01-04-PLAN.md
+
 **UI hint**: yes
 
 ### Phase 2: Interactive Widgets + Reference Topic (+ Voice Spec)
+
 **Goal**: The reusable self-check and tip-box widgets exist, one reference topic is finished to print quality, and the friendly-guide voice spec is locked before any further copy is written.
 **Mode**: mvp
 **Depends on**: Phase 1
@@ -44,10 +52,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. A reviewer can open the voice spec + style guide and verify that the reference topic's copy — and all copy written from this point on — follows the guide persona, graded language ("kann dazu führen", never "du bist süchtig"), and no-lecture rules.
   4. The reference topic page presents facts first in short sections (2–3 sentences per idea, at most one number per section), followed by self-check and tip box, with a clear "weiter geht's" path to the next topic.
   5. A 10–12-year-old reader can complete the reference topic end-to-end unaided on a phone, and her answers are never stored or transmitted (in-memory only).
+
 **Plans**: TBD
 **UI hint**: yes
 
 ### Phase 3: Content Build-Out — Remaining Four Topics
+
 **Goal**: All five v1 topics are live with complete, source-backed German content — each following the facts-first pattern proven in Phase 2, including a balance section and hedged claims.
 **Mode**: mvp
 **Depends on**: Phase 2
@@ -57,9 +67,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. Every topic page follows the facts-first pattern: short sections, 2–3 sentences per idea, at most one number per section, no walls of text.
   3. Every topic's facts cite named pediatric sources (AAP, Mayo Clinic, sleep research) and association-level claims are hedged ("kann dazu führen") — never "du bist süchtig".
   4. Every topic contains a "Was ist daran eigentlich gut?" balance section that counters one-sided anti-phone messaging.
+
 **Plans**: TBD
 
 ### Phase 4: Offline Decision, Polish & Real-Device QA
+
 **Goal**: The app is validated on the daughter's real device — installable, fresh after updates, zero data leaks — with shareable links and final mobile polish.
 **Mode**: mvp
 **Depends on**: Phase 3
@@ -70,6 +82,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. In standalone mode (no browser chrome), a persistent "Start/Zurück" affordance appears on every page, and the site remains readable and usable at 200% zoom with ≥48 px tap targets.
   4. Sharing a topic link in a messenger shows a proper German title and preview (OG meta tags), and the shared page loads correctly on the phone.
   5. From a fresh device with a clean profile, loading every page shows zero third-party network requests — the zero-data promise is literally true on the live site.
+
 **Plans**: TBD
 
 ## Coverage
@@ -100,7 +113,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation Shell, PWA Identity & First Deploy | TBD | Not started | - |
+| 1. Foundation Shell, PWA Identity & First Deploy | 1/4 | In Progress|  |
 | 2. Interactive Widgets + Reference Topic (+ Voice Spec) | TBD | Not started | - |
 | 3. Content Build-Out — Remaining Four Topics | TBD | Not started | - |
 | 4. Offline Decision, Polish & Real-Device QA | TBD | Not started | - |
