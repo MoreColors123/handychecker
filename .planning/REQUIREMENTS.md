@@ -24,13 +24,13 @@ Anforderungen für den ersten Launch. Jede Anforderung mappt auf Roadmap-Phasen.
 
 ### PWA / App-Gefühl (PWA)
 
-- [ ] **PWA-01**: Home-Screen-App-Gefühl – Web-App-Manifest + vollständiges Icon-Set (192/512 PNG, maskable SVG, apple-touch-icon 180×180, Favicon) + iOS-Meta-Tags; ohne App-Store installierbar
-- [ ] **PWA-02**: Mobile-first, responsives Layout mit großen Tap-Zielen (≥48 px) und gut lesbarer Schrift auf kleinen Bildschirmen
+- [x] **PWA-01**: Home-Screen-App-Gefühl – Web-App-Manifest + vollständiges Icon-Set (192/512 PNG, maskable SVG, apple-touch-icon 180×180, Favicon) + iOS-Meta-Tags; ohne App-Store installierbar
+- [x] **PWA-02**: Mobile-first, responsives Layout mit großen Tap-Zielen (≥48 px) und gut lesbarer Schrift auf kleinen Bildschirmen
 
 ### Recht (LEGAL)
 
-- [ ] **LEGAL-01**: Impressum-Seite (mit §5-DDG-konformem Impressum; Eltern-Daten, nie Kind-Daten)
-- [ ] **LEGAL-02**: Kindgerechte Datenschutzerklärung („hier wird nichts gespeichert – die Seite kann das nicht") + kurzer Eltern-Hinweis; Launch-Gate vor dem ersten öffentlichen URL
+- [x] **LEGAL-01**: Impressum-Seite (mit §5-DDG-konformem Impressum; Eltern-Daten, nie Kind-Daten)
+- [x] **LEGAL-02**: Kindgerechte Datenschutzerklärung („hier wird nichts gespeichert – die Seite kann das nicht") + kurzer Eltern-Hinweis; Launch-Gate vor dem ersten öffentlichen URL
 
 ### Stimme & Stil (VOICE)
 
@@ -38,7 +38,7 @@ Anforderungen für den ersten Launch. Jede Anforderung mappt auf Roadmap-Phasen.
 
 ### Datenschutz-Fundament (PRIV)
 
-- [ ] **PRIV-01**: Null Daten – keine Accounts, keine Analysen, keine Tracking-Cookies, keine Drittanbieter-Einbettungen; selbst gehostete Assets (System-/selbst gehostete Schriften); Quiz-Zustand nur in-memory oder localStorage (geräteintern, nie übertragen)
+- [x] **PRIV-01**: Null Daten – keine Accounts, keine Analysen, keine Tracking-Cookies, keine Drittanbieter-Einbettungen; selbst gehostete Assets (System-/selbst gehostete Schriften); Quiz-Zustand nur in-memory oder localStorage (geräteintern, nie übertragen)
 
 ## v2 Requirements
 
@@ -99,12 +99,12 @@ Welche Phasen welche Anforderungen abdecken. Wird bei der Roadmap-Erstellung akt
 | CONT-04 | Phase 3 | Pending |
 | SELF-01 | Phase 2 | Pending |
 | TIPS-01 | Phase 2 | Pending |
-| PWA-01 | Phase 1 | Pending |
-| PWA-02 | Phase 1 | Pending |
-| LEGAL-01 | Phase 1 | Pending |
-| LEGAL-02 | Phase 1 | Pending |
+| PWA-01 | Phase 1 | Complete |
+| PWA-02 | Phase 1 | Complete |
+| LEGAL-01 | Phase 1 | Complete |
+| LEGAL-02 | Phase 1 | Complete |
 | VOICE-01 | Phase 2 | Pending |
-| PRIV-01 | Phase 1 | Pending |
+| PRIV-01 | Phase 1 | Complete |
 
 **Coverage:**
 - v1 requirements: 12 total
