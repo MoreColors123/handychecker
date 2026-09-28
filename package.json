@@ -1,0 +1,16 @@
+{
+  "name": "handychecker",
+  "version": "1.0.0",
+  "description": "HandyChecker — kleine deutsche Info-Seite (10-12) rund ums Handy: statisch, ohne Datensammlung.",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "private": true,
+  "type": "commonjs",
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.6"
+  }
+}

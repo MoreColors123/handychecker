@@ -1,0 +1,38 @@
+---
+title: HandyChecker – Finde deine Balance
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/css/tokens.css' | url }}">
+  <link rel="manifest" href="{{ '/manifest.webmanifest' | url }}">
+  <link rel="icon" href="{{ '/icons/favicon.svg' | url }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/icons/apple-touch-icon.png' | url }}">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="HandyChecker">
+</head>
+<body>
+  <header><a class="skip" href="#inhalt">Zum Inhalt</a></header>
+  <main id="inhalt">
+    <h1>Hi, ich bin Happi 🧡</h1>
+    <p>Hier findest du fünf Themen rund um dein Handy – mit Fakten, Fragen und echten Tipps.
+       Nichts wird gespeichert: Diese Seite kann das gar nicht.</p>
+    <ul class="topic-cards">
+      {%- for topic in site.topics %}
+      <li><a class="card" href="{{ '/themen/' + topic.slug + '/' | url }}">{{ topic.title }}</a></li>
+      {%- endfor %}
+    </ul>
+  </main>
+  <footer>
+    <nav aria-label="Rechtliches">
+      <a href="{{ '/impressum/' | url }}">Impressum</a>
+      <a href="{{ '/datenschutz/' | url }}">Datenschutz</a>
+    </nav>
+  </footer>
+</body>
+</html>

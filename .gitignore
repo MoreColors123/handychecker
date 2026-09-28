@@ -1,0 +1,5 @@
+node_modules/
+_site/
+
+# GSD orchestration runtime state (not project source)
+.gsd/
