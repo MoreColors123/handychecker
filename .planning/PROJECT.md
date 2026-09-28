@@ -24,7 +24,7 @@ The site must make the dangers of smartphone overuse understandable and relatabl
 
 <!-- Current scope. Building toward these. -->
 
-- [ ] Kid-friendly German content on all six danger topics (screen time, sleep, attention, body, social media & feelings, privacy)
+- [ ] Kid-friendly German content on the five v1 topics (screen time, sleep, attention, body, privacy) — social media & feelings deferred to v2 until the child has messaging/social access
 - [ ] Works as a home-screen app feel (installable PWA-style) on a smartphone
 - [ ] Facts + interactive elements: self-check questions and "what should I do?" tip boxes
 - [ ] Friendly-guide voice that informs and encourages without feeling like a lecture
@@ -43,7 +43,7 @@ The site must make the dangers of smartphone overuse understandable and relatabl
 ## Context
 
 - Built for one child but designed to be shareable with friends/classmates (German-only).
-- Domains covered: screen time & balance, sleep, attention & focus, body effects (posture, eyes), social media & feelings (comparison, FOMO, likes-dopamine), privacy & data.
+- Domains covered: screen time & balance, sleep, attention & focus, body effects (posture, eyes), privacy & data. The social media & feelings topic is deferred to v2 — the child does not yet have social media access, so it becomes relevant only once that access begins (parent decision, 2026-09-28).
 - Tone decision: facts first, gentle encouragement second ("Both, mixed" goal). Voice is a friendly guide, not a parent lecture — important because the owner is the parent.
 - Format decision: "Facts + interactive tips" — short sections, small self-check questions, and "what should I do?" tip boxes.
 - Delivery decision: installable feel on her phone (home-screen app), hosted on free static hosting (e.g. GitHub Pages / Netlify) behind a real URL.
@@ -61,6 +61,7 @@ The site must make the dangers of smartphone overuse understandable and relatabl
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
+| Fact-first topics: five in v1, social media deferred to v2 | Child has no social media access yet; topic becomes relevant when access begins | — Pending |
 | Facts + encouragement (mixed goal) | Inform her AND gently motivate healthier habits | — Pending |
 | Focused on age 10–12 | Right depth/level between playful and preachy | — Pending |
 | Friendly-guide voice | Avoids "dad lecture" feel for a parent-built site | — Pending |
