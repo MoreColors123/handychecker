@@ -1,0 +1,35 @@
+---
+title: Hmm, hier stimmt was nicht
+permalink: /404.html
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} – {{ site.siteName }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/css/tokens.css' | url }}">
+  <link rel="stylesheet" href="{{ '/css/site.css' | url }}">
+  <link rel="manifest" href="{{ '/manifest.webmanifest' | url }}">
+  <link rel="icon" href="{{ '/icons/favicon.svg' | url }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/icons/apple-touch-icon.png' | url }}">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="{{ site.siteName }}">
+</head>
+<body>
+  <header><a class="skip" href="#inhalt">Zum Inhalt</a></header>
+  <main id="inhalt">
+    <h1>Hmm, hier stimmt was nicht 🧡</h1>
+    <p>Diese Seite gibt es nicht – aber Happi führt dich zurück.</p>
+    <a class="card" href="{{ '/' | url }}">← zurück zur Startseite</a>
+  </main>
+  <footer>
+    <nav aria-label="Rechtliches">
+      <a href="{{ '/impressum/' | url }}">Impressum</a>
+      <a href="{{ '/datenschutz/' | url }}">Datenschutz</a>
+    </nav>
+  </footer>
+</body>
+</html>
