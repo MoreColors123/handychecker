@@ -1,0 +1,116 @@
+/* HandyChecker base styles — mobile-first, fluid single column, zero fixed widths.
+   Fonts: system stack only, zero external requests (PRIV-01 / LG München rule). */
+
+html {
+  /* 112.5% of the browser default = 18px (--font-base) at default settings,
+     while still honoring the reader's own browser font-size preference */
+  font-size: 112.5%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-cream);
+  color: var(--color-cocoa);
+  font-family: system-ui, "Segoe UI", Verdana, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+main {
+  padding: var(--space-md);
+}
+
+h1 {
+  font-size: calc(1rem * var(--font-scale-xl));
+  line-height: 1.2;
+  margin: var(--space-md) 0 var(--space-sm);
+}
+
+p {
+  font-size: 1rem;
+  margin: 0 0 var(--space-md);
+}
+
+/* --- topic cards: fluid single column; nothing overflows at 320px --- */
+
+.topic-cards {
+  list-style: none;
+  margin: var(--space-md) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr; /* cards stack; widening media query below only */
+  gap: var(--space-md);
+}
+
+.topic-cards > li {
+  min-width: 0; /* grid children never force horizontal scroll */
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  min-height: var(--tap-min);
+  padding: var(--space-md);
+  border-radius: var(--radius-lg);
+  background: var(--color-card-bg);
+  color: var(--color-cocoa);
+  font-size: calc(1rem * var(--font-scale-md));
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.card:hover {
+  background: var(--color-peach);
+}
+
+/* widening only — cards go two-up on larger screens (optional per plan) */
+@media (min-width: 600px) {
+  .topic-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- skip link: visually hidden until keyboard focus --- */
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  background: var(--color-ginger);
+  color: var(--color-text-on-ginger);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+}
+
+.skip:focus-visible {
+  left: var(--space-sm);
+  top: var(--space-sm);
+  min-height: var(--tap-min);
+  outline: 3px solid var(--color-ginger-deep);
+  outline-offset: 2px;
+}
+
+/* --- footer legal nav: ≥48px hit areas on every link (PWA-02) --- */
+
+footer {
+  padding: var(--space-lg) var(--space-md) var(--space-xl);
+}
+
+footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+footer nav a {
+  display: inline-block;
+  min-height: var(--tap-min);
+  padding: var(--space-sm) var(--space-md);
+  color: var(--color-ginger-deep);
+  text-decoration: underline;
+}
+
+footer nav a:focus-visible {
+  outline: 3px solid var(--color-ginger);
+  outline-offset: 2px;
+}

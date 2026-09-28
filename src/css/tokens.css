@@ -1,0 +1,30 @@
+/* HandyChecker design tokens — warm & cozy, light only (D-05/D-06/D-07).
+   No dark-mode tokens by decision: no smartphone in bed (D-06). */
+
+:root {
+  --color-cream: #FFF6EC;       /* page background — warm cream */
+  --color-peach: #FFD9B8;       /* soft peach accents */
+  --color-ginger: #E8863A;      /* Happi's ginger — primary brand */
+  --color-ginger-deep: #C96F2A; /* hover/emphasis */
+  --color-cocoa: #4A3728;       /* body text (~10.5:1 on cream — browser-check, A1) */
+  --color-accent: #F5B041;      /* warm amber highlights */
+  --color-card-bg: #FFFFFF;
+  --color-text-on-ginger: #FFFFFF;
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+
+  --font-base: 18px;            /* ≥16px floor for 10–12 readers */
+  --font-scale-sm: 0.875;
+  --font-scale-md: 1.125;
+  --font-scale-lg: 1.5;
+  --font-scale-xl: 2;
+
+  --tap-min: 48px;              /* every interactive target ≥48×48 (PWA-02) */
+
+  --radius-md: 12px;
+  --radius-lg: 20px;            /* rounded & cozy */
+}
