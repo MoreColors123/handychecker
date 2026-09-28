@@ -3,16 +3,16 @@ gsd_state_version: "1.0"
 current_phase: 01
 current_phase_name: Foundation Shell, PWA Identity & First Deploy
 status: executing
-stopped_at: Completed 01-01-PLAN.md
-last_updated: "2026-09-28T12:11:09.566Z"
+stopped_at: Completed 01-02-PLAN.md
+last_updated: "2026-09-28T12:24:35.481Z"
 last_activity: 2026-09-28
 last_activity_desc: Phase 01 execution started
-state_head: 4c5bc5fd5685b79ef0fdf663c0d9cc7402b75e96
+state_head: 5e0b5551f5e08be5285b816e118b4bc5a5672235
 progress:
   total_phases: 4
   completed_phases: 0
   total_plans: 4
-  completed_plans: 1
+  completed_plans: 2
   percent: 0
 ---
 
@@ -28,7 +28,7 @@ See: .planning/PROJECT.md (updated 2026-09-28)
 ## Current Position
 
 Phase: 01 (Foundation Shell, PWA Identity & First Deploy) — EXECUTING
-Plan: 2 of 4
+Plan: 3 of 4
 Status: Ready to execute
 Last activity: 2026-09-28 — Phase 01 execution started
 
@@ -57,6 +57,7 @@ Progress: [░░░░░░░░░░] 0%
 | Plan | Duration | Tasks | Files |
 |------|----------|-------|-------|
 | Phase 01 P01 | 6min | 2 tasks | 8 files |
+| Phase 01 P02 | 8min | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -71,6 +72,9 @@ Full log in PROJECT.md Key Decisions. Recent decisions affecting current work:
 - [Phase 01]: git.allow_default_branch_commits=true: sequential no-branch workflow on master is this project's configured mode (branching_strategy none, no remote)
 - [Phase 01]: site.css linked beside tokens.css in the head; both stylesheets same-origin from the first build
 - [Phase 01]: html font-size 112.5 percent so rem layout lands on the 18px --font-base while honoring reader browser font-size
+- [Phase 01]: 01-02: in-app Start link reuses the existing .card class (>=48px tap target) instead of adding header CSS - keeps the PWA-02 tap-target guarantee with zero scope creep
+- [Phase 01]: 01-02: 404 permalink honored at the _site/ output root - Eleventy 3.1.6 does not apply pathPrefix to permalinks (GitHub Pages custom-404 contract holds)
+- [Phase 01]: 01-02: Impressum omits conditional DDG section-5 items 3-8 (register/court/USt-ID) - a natural-person parent needs only name+address+email placeholders; multi-line commit messages go through git commit -F temp files on this shell (D-12)
 
 ### Pending Todos
 
@@ -90,6 +94,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-09-28T12:11:09.546Z
-Stopped at: Completed 01-01-PLAN.md
+Last session: 2026-09-28T12:24:35.456Z
+Stopped at: Completed 01-02-PLAN.md
 Resume file: None
