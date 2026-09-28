@@ -1,0 +1,44 @@
+{
+  "version": "1.0",
+  "timestamp": "2026-09-28T14:30:00Z",
+  "phase": 1,
+  "phase_name": "Foundation Shell, PWA Identity & First Deploy",
+  "phase_dir": ".planning/phases/01-foundation-shell-pwa-identity-first-deploy",
+  "plan": 4,
+  "task": "post-execution pipeline (code review done, verification pending)",
+  "total_tasks": 4,
+  "status": "paused",
+  "completed_tasks": [
+    {"id": 1, "name": "Plan 01-01 Walking Skeleton (scaffold, home page, tokens)", "status": "done", "commit": "4ea86e8..4c030ae, docs 88e2cc0"},
+    {"id": 2, "name": "Plan 01-02 Legal pages + zero-host gate", "status": "done", "commit": "48ef0e5, fbc7330, docs 5e0b555/fff19b2"},
+    {"id": 3, "name": "Plan 01-03 PWA identity (Happi icons + manifest)", "status": "done", "commit": "996dabe, 3e98ea5, c64ce15, docs 872ff3e/f1321a6"},
+    {"id": 4, "name": "Plan 01-04 First Deploy (workflow + human repo step + push + LIVE)", "status": "done", "commit": "e17c3f3, 513c2a0, docs c115eb8/dfac881"},
+    {"id": 5, "name": "Code review (standard depth, 16 files)", "status": "done", "commit": "949eed2 (REVIEW.md committed)"}
+  ],
+  "remaining_tasks": [
+    {"id": 6, "name": "Present review results + fix decision (CR-01 CRITICAL must fix; WR-01/02/03 recommended)", "status": "not_started"},
+    {"id": 7, "name": "verify_phase_goal: spawn gsd-verifier -> VERIFICATION.md (expect human_needed -> 01-UAT.md)", "status": "not_started"},
+    {"id": 8, "name": "/gsd-verify-work 1 with user (phone UAT) then phase.complete", "status": "not_started"},
+    {"id": 9, "name": "Security gate: /gsd-secure-phase 1 (surfaced, enforcement active, no SECURITY.md yet)", "status": "not_started"}
+  ],
+  "blockers": [
+    {"description": "CR-01 (review blocker): src/index.njk line ~28 — topic-card links build malformed: {{ '/themen/' + topic.slug + '/' | url }} binds the url filter only to the trailing '/', producing /themen/<slug>/handychecker/ instead of /handychecker/themen/<slug>/. Verified by reviewer with real build. Fix: parenthesize — {{ ('/themen/' + topic.slug + '/') | url }} — rebuild, and extend a build-gate assertion that every href starts with /handychecker/.", "type": "technical", "workaround": "Fix via /gsd-quick or gsd-code-reviewer --fix; small, well-understood"},
+    {"description": "Launch gate LEGAL-02: Impressum bracket placeholders must be filled with real parent data BEFORE sharing the URL with anyone. Automated checks intentionally do NOT fill it.", "type": "human_action", "workaround": "Parent edits src/impressum.njk placeholders, rebuild + push"}
+  ],
+  "async_jobs": [],
+  "human_actions_pending": [
+    {"action": "Decide on review fixes (CR-01 + optionally WR-01 contrast 3.39:1, WR-02 2.66:1, WR-03 strip-tool overrun guard)", "context": "Review at .planning/phases/01-foundation-shell-pwa-identity-first-deploy/01-REVIEW.md, committed 949eed2", "blocking": true},
+    {"action": "Phone UAT via /gsd-verify-work 1 after fixes: open live URL on daughter's Android, add to home screen, check install icon, viewport, zero third-party in network tab", "context": "The phase's success criteria include real-device checks", "blocking": false},
+    {"action": "Fill Impressum placeholders before sharing URL", "context": "LEGAL-02 launch gate; src/impressum.njk", "blocking": false}
+  ],
+  "decisions": [
+    {"decision": "use_worktrees=false (sequential main-tree execution)", "rationale": "Windows argv limit makes orchestrator-worktree headless dispatch infeasible with mandated #3637 embed sizes; subagent spawns proven reliable", "phase": "1"},
+    {"decision": "Local branch renamed master->main", "rationale": "Deploy workflow triggers on main (Rule 3 auto-fix during 01-04 push)", "phase": "1"},
+    {"decision": "git.allow_default_branch_commits=true", "rationale": "branching_strategy none, local-only repo (executor decision, documented in 01-01 SUMMARY)", "phase": "1"},
+    {"decision": "Executors omit model= (anthropic/claude-sonnet-5 unavailable)", "rationale": "Runtime constraint; inherited session model works (D-11)", "phase": "1"},
+    {"decision": "PowerShell gotcha workarounds: verify payloads to temp .js files, commit messages via git commit -F", "rationale": "PS 5.1 strips embedded double quotes (D-12 class)", "phase": "1"}
+  ],
+  "uncommitted_files": [],
+  "next_action": "Resume at the review-disposition point: present the 01-REVIEW.md findings, get the user's fix decision (recommended: fix CR-01 + WR-01/02 via /gsd-quick or inline), rebuild + push, then run verify_phase_goal (spawn gsd-verifier for phase 1 with phase_req_ids PWA-01, PWA-02, LEGAL-01, LEGAL-02, PRIV-01 — expect human_needed -> write 01-UAT.md -> route user to /gsd-verify-work 1). After UAT passes: phase.complete. Then /gsd-secure-phase 1 (surfaced by verify:post hook).",
+  "context_notes": "Site is LIVE at https://morecolors123.github.io/handychecker/ (HTTP 200, German home verified). GitHub repo: MoreColors123/handychecker, remote origin configured, branch main. All 4 phase-1 plans executed sequentially (use_worktrees=false). Execution context details in the four 01-0N-SUMMARY.md files (deviations documented per plan). Code review verdict: 1 Critical (CR-01 URL filter precedence — real bug, links malformed but /themen/ pages are intentional dead-ends answered by 404 until Phase 2/3, so live impact today is cosmetic; MUST fix before Phase 2 ships topic pages), 3 Warnings (WCAG contrast on footer legal nav + skip link; strip-png-meta overrun guard), 4 Info (favicon-32 unused, head-block drift, deploy.yml configure-pages assertion absent, no theme-color meta/SW — Phase-2/4 scope). Key environment facts: gsd shim at C:/Users/FDK-DELL-XPS-8940/.config/opencode/gsd-core/bin/gsd-tools.cjs; OPENCODE_CONFIG agents dir moved to .config/openchamber/agents (agents_installed false is a FALSE NEGATIVE — spawns work); response_language unset (English); compact_content false."
+}
