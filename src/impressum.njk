@@ -1,0 +1,42 @@
+---
+title: Impressum
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} – {{ site.siteName }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/css/tokens.css' | url }}">
+  <link rel="stylesheet" href="{{ '/css/site.css' | url }}">
+  <link rel="manifest" href="{{ '/manifest.webmanifest' | url }}">
+  <link rel="icon" href="{{ '/icons/favicon.svg' | url }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/icons/apple-touch-icon.png' | url }}">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="{{ site.siteName }}">
+</head>
+<body>
+  <header>
+    <a class="skip" href="#inhalt">Zum Inhalt</a>
+    <a class="card" href="{{ '/' | url }}">← Start</a>
+  </header>
+  <main id="inhalt">
+    <h1>Impressum</h1>
+    <p>Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz).</p>
+    <address>
+      [Name der Eltern], [Straße und Hausnummer]<br>
+      [PLZ] [Ort], Deutschland
+    </address>
+    <p>Kontakt: [E-Mail-Adresse der Eltern]</p>
+  </main>
+  <!-- TODO: Eltern – hier bitte echte Daten eintragen, bevor die URL geteilt wird (statt der Platzhalter in eckigen Klammern). -->
+  <footer>
+    <nav aria-label="Rechtliches">
+      <a href="{{ '/impressum/' | url }}">Impressum</a>
+      <a href="{{ '/datenschutz/' | url }}">Datenschutz</a>
+    </nav>
+  </footer>
+</body>
+</html>

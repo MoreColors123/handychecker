@@ -1,0 +1,44 @@
+---
+title: Datenschutz
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} – {{ site.siteName }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/css/tokens.css' | url }}">
+  <link rel="stylesheet" href="{{ '/css/site.css' | url }}">
+  <link rel="manifest" href="{{ '/manifest.webmanifest' | url }}">
+  <link rel="icon" href="{{ '/icons/favicon.svg' | url }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/icons/apple-touch-icon.png' | url }}">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="{{ site.siteName }}">
+</head>
+<body>
+  <header>
+    <a class="skip" href="#inhalt">Zum Inhalt</a>
+    <a class="card" href="{{ '/' | url }}">← Start</a>
+  </header>
+  <main id="inhalt">
+    <h1>Datenschutz – was passiert mit deinen Daten?</h1>
+    <p><strong>Hier wird nichts gespeichert – die Seite kann das gar nicht.</strong></p>
+    <p>Diese Seite fragt dich nicht nach deinem Namen, schickt keine Daten an andere
+       Rechner und nutzt keine Cookies. Alles bleibt auf deinem Handy.</p>
+    <h2>Hinweis für Eltern</h2>
+    <p>HandyChecker speichert keinerlei personenbezogene Daten. Es gibt keine Konten,
+       keine Analysen, keine Tracking-Cookies und keine Einbindungen Dritter
+       (z.&nbsp;B. keine externen Schriften oder Videos). Beim Aufruf werden ausschließlich
+       die Seiteninhalte dieser Domain geladen. Details: Hosting-Logs des gewählten
+       Anbieters. Für den Inhalt verantwortlich: siehe <a href="{{ '/impressum/' | url }}">Impressum</a>.</p>
+  </main>
+  <footer>
+    <nav aria-label="Rechtliches">
+      <a href="{{ '/impressum/' | url }}">Impressum</a>
+      <a href="{{ '/datenschutz/' | url }}">Datenschutz</a>
+    </nav>
+  </footer>
+</body>
+</html>
