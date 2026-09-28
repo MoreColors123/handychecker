@@ -509,20 +509,23 @@ Mobile-first layout rules: fluid single column (cards stack), no fixed widths (`
 | A7 | No dark mode: manifest `background_color`/`theme_color` use warm light values | Code Examples | Low — if a dark splash ever appears, adjust colors; D-06 locked light-only |
 | A8 | Icon art (ginger-cat face) renders acceptably at 32 px favicon | Icon pattern | Low — verify by opening the built favicon in a browser; regenerating is one Inkscape call |
 
-## Open Questions
+## Open Questions (RESOLVED)
 
 1. **GitHub account + repo name for the deploy**
    - What we know: GitHub Pages is the default (D-08/D-09); project sites live at `https://<user>.github.io/<repo>/`; `pathPrefix` and the manifest use `<repo>` (assumed `handychecker`).
    - What's unclear: whether a GitHub account exists and what the repo will be named; `gh` CLI is not installed on this machine.
    - Recommendation: the plan should make repo creation an explicit early task (web UI or `gh auth login`), keep the repo name `handychecker` (or adjust `pathPrefix` in one line), and keep Cloudflare Pages as the fallback (private repos, no subpath, docs-verified preset).
+   - **RESOLVED:** 01-04-PLAN.md Task 2 (checkpoint:human-action — repo creation) + the Cloudflare Pages fallback documented there.
 2. **`pathPrefix` value finalization**
    - What we know: verified that `url`-filtered links + relative manifest work under `pathPrefix: "/handychecker/"`.
    - What's unclear: the actual repo name at first push.
    - Recommendation: name the repo `handychecker`; if the URL differs, change one config line. The relative manifest needs **no** change either way.
+   - **RESOLVED:** 01-04-PLAN.md (one-line pathPrefix adjustment if the repo name differs; the relative manifest needs no change either way).
 3. **Impressum placeholders**
    - What we know: D-10 locks minimal parent data; the plan must not invent identity details.
    - What's unclear: the parent's real name/address/E-Mail (out of scope for an agent to supply).
    - Recommendation: ship the skeleton with bracketed placeholders marked `TODO: parent fills in before first share` — the launch gate (LEGAL-02) enforces completion *before* the URL is shared, not necessarily in-code.
+   - **RESOLVED:** 01-02-PLAN.md Task 1 (bracket placeholders) + 01-04-PLAN.md (LEGAL-02 launch gate before any share).
 
 ## Environment Availability
 

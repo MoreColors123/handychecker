@@ -33,11 +33,11 @@ Scoped requirements: **PWA-01, PWA-02, LEGAL-01, LEGAL-02, PRIV-01**.
 - **D-10:** Legal pages carry **only the parent's minimal data** (Impressum §5 DDG), never the child's; the Datenschutzerklärung is kindgerecht ("hier wird nichts gespeichert – die Seite kann das nicht") plus a short parent note. Launch gate: live before the first public URL is shared.
 
 ### Security / Workflow Carried-Forward Constraints
-- **D-11:** Subagent spawns must **omit `model=`** — `anthropic/claude-sonnet-5` is unavailable in this runtime; inherited model works (researchers succeeded without it).
-- **D-12:** Windows shell mangles embedded `"` in gsd-tools JSON args — pass config JSON via stdin or a Node spawn wrapper, never as a quoted shell argument.
 - **D-13:** Secrets: none exist by design (static site, no backend). No API keys or tokens are stored in the repo or planning docs.
 
 ### the agent's Discretion
+- **D-11:** [informational — orchestration-session constraint, not a build decision; no plan task implements this] Subagent spawns must **omit `model=`** — `anthropic/claude-sonnet-5` is unavailable in this runtime; inherited model works (researchers succeeded without it).
+- **D-12:** [informational — orchestration-session constraint, not a build decision; no plan task implements this] Windows shell mangles embedded `"` in gsd-tools JSON args — pass config JSON via stdin or a Node spawn wrapper, never as a quoted shell argument.
 - Mascot illustration style and exact color hexes (planner/researcher discretion within "warm & cozy + ginger cat").
 - Host choice finalization (GitHub Pages vs Cloudflare) — user accepted either; default GitHub Pages unless planning finds a reason to prefer Cloudflare.
 - Home page layout detail (cards grid etc.) — standard pattern, planner discretion.
