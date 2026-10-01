@@ -132,6 +132,13 @@ footer nav a:focus-visible {
   font-size: calc(1rem * var(--font-scale-md));
 }
 
+/* Stub topic page: the "kommt bald" note (IN-02) */
+.topic-soon {
+  font-size: calc(1rem * var(--font-scale-md));
+  color: var(--color-ginger-ink);
+  font-weight: 600;
+}
+
 .fact {
   margin: 0 0 var(--space-lg);
 }
