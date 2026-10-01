@@ -13,10 +13,11 @@ suffixTitle: true
   {% include "head.njk" %}
 </head>
 <body>
-  <header><a class="skip" href="#inhalt">Zum Inhalt</a></header>
+  {% include "header.njk" %}
   <main id="inhalt">
   {%- if topic.facts %}
     <h1>{{ topic.title }}</h1>
+    <div class="happi-hero">{% include "happi-illus.svg" %}</div>
     <p class="topic-intro">{{ topic.intro }}</p>
     {%- for fact in topic.facts %}
     <section class="fact">

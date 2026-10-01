@@ -2,7 +2,7 @@
   <!-- Happi-Include (D-11/D-12): hand-derived from the one art source
        src/icons-src/happi-source.svg — SAME shapes and locked hexes, but the
        warm-cream background rect is dropped so the page cream shows through.
-       Inlined as markup (never served, never an <img>) → zero HTTP requests.
+       Inlined as markup (never served, never an image element) → zero HTTP requests.
        Contains NO template syntax; contains role="img" + <title> for the name. -->
   <title>Happi, die Handy-Katze</title>
   <!-- ears -->
