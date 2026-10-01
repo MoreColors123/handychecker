@@ -3,16 +3,16 @@ gsd_state_version: "1.0"
 current_phase: 02
 current_phase_name: Interactive Widgets + Reference Topic (+ Voice Spec)
 status: executing
-stopped_at: Completed 02-01-PLAN.md
-last_updated: "2026-10-01T12:42:02.249Z"
+stopped_at: Completed 02-02-PLAN.md
+last_updated: "2026-10-01T12:44:56.693Z"
 last_activity: 2026-10-01
 last_activity_desc: Phase 02 execution started
-state_head: d4077d003bfdb4bbc7557450ecd3e0b5d605e0c2
+state_head: a8825c7495e43e50de821728f24c7b4ea696213a
 progress:
   total_phases: 4
   completed_phases: 1
   total_plans: 7
-  completed_plans: 5
+  completed_plans: 6
   percent: 25
 ---
 
@@ -28,7 +28,7 @@ See: .planning/PROJECT.md (updated 2026-09-28)
 ## Current Position
 
 Phase: 02 (Interactive Widgets + Reference Topic (+ Voice Spec)) — EXECUTING
-Plan: 2 of 3
+Plan: 3 of 3
 Status: Ready to execute
 Last activity: 2026-10-01 — Phase 02 execution started
 
@@ -62,6 +62,7 @@ Progress: [███░░░░░░░] 25%
 | Phase 01 P03 | 11min | 3 tasks | 9 files |
 | Phase 01 P04 | 20min | 3 tasks | 2 files |
 | Phase 02 P01 | 2min | 2 tasks | 6 files |
+| Phase 02 P02 | 1min | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -87,6 +88,8 @@ Full log in PROJECT.md Key Decisions. Recent decisions affecting current work:
 - [Phase 02]: 02-01: Voice spec is in-repo docs/stimme-und-stil.md (outside src/, never served); its machine-parseable Verboten list is the single data source for all future copy gates
 - [Phase 02]: 02-01: topics.json is a bare JSON array (first byte '[') driving one themen.njk pagination template -> all /themen/<slug>/ routes; Phase 3 adds topics with zero template work (wrapped object form silently collapses pagination)
 - [Phase 02]: 02-01: Reference topic self-check ships ONE calibrated question (45-min deal) with three descriptive options; app.js defer tag is wired in themen.njk but the file itself ships in plan 02-02 (documented interim gap, WINDOWS.md #3)
+- [Phase 02]: 02-02: self-check reveal is 100% CSS (:has(input:checked)) so it works with zero JS; app.js is announcement-only (textContent into role=status live region), zero storage/network/innerHTML (SC 5 / PRIV-01 by construction)
+- [Phase 02]: 02-02: the label (not the radio) is the >=48px tap surface; fact styling targets the shipped class .fact (plan prose said .topic-facts); built passthrough disks are _site/css + _site/js (pathPrefix is URL-only)
 
 ### Pending Todos
 
@@ -106,6 +109,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-10-01T12:41:57.380Z
-Stopped at: Completed 02-01-PLAN.md
+Last session: 2026-10-01T12:44:56.655Z
+Stopped at: Completed 02-02-PLAN.md
 Resume file: None

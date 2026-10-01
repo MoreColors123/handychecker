@@ -1,10 +1,10 @@
 ---
 schema_version: 1
-open_count: 3
+open_count: 2
 waived_count: 0
-fixed_count: 0
+fixed_count: 1
 total_count: 3
-last_updated: 2026-10-01T12:41:52.848Z
+last_updated: 2026-10-01T12:45:03.163Z
 ---
 
 # Broken Windows Ledger
@@ -17,7 +17,7 @@ last_updated: 2026-10-01T12:41:52.848Z
 |----|-------|------|------|------|-------------|--------|--------|-------------|-------------|
 | 1 | 01 | stub | src/index.njk |  | topic-card and footer legal links are intentional interim dead-ends until plan 01-02 (legal pages + custom 404) and Phases 2/3 (topic pages) build them | open |  | 2026-09-28T12:11:35.610Z |  |
 | 2 | 01 | stub | src/impressum.njk |  | Impressum parent-data bracket placeholders are intentional (D-10) - parent must replace all four with real data before the first URL share (LEGAL-01 human launch gate, enforced in plan 01-04) | open |  | 2026-09-28T12:23:09.716Z |  |
-| 3 | 02 | stub | src/themen.njk |  | Deferred app.js defer tag wired in themen.njk; src/js/app.js file ships in plan 02-02 (documented interim gap, plan 02-01) | open |  | 2026-10-01T12:41:52.848Z |  |
+| 3 | 02 | stub | src/themen.njk |  | Deferred app.js defer tag wired in themen.njk; src/js/app.js file ships in plan 02-02 (documented interim gap, plan 02-01) | fixed |  | 2026-10-01T12:41:52.848Z | 2026-10-01T12:45:03.163Z |
 
 ````json
 [
@@ -54,10 +54,10 @@ last_updated: 2026-10-01T12:41:52.848Z
     "file": "src/themen.njk",
     "line": null,
     "description": "Deferred app.js defer tag wired in themen.njk; src/js/app.js file ships in plan 02-02 (documented interim gap, plan 02-01)",
-    "status": "open",
+    "status": "fixed",
     "reason": "",
     "recorded_at": "2026-10-01T12:41:52.848Z",
-    "resolved_at": null,
+    "resolved_at": "2026-10-01T12:45:03.163Z",
     "milestone": null
   }
 ]

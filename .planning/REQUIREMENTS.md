@@ -16,11 +16,11 @@ Anforderungen für den ersten Launch. Jede Anforderung mappt auf Roadmap-Phasen.
 
 ### Selbstcheck (SELF)
 
-- [ ] **SELF-01**: Wiederverwendbarer Selbstcheck pro Thema („Wie ist das bei dir?") – beschreibende Antwortoptionen, nie bewertet, nie beschämend, rein clientseitig
+- [x] **SELF-01**: Wiederverwendbarer Selbstcheck pro Thema („Wie ist das bei dir?") – beschreibende Antwortoptionen, nie bewertet, nie beschämend, rein clientseitig
 
 ### Tipps (TIPS)
 
-- [ ] **TIPS-01**: „Was kann ich tun?"-Tipp-Box auf jedem Thema – 1–3 konkrete, machbare Aktionen (z. B. „Handy schläft in der Küche"), Efficacy vor Fakten
+- [x] **TIPS-01**: „Was kann ich tun?"-Tipp-Box auf jedem Thema – 1–3 konkrete, machbare Aktionen (z. B. „Handy schläft in der Küche"), Efficacy vor Fakten
 
 ### PWA / App-Gefühl (PWA)
 
@@ -97,8 +97,8 @@ Welche Phasen welche Anforderungen abdecken. Wird bei der Roadmap-Erstellung akt
 | CONT-02 | Phase 3 | Pending |
 | CONT-03 | Phase 3 | Pending |
 | CONT-04 | Phase 3 | Pending |
-| SELF-01 | Phase 2 | Pending |
-| TIPS-01 | Phase 2 | Pending |
+| SELF-01 | Phase 2 | Complete |
+| TIPS-01 | Phase 2 | Complete |
 | PWA-01 | Phase 1 | Complete |
 | PWA-02 | Phase 1 | Complete |
 | LEGAL-01 | Phase 1 | Complete |
