@@ -4,7 +4,8 @@
   "description": "HandyChecker — kleine deutsche Info-Seite (10-12) rund ums Handy: statisch, ohne Datensammlung.",
   "scripts": {
     "build": "eleventy",
-    "dev": "eleventy --serve"
+    "dev": "eleventy --serve",
+    "check:voice": "node scripts/voice-check.js"
   },
   "keywords": [],
   "license": "ISC",
