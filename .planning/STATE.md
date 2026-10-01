@@ -4,10 +4,10 @@ current_phase: 02
 current_phase_name: Interactive Widgets + Reference Topic (+ Voice Spec)
 status: verifying
 stopped_at: Phase 2 executed + reviewed (9/9 fixed) + verified 17/19; 5 human UAT items pending (02-UAT.md)
-last_updated: "2026-10-01T13:50:56.058Z"
+last_updated: "2026-10-01T14:12:14.792Z"
 last_activity: 2026-10-01
 last_activity_desc: Phase 02 execution started
-state_head: 335d7889c2739c75855037e4a77b3c492bcf8aa0
+state_head: 9111a88661a6efdc80b1f49683ceb035dc690049
 progress:
   total_phases: 4
   completed_phases: 1
@@ -30,7 +30,7 @@ See: .planning/PROJECT.md (updated 2026-09-28)
 Phase: 02 (Interactive Widgets + Reference Topic (+ Voice Spec)) — EXECUTING
 Plan: 3 of 3
 Status: Phase complete — ready for verification
-Last activity: 2026-10-01 — Completed quick task 261001-l4e: linear guided topic page with Start-button quiz
+Last activity: 2026-10-01 — Completed quick task 261001-mdd: start page + topics overview + tighter quiz spacing
 
 Progress: [███░░░░░░░] 25%
 
@@ -112,6 +112,7 @@ None yet.
 | 2 | lock quiz answer after first choice (options disabled) | 2026-10-01 | 35bc2ae | — |
 | 3 | merge facts into one step, selfcheck gate closes facts page | 2026-10-01 | 7e2d280 | — |
 | 4 | dedicated quiz page, progress above question, radio grid layout, hidden-attr fix | 2026-10-01 | 335d788 | — |
+| 261001-mdd | start page and topics overview page plus tighter quiz spacing | 2026-10-01 | 9111a88 | [261001-mdd-start-page-and-topics-overview-page-plus](./quick/261001-mdd-start-page-and-topics-overview-page-plus/) |
 
 ## Deferred Items
 
