@@ -1,0 +1,11 @@
+{# Shared header partial (D-12): the skip link lives on every page, the 32px
+   Happi mark is decorative (aria-hidden), and the Phase 1 in-app Start card
+   (01-02 decision) is preserved on every page EXCEPT the home page.
+   page.url is the pre-pathPrefix value, so the home guard compares against "/". #}
+  <header class="site-header">
+    <a class="skip" href="#inhalt">Zum Inhalt</a>
+    <span class="happi-mark" aria-hidden="true">{% include "happi-illus.svg" %}</span>
+    {%- if page.url != "/" %}
+    <a class="card" href="{{ '/' | url }}">← Start</a>
+    {%- endif %}
+  </header>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img">
+  <!-- Happi-Include (D-11/D-12): hand-derived from the one art source
+       src/icons-src/happi-source.svg — SAME shapes and locked hexes, but the
+       warm-cream background rect is dropped so the page cream shows through.
+       Inlined as markup (never served, never an <img>) → zero HTTP requests.
+       Contains NO template syntax; contains role="img" + <title> for the name. -->
+  <title>Happi, die Handy-Katze</title>
+  <!-- ears -->
+  <polygon points="128,196 148,84 236,150" fill="#E8863A"/>
+  <polygon points="384,196 364,84 276,150" fill="#E8863A"/>
+  <!-- head -->
+  <circle cx="256" cy="272" r="152" fill="#E8863A"/>
+  <!-- inner ears -->
+  <polygon points="152,180 162,110 216,148" fill="#FFD9B8"/>
+  <polygon points="360,180 350,110 296,148" fill="#FFD9B8"/>
+  <!-- blush -->
+  <circle cx="160" cy="306" r="18" fill="#FFD9B8"/>
+  <circle cx="352" cy="306" r="18" fill="#FFD9B8"/>
+  <!-- eyes -->
+  <circle cx="196" cy="258" r="18" fill="#4A3728"/>
+  <circle cx="316" cy="258" r="18" fill="#4A3728"/>
+  <!-- nose and smile -->
+  <polygon points="242,282 270,282 256,298" fill="#4A3728"/>
+  <path d="M 256 298 L 256 314 M 256 314 Q 238 332 222 318 M 256 314 Q 274 332 290 318" stroke="#4A3728" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <!-- whiskers -->
+  <path d="M 168 276 L 104 264 M 166 296 L 100 298 M 168 316 L 104 332" stroke="#4A3728" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M 344 276 L 408 264 M 346 296 L 412 298 M 344 316 L 408 332" stroke="#4A3728" stroke-width="6" stroke-linecap="round" fill="none"/>
+</svg>

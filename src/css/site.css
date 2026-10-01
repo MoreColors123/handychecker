@@ -238,3 +238,46 @@ footer nav a:focus-visible {
   padding: var(--space-md);
   margin: 0 0 var(--space-lg);
 }
+
+/* --- Happi identity layer (D-11/D-12): inline SVG, zero requests --- */
+
+/* Shared header: the skip link stays visually hidden until focused (existing
+   .skip rules); the decorative mark is fixed-size and NEVER stretches or wraps
+   the row (Pitfall 7). At 320px the mark (32px) + Start card (≥48px) fit. */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+}
+
+/* The mark is decoration, NOT a control: no target-size obligation, no growth. */
+.happi-mark {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.happi-mark svg {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
+/* Hero: Happi large on the home page and the reference topic (D-11/D-12).
+   160px stays inside the fluid column even at 320px (no horizontal scroll). */
+.happi-hero {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 var(--space-md);
+}
+
+.happi-hero svg {
+  display: block;
+  width: 160px;
+  height: 160px;
+}
