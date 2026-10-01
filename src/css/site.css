@@ -194,12 +194,13 @@ footer nav a:focus-visible {
   grid-template-columns: auto minmax(0, 1fr);
   column-gap: var(--space-sm);
   align-items: start;
-  margin: 0 0 var(--space-sm);
+  margin: 0 0 calc(var(--space-sm) / 2);
 }
 
 /* Tap targets (PWA-02 carry-over): the label IS the tap surface */
 .selfcheck__option label {
-  display: block;
+  display: flex;                           /* single-line label text centers in its tap box */
+  align-items: center;
   min-height: var(--tap-min);              /* 48px token */
   padding: var(--space-sm) var(--space-md);
   border-radius: var(--radius-md);
