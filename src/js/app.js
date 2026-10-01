@@ -1,7 +1,7 @@
-// HandyChecker – Selbstcheck-Ankündigung + lineare Schrittführung
+// HandyChecker – Selbstcheck-Ankündigung + lineare Schrittführung + Quiz-Gate
 // (SELF-01; Quick 261001-l4e: geführte Themenseite).
 //
-// Zwei Aufgaben, in dieser Reihenfolge:
+// Drei Aufgaben, in dieser Reihenfolge:
 //   1. Selbstcheck-Ankündigung (bestehend, unverändert): CSS :has() zeigt die
 //      Reflexion ohne JS; dieses Skript ergänzt die aria-live-Ankündigung und
 //      einen winzigen Fallback für Browser OHNE :has().
@@ -10,6 +10,10 @@
 //      gemeinsamen „Weiter"-Knopf. Ohne den Marker bleibt jede andere Seite
 //      unberührt (früher Ausstieg). Alle Schritte sind ohne JS voll sichtbar –
 //      Verstecken passiert ausschließlich hier zur Laufzeit.
+//   3. Quiz-Gate: der Selbstcheck startet erst auf „Los geht's!", zeigt dann
+//      eine Frage nach der anderen, deckt jede Reflexion sofort auf und führt
+//      per „Weiter" zur nächsten Frage bzw. am Ende zu den Tipps. Der
+//      „Weiter"-Knopf erscheint erst, wenn die aktuelle Frage beantwortet ist.
 //
 // Keine Speicherung, kein Senden: Antworten und Schrittstand leben im DOM
 // (Radio checked / hidden-Attribut), Reload = vergessen. Text wird nur per
@@ -76,6 +80,124 @@
 
   var current = 0;
 
+  function setProgress(text) {
+    progress.textContent = text || "";
+  }
+
+  // --- 3. Selbstcheck als lineares Quiz -------------------------------------
+  var selfcheckStep = flow.querySelector(".selfcheck[data-step]");
+  var quizGroups = selfcheckStep
+    ? Array.prototype.slice.call(selfcheckStep.querySelectorAll(".selfcheck__group"))
+    : [];
+  var live = selfcheckStep ? selfcheckStep.querySelector(".selfcheck__live") : null;
+
+  // Kleine Zahlwort-Tabelle, damit der Gate-Text die Fragenanzahl nie falsch nennt.
+  var numeral = {
+    1: "eine",
+    2: "zwei",
+    3: "drei",
+    4: "vier",
+    5: "fünf",
+    6: "sechs",
+    7: "sieben",
+    8: "acht",
+  };
+
+  var quizOn = false; // Start gedrückt, Quiz läuft
+  var qIndex = 0; // aktuell sichtbare Frage (0-basiert)
+
+  var gate = null;
+  var startBtn = null;
+
+  if (selfcheckStep && quizGroups.length) {
+    var n = quizGroups.length;
+
+    gate = selfcheckStep.querySelector(".quiz-gate");
+    if (!gate) {
+      gate = document.createElement("p");
+      gate.className = "quiz-gate";
+    }
+    gate.textContent = (numeral[n] || n) + " Fragen – ganz ohne richtig oder falsch.";
+
+    startBtn = selfcheckStep.querySelector(".quiz-start");
+    if (!startBtn) {
+      startBtn = document.createElement("button");
+      startBtn.type = "button";
+      startBtn.className = "quiz-start";
+    }
+    startBtn.textContent = "Los geht's!";
+
+    if (!selfcheckStep.contains(gate) || !selfcheckStep.contains(startBtn)) {
+      var heading = selfcheckStep.querySelector("h2");
+      var anchor = heading || null;
+      if (anchor && anchor.parentNode) {
+        anchor.parentNode.insertBefore(gate, anchor.nextSibling);
+        anchor.parentNode.insertBefore(startBtn, gate.nextSibling);
+      } else {
+        selfcheckStep.insertBefore(gate, selfcheckStep.firstChild);
+        selfcheckStep.insertBefore(startBtn, gate.nextSibling);
+      }
+    }
+
+    // Vor dem Start: nur Überschrift + Gate + Start sind zu sehen.
+    quizGroups.forEach(function (g) {
+      g.setAttribute("hidden", "");
+    });
+    if (live) live.setAttribute("hidden", "");
+
+    function focusQuizGroup(idx) {
+      var legend = quizGroups[idx].querySelector("legend");
+      if (legend) {
+        legend.setAttribute("tabindex", "-1");
+        legend.focus();
+      }
+    }
+
+    startBtn.addEventListener("click", function () {
+      quizOn = true;
+      qIndex = 0;
+      gate.setAttribute("hidden", "");
+      startBtn.setAttribute("hidden", "");
+      if (live) live.removeAttribute("hidden");
+      quizGroups.forEach(function (g) {
+        g.setAttribute("hidden", "");
+      });
+      quizGroups[0].removeAttribute("hidden");
+      nav.removeAttribute("hidden");
+      next.removeAttribute("hidden");
+      setProgress("Frage 1 von " + quizGroups.length);
+      focusQuizGroup(0);
+    });
+
+    // „Weiter" erst zeigen, wenn die aktuelle Frage beantwortet ist – die
+    // bestehende Ankündigung feuert zuerst (früher registriert), dann das hier.
+    quizGroups.forEach(function (group, idx) {
+      group.addEventListener("change", function () {
+        if (quizOn && idx === qIndex) next.removeAttribute("hidden");
+      });
+    });
+  }
+
+  function advanceQuiz() {
+    qIndex += 1;
+    if (qIndex < quizGroups.length) {
+      quizGroups.forEach(function (g) {
+        g.setAttribute("hidden", "");
+      });
+      quizGroups[qIndex].removeAttribute("hidden");
+      next.setAttribute("hidden", ""); // bis diese Frage beantwortet ist
+      setProgress("Frage " + (qIndex + 1) + " von " + quizGroups.length);
+      focusQuizGroup(qIndex);
+    } else {
+      quizOn = false;
+      setProgress("");
+      quizGroups.forEach(function (g) {
+        g.setAttribute("hidden", "");
+      });
+      if (current < steps.length - 1) show(current + 1);
+    }
+  }
+
   function show(i) {
     current = i;
 
@@ -97,6 +219,13 @@
       nav.removeAttribute("hidden");
     }
 
+    // Vor dem Start des Selbstchecks bleibt der Weiter-Knopf verborgen.
+    if (steps[i] === selfcheckStep && !quizOn) {
+      nav.setAttribute("hidden", "");
+    }
+
+    setProgress("");
+
     // Fokus auf die erste Überschrift/das erste Legend des Schritts.
     var focusEl = steps[i].querySelector("h1, h2, legend");
     if (focusEl) {
@@ -106,6 +235,10 @@
   }
 
   next.addEventListener("click", function () {
+    if (quizOn) {
+      advanceQuiz();
+      return;
+    }
     if (current < steps.length - 1) show(current + 1);
   });
 

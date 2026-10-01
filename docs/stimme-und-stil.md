@@ -71,6 +71,31 @@ Antwortoptionen und Tipps müssen auf diese echten Zahlen zeigen. (Externer Anke
 als Kontext: klicksafe nennt 45–60 Minuten pro Tag für 9- bis 12-Jährige – die
 Familienzahlen regeln aber.)
 
+## Stepper & Knöpfe
+
+Die Themenseite führt Schritt für Schritt: Intro → Fakten → Selbstcheck → Tipps →
+Balance → „Weiter geht's". Die Knöpfe dafür sind die einzigen erlaubten Imperative
+und laden nur zum Weitergehen ein – sie fordern nichts und drängen nicht.
+
+Die beiden Knopfbeschriftungen:
+
+- **Weiter** – führt zum nächsten Schritt; innerhalb des Selbstchecks von Frage zu Frage.
+- **Los geht's!** – startet den Selbstcheck, bevor die Fragen sichtbar werden.
+
+Weitere feste Textbausteine:
+
+- Fortschritt im Selbstcheck: „Frage x von N" – zählt nur die Fragen und nie eine Leistung.
+- Selbstcheck-Einstieg (Gate): „drei Fragen – ganz ohne richtig oder falsch."
+  (die Zahl kommt aus der Fragenanzahl; bei vier Fragen steht dort „vier").
+
+Regeln:
+
+- Nur nach vorne einladen, nie drängen – kein Druck, kein Countdown, keine Punkte.
+- Der Fortschritt bezieht sich auf die Fragen, nicht auf die Person.
+- Keine Antwort wird bewertet; es gibt kein Richtig oder Falsch.
+- Diese Bausteine stehen in `src/js/app.js` (nicht in `topics.json`) und sind an
+  diese Vorgaben gebunden; das Voice-Gate scannt `topics.json` und die Verboten-Liste.
+
 ## Checkliste pro Text
 
 - [ ] Spricht Happi in der Ich-Form und duzt die Leserin?

@@ -335,3 +335,29 @@ footer nav a:focus-visible {
 .stepper-next:hover {
   background: var(--color-accent);  /* cocoa auf amber bleibt >4.5:1 */
 }
+
+/* Quiz-Gate: ruhiger Einstiegstext + großer Start-Knopf (gleiche Behandlung
+   wie .stepper-next). Token-only, hell. */
+.quiz-gate {
+  margin: 0 0 var(--space-md);
+  color: var(--color-cocoa);
+}
+
+.quiz-start {
+  display: block;
+  width: 100%;
+  min-height: var(--tap-min);
+  padding: var(--space-sm) var(--space-md);
+  border: 2px solid var(--color-ginger);
+  border-radius: var(--radius-lg);
+  background: var(--color-peach);   /* cocoa auf peach = 8.49:1 */
+  color: var(--color-cocoa);
+  font-family: inherit;
+  font-size: calc(1rem * var(--font-scale-md));
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.quiz-start:hover {
+  background: var(--color-accent);  /* cocoa auf amber bleibt >4.5:1 */
+}
