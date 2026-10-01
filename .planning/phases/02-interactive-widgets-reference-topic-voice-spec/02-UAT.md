@@ -9,15 +9,15 @@ updated: 2026-10-01T15:30:00Z
 ## Current Test
 
 number: 1
-name: Guided linear flow + self-check (Start button, one question at a time)
+name: Guided flow (landing → facts page → Start-gated linear quiz)
 expected: |
-  Open https://morecolors123.github.io/handychecker/themen/bildschirmzeit/ on her phone: the page starts with Happi's intro and each section appears step by step via a "Weiter" button (facts → quiz → tips → balance → topic cards at the very end). The quiz begins only after tapping the Start button ("Los geht's!"); questions come one at a time — tap an answer, Happi's reflection appears INSTANTLY, then "Weiter" leads on. Nothing is scored, ranked, or judged; options feel like HER life (45-min deal, varies daily, music exempt). Works unaided.
+  Open https://morecolors123.github.io/handychecker/themen/bildschirmzeit/ on her phone: the page opens with Happi's intro; ONE "Weiter" click shows all three facts on ONE page, ending with "Wie ist das bei dir?" — the quiz starts only via "Los geht's!" and runs one question at a time: tap an answer, Happi's reflection appears INSTANTLY and the choice locks (other options disabled), "Weiter" leads on. Tips and balance follow step by step; topic cards appear at the very end. Nothing is scored, ranked, or judged; options feel like HER life (45-min deal, varies daily, music exempt). Works unaided.
 awaiting: user response
 
 ## Tests
 
-### 1. Guided linear flow + self-check (Start button, one question at a time)
-expected: Open https://morecolors123.github.io/handychecker/themen/bildschirmzeit/ on her phone — page reveals step by step via "Weiter" (intro → facts → quiz → tips → balance → topic cards last); quiz gated behind a Start button; questions one at a time — tap an answer, reflection appears instantly, "Weiter" leads on; never scored; options feel like her life (45-min deal, music exempt); completable unaided
+### 1. Guided flow (landing → facts page → Start-gated linear quiz)
+expected: Open https://morecolors123.github.io/handychecker/themen/bildschirmzeit/ on her phone — Happi intro, ONE "Weiter" click shows all three facts on one page ending with "Wie ist das bei dir?"; quiz gated behind "Los geht's!"; questions one at a time — tap an answer, reflection appears instantly, choice locks, "Weiter" leads on; tips → balance step by step; topic cards last; never scored; completable unaided
 result: [pending]
 
 ### 2. Copy tone: Happi sounds like a warm guide, never a lecture (SC3 + CR-01/WR-01 rewrites)
