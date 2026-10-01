@@ -14,19 +14,21 @@ suffixTitle: true
 </head>
 <body>
   {% include "header.njk" %}
-  <main id="inhalt">
+  <main id="inhalt" data-flow>
   {%- if topic.facts %}
+    <div class="step step--intro" data-step>
     <h1>{{ topic.title }}</h1>
     <div class="happi-hero">{% include "happi-illus.svg" %}</div>
     <p class="topic-intro">{{ topic.intro }}</p>
+    </div>
     {%- for fact in topic.facts %}
-    <section class="fact">
+    <section class="fact" data-step>
       <h2>{{ fact.heading }}</h2>
       <p>{{ fact.text }}</p>
     </section>
     {%- endfor %}
     {%- if topic.selfcheck %}
-    <section class="selfcheck" aria-labelledby="selfcheck-h">
+    <section class="selfcheck" data-step aria-labelledby="selfcheck-h">
       <h2 id="selfcheck-h">{{ topic.selfcheck.heading }}</h2>
       {%- for q in topic.selfcheck.questions %}
       {%- set qi = loop.index %}
@@ -45,7 +47,7 @@ suffixTitle: true
     </section>
     {%- endif %}
     {%- if topic.tips %}
-    <section class="tips">
+    <section class="tips" data-step>
       <h2>{{ topic.tips.heading }}</h2>
       <ul>
         {%- for item in topic.tips.items %}
@@ -55,11 +57,12 @@ suffixTitle: true
     </section>
     {%- endif %}
     {%- if topic.balance %}
-    <section class="balance">
+    <section class="balance" data-step>
       <h2>{{ topic.balance.heading }}</h2>
       <p>{{ topic.balance.text }}</p>
     </section>
     {%- endif %}
+    <section class="topic-next" data-step>
     <h2>Weiter geht's</h2>
     <ul class="topic-cards">
       {%- for t in topics %}{% if t.slug != topic.slug %}
@@ -67,6 +70,7 @@ suffixTitle: true
       {% endif %}{%- endfor %}
       <li><a class="card" href="{{ '/' | url }}">Zurück zur Startseite</a></li>
     </ul>
+    </section>
   {%- else %}
     <h1>{{ topic.title }}</h1>
     <p class="topic-soon">Das Thema kommt bald – Happi arbeitet schon dran! 🧡</p>

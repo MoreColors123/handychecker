@@ -301,3 +301,37 @@ footer nav a:focus-visible {
   width: 160px;
   height: 160px;
 }
+
+/* --- lineare Schrittführung (Quick 261001-l4e): gemeinsamer „Weiter"-Knopf ---
+   Kein Standard-Verstecken: `hidden` wird ausschließlich zur Laufzeit von
+   app.js gesetzt. Ohne JS bleiben alle Schritte sichtbar. Token-only, hell. */
+
+.stepper-nav {
+  margin: var(--space-lg) 0 var(--space-sm);
+}
+
+.stepper-progress {
+  margin: 0 0 var(--space-sm);
+  font-size: calc(1rem * var(--font-scale-sm));
+  font-weight: 600;
+  color: var(--color-ginger-ink);
+}
+
+.stepper-next {
+  display: block;
+  width: 100%;
+  min-height: var(--tap-min);
+  padding: var(--space-sm) var(--space-md);
+  border: 2px solid var(--color-ginger);
+  border-radius: var(--radius-lg);
+  background: var(--color-peach);   /* cocoa auf peach = 8.49:1 */
+  color: var(--color-cocoa);
+  font-family: inherit;
+  font-size: calc(1rem * var(--font-scale-md));
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.stepper-next:hover {
+  background: var(--color-accent);  /* cocoa auf amber bleibt >4.5:1 */
+}
