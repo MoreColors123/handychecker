@@ -114,3 +114,127 @@ footer nav a:focus-visible {
   outline: 3px solid var(--color-ginger);
   outline-offset: 2px;
 }
+
+/* --- topic page: facts readability (CONT-02: facts first, short sections) --- */
+
+.topic-intro {
+  font-size: calc(1rem * var(--font-scale-md));
+}
+
+.fact {
+  margin: 0 0 var(--space-lg);
+}
+
+.fact h2,
+.selfcheck h2,
+.tips h2,
+.balance h2 {
+  font-size: calc(1rem * var(--font-scale-md));
+  line-height: 1.3;
+  margin: var(--space-lg) 0 var(--space-sm);
+}
+
+/* --- self-check widget (SELF-01, D-02/D-04): pure-CSS tap → reflection --- */
+
+/* Reflection hidden until its option is checked — pure CSS, works without JS.
+   Anchored to the small .selfcheck__option container with a descendant input —
+   the MDN-performance-safe shape (no body/:root anchoring). */
+.selfcheck__reflection { display: none; }
+.selfcheck__option:has(input:checked) .selfcheck__reflection { display: block; }
+
+/* The widget reads as one friendly block (card language, D-02) */
+.selfcheck {
+  background: var(--color-card-bg);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  margin: 0 0 var(--space-lg);
+}
+
+.selfcheck__group {
+  border: 0;
+  margin: 0 0 var(--space-md);
+  padding: 0;
+}
+
+.selfcheck__group legend {
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+  padding: 0;
+}
+
+.selfcheck__option {
+  margin: 0 0 var(--space-sm);
+}
+
+/* Tap targets (PWA-02 carry-over): the label IS the tap surface */
+.selfcheck__option label {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap-min);              /* 48px token */
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+.selfcheck__option label:hover { background: var(--color-peach); }
+.selfcheck__option input[type="radio"] { width: 24px; height: 24px; accent-color: var(--color-ginger); }
+
+/* The revealed reflection — anchored warm block under the checked option */
+.selfcheck__option .selfcheck__reflection {
+  margin: var(--space-sm) 0 0;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-peach);
+  border-radius: var(--radius-md);
+}
+
+/* Live region: announceable but visually quiet — NEVER display:none
+   (that can suppress announcements; use the visually-hidden clip pattern). */
+.selfcheck__live {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --- "Was kann ich tun?" tips (TIPS-01, D-05): distinct action block --- */
+
+.tips {
+  background: var(--color-card-bg);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  margin: 0 0 var(--space-lg);
+}
+
+.tips ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Each action reads as a full-width row she can DO today (≥48px tall) */
+.tips li {
+  display: flex;
+  align-items: center;
+  min-height: var(--tap-min);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  background: var(--color-cream);
+  margin: 0 0 var(--space-sm);
+}
+
+.tips li:last-child { margin-bottom: 0; }
+
+/* --- balance section (CONT-04/D-08): the positive counterview --- */
+
+.balance {
+  background: var(--color-peach);
+  border-left: 6px solid var(--color-ginger);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  margin: 0 0 var(--space-lg);
+}
