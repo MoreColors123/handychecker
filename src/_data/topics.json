@@ -39,6 +39,46 @@
               "reflection": "Ganz ehrlich: So ist es bei fast allen. Manchmal ist etwas spannend, manchmal nicht – das darf unterschiedlich sein."
             }
           ]
+        },
+        {
+          "text": "Wie unterschiedlich sind deine Handy-Tage?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Bei mir ist es fast jeden Tag gleich",
+              "reflection": "Das kennen viele – feste Zeiten geben manchen Kindern ein gutes Gefühl."
+            },
+            {
+              "id": "b",
+              "text": "Mal sind es 30 Minuten, mal 60",
+              "reflection": "So ist es bei sehr vielen – mal mehr, mal weniger, das darf schwanken."
+            },
+            {
+              "id": "c",
+              "text": "Ich merke oft gar nicht, wie lange es war",
+              "reflection": "Auch das kennen viele – die Zeit am Bildschirm fühlt sich manchmal anders an, als sie ist."
+            }
+          ]
+        },
+        {
+          "text": "Was machst du am liebsten am Handy?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Mit Freundinnen schreiben",
+              "reflection": "Schreiben hält dich mit deinen Leuten in Kontakt – das ist ein schöner Teil vom Handy."
+            },
+            {
+              "id": "b",
+              "text": "Musik hören, z. B. mit Spotify",
+              "reflection": "Musik ist was anderes – die zählt nicht zum Handy-Deal dazu."
+            },
+            {
+              "id": "c",
+              "text": "Videos anschauen",
+              "reflection": "Videos sind schnell spannend – dabei kann die Zeit manchmal wie im Flug vergehen."
+            }
+          ]
         }
       ]
     },
