@@ -29,7 +29,11 @@ expected: Home page shows a Happi illustration; the Bildschirmzeit page shows on
 result: [pending]
 
 ### 4. Weiter-path + stub honesty (SC4 + WR-04)
-expected: The topic page's LAST step (after the guided flow) shows the four next-topic cards + "Zurück zur Startseite"; the four stub cards show a "bald" badge (home + topic page) so the promise is honest; tapping a stub card lands on a friendly "kommt bald" stub page with Happi
+expected: The topic page's LAST step (after the guided flow) shows the four next-topic cards + "Zurück zur Startseite"; the four stub cards show a "bald" badge (topics overview + topic page) so the promise is honest; tapping a stub card lands on a friendly "kommt bald" stub page with Happi
+result: [pending]
+
+### 6. Two-step entry: start page → topics overview
+expected: Opening https://morecolors123.github.io/handychecker/ shows ONLY Happi's icon + the greeting ("Hier wächst Schritt für Schritt… Nichts wird gespeichert: Diese Seite kann das gar nicht.") + a "Start" button; tapping it leads to the topics overview at /themen/ with Happi's icon, the "kribbelig im Kopf" greeting ending in "Welches Thema möchtest du zuerst anschauen?" and the topic cards (4 of them with "bald" badges)
 result: [pending]
 
 ### 5. Voice spec + style guide reviewable (SC3)
@@ -38,10 +42,10 @@ result: [pending]
 
 ## Summary
 
-total: 5
+total: 6
 passed: 0
 issues: 0
-pending: 5
+pending: 6
 skipped: 0
 blocked: 0
 
