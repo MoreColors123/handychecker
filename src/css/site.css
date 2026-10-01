@@ -75,8 +75,8 @@ p {
 .skip {
   position: absolute;
   left: -9999px;
-  background: var(--color-ginger);
-  color: var(--color-text-on-ginger);
+  background: var(--color-peach);      /* cocoa on peach = 8.49:1 (white on ginger was 2.66:1) */
+  color: var(--color-cocoa);
   padding: var(--space-sm) var(--space-md);
   border-radius: var(--radius-md);
   text-decoration: none;
