@@ -4,10 +4,10 @@ current_phase: 02
 current_phase_name: Interactive Widgets + Reference Topic (+ Voice Spec)
 status: verifying
 stopped_at: Phase 2 executed + reviewed (9/9 fixed) + verified 17/19; 5 human UAT items pending (02-UAT.md)
-last_updated: "2026-10-01T13:37:29.840Z"
+last_updated: "2026-10-01T13:50:56.058Z"
 last_activity: 2026-10-01
 last_activity_desc: Phase 02 execution started
-state_head: 7e2d2808ccce814639be6857b6a0d5256aeb852f
+state_head: 335d7889c2739c75855037e4a77b3c492bcf8aa0
 progress:
   total_phases: 4
   completed_phases: 1
@@ -111,6 +111,7 @@ None yet.
 | 261001-l4e | linear guided topic page with Start-button quiz | 2026-10-01 | 108771d | [261001-l4e-linear-guided-topic-page-with-start-butt](./quick/261001-l4e-linear-guided-topic-page-with-start-butt/) |
 | 2 | lock quiz answer after first choice (options disabled) | 2026-10-01 | 35bc2ae | — |
 | 3 | merge facts into one step, selfcheck gate closes facts page | 2026-10-01 | 7e2d280 | — |
+| 4 | dedicated quiz page, progress above question, radio grid layout, hidden-attr fix | 2026-10-01 | 335d788 | — |
 
 ## Deferred Items
 

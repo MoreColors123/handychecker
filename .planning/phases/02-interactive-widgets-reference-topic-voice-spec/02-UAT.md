@@ -17,7 +17,7 @@ awaiting: user response
 ## Tests
 
 ### 1. Guided flow (landing → facts page → Start-gated linear quiz)
-expected: Open https://morecolors123.github.io/handychecker/themen/bildschirmzeit/ on her phone — Happi intro, ONE "Weiter" click shows all three facts on one page ending with "Wie ist das bei dir?"; quiz gated behind "Los geht's!"; questions one at a time — tap an answer, reflection appears instantly, choice locks, "Weiter" leads on; tips → balance step by step; topic cards last; never scored; completable unaided
+expected: Open https://morecolors123.github.io/handychecker/themen/bildschirmzeit/ on her phone — Happi intro, ONE "Weiter" click shows all three facts on one page ending with "Wie ist das bei dir?"; quiz gated behind "Los geht's!" and opens as its OWN page with "Frage x von 3" above each question; tap an answer, reflection appears instantly, choice locks, "Weiter" leads on (button only appears after answering); tips → balance step by step; topic cards last; never scored; completable unaided; radio + text stay on one row on narrow screens
 result: [pending]
 
 ### 2. Copy tone: Happi sounds like a warm guide, never a lecture (SC3 + CR-01/WR-01 rewrites)
