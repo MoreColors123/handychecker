@@ -34,7 +34,7 @@ Anforderungen für den ersten Launch. Jede Anforderung mappt auf Roadmap-Phasen.
 
 ### Stimme & Stil (VOICE)
 
-- [ ] **VOICE-01**: Friendly-Guide-Persona + Style-Guide (Voice-Spec) werden definiert, BEVOR die Massen-Kopien geschrieben werden – die Anti-Vorlese-Garantie
+- [x] **VOICE-01**: Friendly-Guide-Persona + Style-Guide (Voice-Spec) werden definiert, BEVOR die Massen-Kopien geschrieben werden – die Anti-Vorlese-Garantie
 
 ### Datenschutz-Fundament (PRIV)
 
@@ -103,7 +103,7 @@ Welche Phasen welche Anforderungen abdecken. Wird bei der Roadmap-Erstellung akt
 | PWA-02 | Phase 1 | Complete |
 | LEGAL-01 | Phase 1 | Complete |
 | LEGAL-02 | Phase 1 | Complete |
-| VOICE-01 | Phase 2 | Pending |
+| VOICE-01 | Phase 2 | Complete |
 | PRIV-01 | Phase 1 | Complete |
 
 **Coverage:**

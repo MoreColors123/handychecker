@@ -2,17 +2,17 @@
 gsd_state_version: "1.0"
 current_phase: 02
 current_phase_name: Interactive Widgets + Reference Topic (+ Voice Spec)
-status: executing
-stopped_at: Completed 02-02-PLAN.md
-last_updated: "2026-10-01T12:44:56.693Z"
+status: verifying
+stopped_at: Completed 02-03-PLAN.md
+last_updated: "2026-10-01T12:47:53.562Z"
 last_activity: 2026-10-01
 last_activity_desc: Phase 02 execution started
-state_head: a8825c7495e43e50de821728f24c7b4ea696213a
+state_head: cfadf2390f15b01033b26b64fbd18d691ee7214c
 progress:
   total_phases: 4
   completed_phases: 1
   total_plans: 7
-  completed_plans: 6
+  completed_plans: 7
   percent: 25
 ---
 
@@ -29,7 +29,7 @@ See: .planning/PROJECT.md (updated 2026-09-28)
 
 Phase: 02 (Interactive Widgets + Reference Topic (+ Voice Spec)) — EXECUTING
 Plan: 3 of 3
-Status: Ready to execute
+Status: Phase complete — ready for verification
 Last activity: 2026-10-01 — Phase 02 execution started
 
 Progress: [███░░░░░░░] 25%
@@ -63,6 +63,7 @@ Progress: [███░░░░░░░] 25%
 | Phase 01 P04 | 20min | 3 tasks | 2 files |
 | Phase 02 P01 | 2min | 2 tasks | 6 files |
 | Phase 02 P02 | 1min | 2 tasks | 2 files |
+| Phase 02 P03 | 1min | 2 tasks | 8 files |
 
 ## Accumulated Context
 
@@ -90,6 +91,9 @@ Full log in PROJECT.md Key Decisions. Recent decisions affecting current work:
 - [Phase 02]: 02-01: Reference topic self-check ships ONE calibrated question (45-min deal) with three descriptive options; app.js defer tag is wired in themen.njk but the file itself ships in plan 02-02 (documented interim gap, WINDOWS.md #3)
 - [Phase 02]: 02-02: self-check reveal is 100% CSS (:has(input:checked)) so it works with zero JS; app.js is announcement-only (textContent into role=status live region), zero storage/network/innerHTML (SC 5 / PRIV-01 by construction)
 - [Phase 02]: 02-02: the label (not the radio) is the >=48px tap surface; fact styling targets the shipped class .fact (plan prose said .topic-facts); built passthrough disks are _site/css + _site/js (pathPrefix is URL-only)
+- [Phase 02]: 02-03: Happi identity ships as inline SVG only - happi-illus.svg (derived from happi-source.svg, bg rect dropped) inlined site-wide = zero extra requests (D-11/D-12, backlog 999.1 resolved)
+- [Phase 02]: 02-03: shared header.njk (skip link + 32px aria-hidden mark + Start .card guarded by page.url) on all five templates; heroes only on home + reference topic (svg counts 2 vs 1)
+- [Phase 02]: 02-03: header mark is aria-hidden decoration (flex 0 0 auto, 32px, no target-size obligation); 404 keeps both Start affordances per plan-checker advisory
 
 ### Pending Todos
 
@@ -109,6 +113,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-10-01T12:44:56.655Z
-Stopped at: Completed 02-02-PLAN.md
+Last session: 2026-10-01T12:47:53.475Z
+Stopped at: Completed 02-03-PLAN.md
 Resume file: None
