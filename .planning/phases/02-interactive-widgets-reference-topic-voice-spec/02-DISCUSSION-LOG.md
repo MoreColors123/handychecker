@@ -92,7 +92,7 @@
 
 ## Happi Illustration
 
-Deferred backlog item 999.1 (user's own follow-up from UAT test 4: "inside the app there is no icon visible. should it be?") — promoted INTO Phase 2 scope: a visible Happi illustration on the reference topic page, derived from the one-SVG-source pipeline.
+Deferred backlog item 999.1 (user's own follow-up from UAT test 4: "inside the app there is no icon visible. should it be?") — promoted INTO Phase 2 scope: a visible Happi illustration on the reference topic page, derived from the one-SVG-source pipeline. Extended during context capture by user request: "also add the cat symbol on the start page or on every page, if thats not yet planned" → start-page illustration + compact recurring Happi mark in every page's shared header (D-11/D-12).
 
 ## the agent's Discretion
 

@@ -36,6 +36,7 @@ Scoped requirements: **VOICE-01, SELF-01, TIPS-01** (+ the deferred backlog item
 
 ### Happi Illustration (backlog 999.1 → in scope here)
 - **D-11:** A **visible Happi illustration appears on the reference topic page** (user's deferred follow-up, promoted from backlog) — derived from the existing one-SVG-source pipeline (`src/icons-src/happi-source.svg` → larger art export), warm & cozy palette, inside the established design tokens. Size/hero placement at planner discretion (researcher/planner discretion per Phase 1 CONTEXT).
+- **D-12:** Happi is also visible on the **start page** (user request, 2026-10-01: "also add the cat symbol on the start page or on every page") AND as a **small recurring Happi mark in the shared header of every page** — the mascot anchors the identity site-wide (research pattern: kid-site mascots appear consistently on all pages, e.g. Internet-ABC's Flizzy). Planner discretion on exact placement: home hero (larger) + compact header mark everywhere; derived from the same one-SVG-source pipeline; must stay zero-request (same-origin SVG) and not crowd the ≥48px tap-target layout.
 
 ### the agent's Discretion
 - Exact reflection wording, number of self-check questions (1–3), tip copy, illustration placement/size — within the locked voice rules and calibration data.
