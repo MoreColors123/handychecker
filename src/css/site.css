@@ -106,7 +106,7 @@ footer nav a {
   display: inline-block;
   min-height: var(--tap-min);
   padding: var(--space-sm) var(--space-md);
-  color: var(--color-ginger-deep);
+  color: var(--color-ginger-ink); /* 4.74:1 on cream — ginger-deep is only 3.39:1 */
   text-decoration: underline;
 }
 
