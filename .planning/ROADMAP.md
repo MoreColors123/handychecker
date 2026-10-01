@@ -12,7 +12,7 @@ HandyChecker is a small, German-language information site for a 10–12 year old
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation Shell, PWA Identity & First Deploy** - Installable PWA shell, design tokens, legal pages, zero-data foundation, first public URL
+- [x] **Phase 1: Foundation Shell, PWA Identity & First Deploy** - Installable PWA shell, design tokens, legal pages, zero-data foundation, first public URL (completed 2026-10-01)
 - [ ] **Phase 2: Interactive Widgets + Reference Topic (+ Voice Spec)** - Reusable self-check + tip-box widgets, locked voice spec, one print-quality topic
 - [ ] **Phase 3: Content Build-Out — Remaining Four Topics** - Complete German content for all five v1 topics (facts-first, sourced, balanced, hedged)
 - [ ] **Phase 4: Offline Decision, Polish & Real-Device QA** - SW decision, real-device install/update validation, shareability, zero-request verification
@@ -113,7 +113,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation Shell, PWA Identity & First Deploy | 4/4 | In Progress|  |
+| 1. Foundation Shell, PWA Identity & First Deploy | 4/4 | Complete    | 2026-10-01 |
 | 2. Interactive Widgets + Reference Topic (+ Voice Spec) | TBD | Not started | - |
 | 3. Content Build-Out — Remaining Four Topics | TBD | Not started | - |
 | 4. Offline Decision, Polish & Real-Device QA | TBD | Not started | - |

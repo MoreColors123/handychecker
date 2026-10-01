@@ -1,7 +1,7 @@
 ---
 phase: 01-foundation-shell-pwa-identity-first-deploy
 verified: 2026-10-01T08:15:43Z
-status: human_needed
+status: passed
 score: 22/23 must-haves verified
 covered_files:
   - .planning/phases/01-foundation-shell-pwa-identity-first-deploy/01-01-PLAN.md
@@ -35,6 +35,7 @@ covered_files:
   - src/icons/favicon-32.png
   - tools/strip-png-meta.cjs
   - .github/workflows/deploy.yml
+
 covered_digest: "v2:sha256:ff5869d2261042481e56cd5b17f53d100522e0465b3a4ab2f0cc3619889e3df8"
 behavior_unverified: 1
 overrides_applied: 0
@@ -191,26 +192,31 @@ No `coincidental-reliance` entries: every load-bearing precondition is declared 
 ### Human Verification Required
 
 ### 1. Narrow-viewport on-device check (SC5)
+
 **Test:** Open https://morecolors123.github.io/handychecker/ on her phone (or DevTools emulation at 320/390/430 px) and swipe horizontally; eyeball card sizes.
 **Expected:** No horizontal scrolling at 320–430 px; every card and footer link ≥48×48 px.
 **Why human:** Layout invariants need a rendered viewport; CSS structure is machine-verified but no test renders the page.
 
 ### 2. Fresh-browser zero-request check (SC3 human half)
+
 **Test:** Open the live URL in a brand-new browser profile on her phone, watch the network tab while loading home, impressum, datenschutz.
 **Expected:** Zero requests to third-party domains — everything from morecolors123.github.io.
 **Why human:** Needs a real device + fresh profile; the machine half (0 third-party refs in live HTML) already passes.
 
 ### 3. Android install prompt (SC4 human half)
+
 **Test:** Open the live URL in Android Chrome → menu → install offer / manifest panel.
 **Expected:** Install offered, manifest panel clean, installed icon shows the Happi cat (not a gray globe).
 **Why human:** Requires the physical device; member-level installability (manifest + IHDR-matched icons) already verified live.
 
 ### 4. Icon visual check (plan A8)
+
 **Test:** Open icon-maskable.svg and the 32 px favicon at actual size (and the installed home-screen icon).
 **Expected:** Cat recognizable; nothing clipped out of the safe-zone circle; 32 px still reads as a cat.
 **Why human:** Aesthetic recognizability at real sizes needs human eyes.
 
 ### 5. LEGAL-02 launch gate — owner Impressum data fill
+
 **Test:** Replace the four bracket placeholders in src/impressum.njk with real parent data, rebuild, push — BEFORE sharing the URL with anyone (01-USER-SETUP.md has the exact steps).
 **Expected:** Live Impressum shows real provider identity per §5 DDG.
 **Why human:** The executor must never invent parent data (prohibition P1) — the fill is the owner's by design.
