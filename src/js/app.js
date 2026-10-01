@@ -20,7 +20,6 @@
 
     group.addEventListener("change", function (e) {
       var input = e.target;
-      if (!input.matches('input[type="radio"]')) return;
       var option = input.closest(".selfcheck__option");
       if (!option) return;
       var label = option.querySelector("label");
