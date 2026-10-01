@@ -1,12 +1,5 @@
 {
   "siteName": "HandyChecker",
   "lang": "de",
-  "description": "Was dein Handy mit dir macht – und wie du gesünder damit umgehst. Die Seite speichert keine Daten.",
-  "topics": [
-    { "slug": "bildschirmzeit", "title": "Bildschirmzeit & Balance" },
-    { "slug": "schlaf", "title": "Schlaf" },
-    { "slug": "aufmerksamkeit", "title": "Aufmerksamkeit & Fokus" },
-    { "slug": "koerper", "title": "Körper" },
-    { "slug": "datenschutz", "title": "Datenschutz & Daten" }
-  ]
+  "description": "Was dein Handy mit dir macht – und wie du gesünder damit umgehst. Die Seite speichert keine Daten."
 }

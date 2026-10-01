@@ -1,0 +1,78 @@
+---
+pagination:
+  data: topics
+  size: 1
+  alias: topic
+permalink: "/themen/{{ topic.slug }}/"
+suffixTitle: true
+---
+{% set title = topic.title %}
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+  {% include "head.njk" %}
+</head>
+<body>
+  <header><a class="skip" href="#inhalt">Zum Inhalt</a></header>
+  <main id="inhalt">
+  {%- if topic.facts %}
+    <h1>{{ topic.title }}</h1>
+    <p class="topic-intro">{{ topic.intro }}</p>
+    {%- for fact in topic.facts %}
+    <section class="fact">
+      <h2>{{ fact.heading }}</h2>
+      <p>{{ fact.text }}</p>
+    </section>
+    {%- endfor %}
+    {%- if topic.selfcheck %}
+    <section class="selfcheck" aria-labelledby="selfcheck-h">
+      <h2 id="selfcheck-h">{{ topic.selfcheck.heading }}</h2>
+      {%- for q in topic.selfcheck.questions %}
+      {%- set qi = loop.index %}
+      <fieldset class="selfcheck__group">
+        <legend>{{ q.text }}</legend>
+        {%- for opt in q.options %}
+        <div class="selfcheck__option">
+          <input type="radio" id="q{{ qi }}-{{ opt.id }}" name="q{{ qi }}" value="{{ opt.id }}">
+          <label for="q{{ qi }}-{{ opt.id }}">{{ opt.text }}</label>
+          <p class="selfcheck__reflection" data-reflection>{{ opt.reflection }}</p>
+        </div>
+        {%- endfor %}
+      </fieldset>
+      {%- endfor %}
+      <p class="selfcheck__live" role="status" aria-live="polite" aria-atomic="true"></p>
+    </section>
+    {%- endif %}
+    {%- if topic.tips %}
+    <section class="tips">
+      <h2>{{ topic.tips.heading }}</h2>
+      <ul>
+        {%- for item in topic.tips.items %}
+        <li>{{ item.text }}</li>
+        {%- endfor %}
+      </ul>
+    </section>
+    {%- endif %}
+    {%- if topic.balance %}
+    <section class="balance">
+      <h2>{{ topic.balance.heading }}</h2>
+      <p>{{ topic.balance.text }}</p>
+    </section>
+    {%- endif %}
+    <h2>Weiter geht's</h2>
+    <ul class="topic-cards">
+      {%- for t in topics %}{% if t.slug != topic.slug %}
+      <li><a class="card" href="{{ ('/themen/' + t.slug + '/') | url }}">{{ t.title }}</a></li>
+      {% endif %}{%- endfor %}
+      <li><a class="card" href="{{ '/' | url }}">Zurück zur Startseite</a></li>
+    </ul>
+  {%- else %}
+    <h1>{{ topic.title }}</h1>
+    <p class="topic-soon">Das Thema kommt bald – Happi arbeitet schon dran! 🧡</p>
+    <p><a class="card" href="{{ '/' | url }}">← zurück zur Startseite</a></p>
+  {%- endif %}
+  </main>
+  <script src="{{ '/js/app.js' | url }}" defer></script>
+  {% include "footer.njk" %}
+</body>
+</html>

@@ -1,0 +1,61 @@
+[
+  {
+    "slug": "bildschirmzeit",
+    "title": "Bildschirmzeit & Balance",
+    "intro": "Ich bin Happi, die Handy-Katze. Ich hab da mal was ausprobiert: Wenn ich zu lange auf den Bildschirm schaue, werde ich ganz kribbelig im Kopf. Deshalb schauen wir zusammen, wie das bei dir ist – ganz ohne Vorwürfe.",
+    "facts": [
+      {
+        "heading": "Dein Handy ist echt praktisch",
+        "text": "Klar, dein Handy ist praktisch: Musik hören, Freunde schreiben, Sachen lernen. Das ist völlig normal und macht Spaß."
+      },
+      {
+        "heading": "Manchmal verliert man die Zeit",
+        "text": "Kennst du das? Du schaust kurz rein und plötzlich ist eine Stunde weg. Das kann dazu führen, dass du gar nicht merkst, wie lange du schon am Bildschirm bist."
+      },
+      {
+        "heading": "Dein Kopf braucht Pausen",
+        "text": "Dein Kopf arbeitet am Bildschirm auf Hochtouren. Wenn er keine Pause bekommt, kann es schwerfallen, sich danach wieder zu konzentrieren. Ein bisschen frische Luft tut richtig gut."
+      }
+    ],
+    "selfcheck": {
+      "heading": "Wie ist das bei dir?",
+      "questions": [
+        {
+          "text": "Wenn dein Handy-Deal (45 Minuten) für heute durch ist – wie fühlt sich das an?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Meistens reicht es mir so",
+              "reflection": "Das klingt gut! Viele Kinder finden, dass eine kurze Runde am Handy danach noch mehr Spaß macht."
+            },
+            {
+              "id": "b",
+              "text": "Oft wär ich gern länger",
+              "reflection": "Das kennen viele Kinder – und ich, Happi, kenne das auch! Wichtig ist, dass du selbst merkst, wann genug ist."
+            },
+            {
+              "id": "c",
+              "text": "Kommt drauf an, was ich mache",
+              "reflection": "Ganz ehrlich: So ist es bei fast allen. Manchmal ist etwas spannend, manchmal nicht – das darf unterschiedlich sein."
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "heading": "Was kann ich tun?",
+      "items": [
+        { "text": "Probiere aus: Leg dein Handy nach der Schule für eine Stunde in die Küche." },
+        { "text": "Probiere aus: Lass dein Handy abends außerhalb deines Zimmers liegen." }
+      ]
+    },
+    "balance": {
+      "heading": "Was ist daran eigentlich gut?",
+      "text": "Handys sind nicht nur schlecht: Du kannst Musik hören, mit Freundinnen schreiben oder für die Schule lernen. Musik ist was anderes – die zählt nicht zur Bildschirmzeit dazu. Wenn du über Spotify Musik hörst, darfst du das länger machen als andere Apps."
+    }
+  },
+  { "slug": "schlaf", "title": "Schlaf" },
+  { "slug": "aufmerksamkeit", "title": "Aufmerksamkeit & Fokus" },
+  { "slug": "koerper", "title": "Körper" },
+  { "slug": "datenschutz", "title": "Datenschutz & Daten" }
+]

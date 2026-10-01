@@ -13,7 +13,7 @@ title: HandyChecker – Finde deine Balance
     <p>Hier findest du fünf Themen rund um dein Handy – mit Fakten, Fragen und echten Tipps.
        Nichts wird gespeichert: Diese Seite kann das gar nicht.</p>
     <ul class="topic-cards">
-      {%- for topic in site.topics %}
+      {%- for topic in topics %}
       <li><a class="card" href="{{ ('/themen/' + topic.slug + '/') | url }}">{{ topic.title }}</a></li>
       {%- endfor %}
     </ul>
