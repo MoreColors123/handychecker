@@ -93,7 +93,10 @@
   }
 
   // --- 3. Selbstcheck als lineares Quiz -------------------------------------
-  var selfcheckStep = flow.querySelector(".selfcheck[data-step]");
+  // Der Selbstcheck ist kein eigener Schritt mehr: er schließt die Fakten-
+  // Seite unten ab („Wie ist das bei dir?" + Startknopf). Sein Schritt ist
+  // der umgebende .step--facts-Wrapper.
+  var selfcheckStep = flow.querySelector(".selfcheck");
   var quizGroups = selfcheckStep
     ? Array.prototype.slice.call(selfcheckStep.querySelectorAll(".selfcheck__group"))
     : [];
@@ -227,8 +230,9 @@
       nav.removeAttribute("hidden");
     }
 
-    // Vor dem Start des Selbstchecks bleibt der Weiter-Knopf verborgen.
-    if (steps[i] === selfcheckStep && !quizOn) {
+    // Vor dem Start des Selbstchecks bleibt der Weiter-Knopf verborgen –
+    // auf der Fakten-Seite führt nur „Los geht's!" in das Quiz.
+    if (selfcheckStep && steps[i].contains(selfcheckStep) && !quizOn) {
       nav.setAttribute("hidden", "");
     }
 

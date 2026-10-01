@@ -21,14 +21,15 @@ suffixTitle: true
     <div class="happi-hero">{% include "happi-illus.svg" %}</div>
     <p class="topic-intro">{{ topic.intro }}</p>
     </div>
+    <div class="step step--facts" data-step>
     {%- for fact in topic.facts %}
-    <section class="fact" data-step>
+    <section class="fact">
       <h2>{{ fact.heading }}</h2>
       <p>{{ fact.text }}</p>
     </section>
     {%- endfor %}
     {%- if topic.selfcheck %}
-    <section class="selfcheck" data-step aria-labelledby="selfcheck-h">
+    <section class="selfcheck" aria-labelledby="selfcheck-h">
       <h2 id="selfcheck-h">{{ topic.selfcheck.heading }}</h2>
       {%- for q in topic.selfcheck.questions %}
       {%- set qi = loop.index %}
@@ -46,6 +47,7 @@ suffixTitle: true
       <p class="selfcheck__live" role="status"></p>
     </section>
     {%- endif %}
+    </div>
     {%- if topic.tips %}
     <section class="tips" data-step>
       <h2>{{ topic.tips.heading }}</h2>
