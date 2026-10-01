@@ -9,15 +9,15 @@ updated: 2026-10-01T15:30:00Z
 ## Current Test
 
 number: 1
-name: Self-check tap→reflection on the reference topic (SC1/SC5)
+name: Guided linear flow + self-check (Start button, one question at a time)
 expected: |
-  Open https://morecolors123.github.io/handychecker/themen/bildschirmzeit/ on her phone: she reads the self-check ("Wie ist das bei dir?"), taps an answer option — the friendly Happi reflection appears INSTANTLY below (no button), tapping another option switches the reflection. Nothing is scored, ranked, or judged; options feel like HER life (45-min deal, varies daily, music exempt). Works unaided.
+  Open https://morecolors123.github.io/handychecker/themen/bildschirmzeit/ on her phone: the page starts with Happi's intro and each section appears step by step via a "Weiter" button (facts → quiz → tips → balance → topic cards at the very end). The quiz begins only after tapping the Start button ("Los geht's!"); questions come one at a time — tap an answer, Happi's reflection appears INSTANTLY, then "Weiter" leads on. Nothing is scored, ranked, or judged; options feel like HER life (45-min deal, varies daily, music exempt). Works unaided.
 awaiting: user response
 
 ## Tests
 
-### 1. Self-check tap→reflection on the reference topic (SC1/SC5)
-expected: Open https://morecolors123.github.io/handychecker/themen/bildschirmzeit/ on her phone — tap an answer, reflection appears instantly below; tap another, reflection switches; never scored; options feel like her life (45-min deal, music exempt); completable unaided
+### 1. Guided linear flow + self-check (Start button, one question at a time)
+expected: Open https://morecolors123.github.io/handychecker/themen/bildschirmzeit/ on her phone — page reveals step by step via "Weiter" (intro → facts → quiz → tips → balance → topic cards last); quiz gated behind a Start button; questions one at a time — tap an answer, reflection appears instantly, "Weiter" leads on; never scored; options feel like her life (45-min deal, music exempt); completable unaided
 result: [pending]
 
 ### 2. Copy tone: Happi sounds like a warm guide, never a lecture (SC3 + CR-01/WR-01 rewrites)
@@ -29,7 +29,7 @@ expected: Home page shows a Happi illustration; the Bildschirmzeit page shows on
 result: [pending]
 
 ### 4. Weiter-path + stub honesty (SC4 + WR-04)
-expected: The topic page ends with the four next-topic cards + "Zurück zur Startseite"; the four stub cards show a "bald" badge (home + topic page) so the promise is honest; tapping a stub card lands on a friendly "kommt bald" stub page with Happi
+expected: The topic page's LAST step (after the guided flow) shows the four next-topic cards + "Zurück zur Startseite"; the four stub cards show a "bald" badge (home + topic page) so the promise is honest; tapping a stub card lands on a friendly "kommt bald" stub page with Happi
 result: [pending]
 
 ### 5. Voice spec + style guide reviewable (SC3)
