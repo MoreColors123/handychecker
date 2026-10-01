@@ -1,0 +1,14 @@
+{# Shared <head> for every page. suffixTitle (frontmatter, optional):
+   append " – {siteName}" to <title>; home page already carries the name. #}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}{% if suffixTitle %} – {{ site.siteName }}{% endif %}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/css/tokens.css' | url }}">
+  <link rel="stylesheet" href="{{ '/css/site.css' | url }}">
+  <link rel="manifest" href="{{ '/manifest.webmanifest' | url }}">
+  <link rel="icon" href="{{ '/icons/favicon.svg' | url }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/icons/apple-touch-icon.png' | url }}">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="{{ site.siteName }}">
