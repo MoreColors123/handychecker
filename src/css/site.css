@@ -198,6 +198,12 @@ footer nav a:focus-visible {
 .selfcheck__option label:hover { background: var(--color-peach); }
 .selfcheck__option input[type="radio"] { width: 24px; height: 24px; accent-color: var(--color-ginger); }
 
+/* Locked answer: after the first choice the radios are disabled (app.js).
+   Dim the unchosen options, keep the chosen one prominent, no hover trap. */
+.selfcheck__group:has(input:disabled) .selfcheck__option:not(:has(input:checked)) { opacity: 0.55; }
+.selfcheck__group:has(input:disabled) .selfcheck__option:not(:has(input:checked)) label { cursor: default; }
+.selfcheck__group:has(input:disabled) .selfcheck__option:not(:has(input:checked)) label:hover { background: transparent; }
+
 /* The revealed reflection — anchored warm block under the checked option */
 .selfcheck__option .selfcheck__reflection {
   margin: var(--space-sm) 0 0;

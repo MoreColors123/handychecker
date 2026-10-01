@@ -36,6 +36,14 @@
         var input = e.target;
         var option = input.closest(".selfcheck__option");
         if (!option) return;
+
+        // Antwort festhalten: die erste Wahl gilt. Alle Radio-Optionen der
+        // Frage werden gesperrt, damit danach nichts mehr umgeschaltet werden
+        // kann (JS-Upgrade; ohne JS bleiben die Optionen umschaltbar).
+        group.querySelectorAll('input[type="radio"]').forEach(function (r) {
+          r.disabled = true;
+        });
+
         var label = option.querySelector("label");
         var reflection = option.querySelector(".selfcheck__reflection");
 
