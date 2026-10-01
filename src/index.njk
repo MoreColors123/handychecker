@@ -25,7 +25,7 @@ title: HandyChecker – Finde deine Balance
        Nichts wird gespeichert: Diese Seite kann das gar nicht.</p>
     <ul class="topic-cards">
       {%- for topic in site.topics %}
-      <li><a class="card" href="{{ '/themen/' + topic.slug + '/' | url }}">{{ topic.title }}</a></li>
+      <li><a class="card" href="{{ ('/themen/' + topic.slug + '/') | url }}">{{ topic.title }}</a></li>
       {%- endfor %}
     </ul>
   </main>
