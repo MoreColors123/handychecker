@@ -54,8 +54,13 @@ Decimal phases appear between their surrounding integers in numeric order.
   5. A 10–12-year-old reader can complete the reference topic end-to-end unaided on a phone, and her answers are never stored or transmitted (in-memory only).
 
 **Plans**: 3 plans
+**Wave 1**
 - [ ] 02-01-PLAN.md — Voice spec (VOICE-01, gating artifact) + reference topic data layer & pagination tracer (SELF-01/TIPS-01 structure)
+
+**Wave 2** *(blocked on Wave 1 completion)*
 - [ ] 02-02-PLAN.md — Widget interactivity: pure-CSS :has() reflection reveal + app.js aria-live enhancer (SELF-01/TIPS-01 live)
+
+**Wave 3** *(blocked on Wave 2 completion)*
 - [ ] 02-03-PLAN.md — Happi identity site-wide: illustration include, header mark, heroes (D-11/D-12, backlog 999.1)
 
 **UI hint**: yes
