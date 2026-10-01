@@ -15,6 +15,11 @@ jobs:
         with: { node-version: 22, cache: npm }
       - run: npm ci
       - run: npm run build
+      # Depends on a one-time repo setting: Settings -> Pages -> Source =
+      # "GitHub Actions" (plan 01-04 user checklist; forks/transfers must redo
+      # it). configure-pages surfaces a missing/broken Pages setup here, early
+      # and with a clear message, instead of deploy-pages failing opaquely.
+      - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with: { path: _site }
   deploy:
