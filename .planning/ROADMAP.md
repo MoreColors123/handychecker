@@ -117,3 +117,13 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 2. Interactive Widgets + Reference Topic (+ Voice Spec) | TBD | Not started | - |
 | 3. Content Build-Out — Remaining Four Topics | TBD | Not started | - |
 | 4. Offline Decision, Polish & Real-Device QA | TBD | Not started | - |
+
+## Backlog
+
+### Phase 999.1: Follow-up — Phase 01 deferred UAT follow-up: Test 4 (BACKLOG)
+
+**Goal:** Resolve the UAT checkpoint deferred during Phase 01 verification
+**Source phase:** 01
+**Deferred at:** 2026-10-01 during /gsd-verify-work 01 session completion
+**Follow-ups:**
+- [ ] Test 4: Visible Happi illustration inside the app pages (home/topic pages), not just the app icon — mascot gives the friendly guide a face; natural fit for Phase 2's voice spec + first topic page design (deferred 2026-10-01)
