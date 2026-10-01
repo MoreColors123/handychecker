@@ -136,7 +136,9 @@ footer nav a:focus-visible {
 
 /* --- self-check widget (SELF-01, D-02/D-04): pure-CSS tap → reflection --- */
 
-/* Reflection hidden until its option is checked — pure CSS, works without JS.
+/* Reflection hidden until its option is checked — pure CSS, works without JS in
+   :has()-capable browsers (Chrome ≥105, Firefox ≥121). app.js reveals it as a
+   tiny fallback on engines without :has().
    Anchored to the small .selfcheck__option container with a descendant input —
    the MDN-performance-safe shape (no body/:root anchoring). */
 .selfcheck__reflection { display: none; }
