@@ -1,6 +1,13 @@
 /* HandyChecker base styles — mobile-first, fluid single column, zero fixed widths.
    Fonts: system stack only, zero external requests (PRIV-01 / LG München rule). */
 
+/* JS toggles visibility via the hidden attribute (stepper, quiz gate,
+   progress, live region). Author display rules on buttons/paragraphs would
+   otherwise override the UA's [hidden] rule — this keeps hiding reliable. */
+[hidden] {
+  display: none !important;
+}
+
 html {
   /* 112.5% of the browser default = 18px (--font-base) at default settings,
      while still honoring the reader's own browser font-size preference */
@@ -183,20 +190,28 @@ footer nav a:focus-visible {
 }
 
 .selfcheck__option {
+  display: grid;                  /* radio + text stay on ONE row even on narrow screens */
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: var(--space-sm);
+  align-items: start;
   margin: 0 0 var(--space-sm);
 }
 
 /* Tap targets (PWA-02 carry-over): the label IS the tap surface */
 .selfcheck__option label {
-  display: inline-flex;
-  align-items: center;
+  display: block;
   min-height: var(--tap-min);              /* 48px token */
   padding: var(--space-sm) var(--space-md);
   border-radius: var(--radius-md);
   cursor: pointer;
 }
 .selfcheck__option label:hover { background: var(--color-peach); }
-.selfcheck__option input[type="radio"] { width: 24px; height: 24px; accent-color: var(--color-ginger); }
+.selfcheck__option input[type="radio"] {
+  width: 24px;
+  height: 24px;
+  accent-color: var(--color-ginger);
+  margin-top: 7px;              /* optisch zur ersten Textzeile ausgerichtet */
+}
 
 /* Locked answer: after the first choice the radios are disabled (app.js).
    Dim the unchosen options, keep the chosen one prominent, no hover trap. */
@@ -206,6 +221,7 @@ footer nav a:focus-visible {
 
 /* The revealed reflection — anchored warm block under the checked option */
 .selfcheck__option .selfcheck__reflection {
+  grid-column: 1 / -1;          /* under radio AND text, own row */
   margin: var(--space-sm) 0 0;
   padding: var(--space-sm) var(--space-md);
   background: var(--color-peach);

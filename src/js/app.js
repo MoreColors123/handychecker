@@ -75,15 +75,17 @@
   var nav = document.createElement("div");
   nav.className = "stepper-nav";
 
+  // Der Fortschritt („Frage x von y") ist ein eigenes Element: im Quiz steht
+  // er ÜBER der Frage, nicht im Nav-Block am Seitenende.
   var progress = document.createElement("p");
   progress.className = "stepper-progress";
+  progress.setAttribute("hidden", "");
 
   var next = document.createElement("button");
   next.type = "button";
   next.className = "stepper-next";
   next.textContent = "Weiter";
 
-  nav.appendChild(progress);
   nav.appendChild(next);
 
   var current = 0;
@@ -93,14 +95,16 @@
   }
 
   // --- 3. Selbstcheck als lineares Quiz -------------------------------------
-  // Der Selbstcheck ist kein eigener Schritt mehr: er schließt die Fakten-
-  // Seite unten ab („Wie ist das bei dir?" + Startknopf). Sein Schritt ist
-  // der umgebende .step--facts-Wrapper.
+  // Der Selbstcheck-Schluss („Wie ist das bei dir?" + Startknopf) steht unten
+  // auf der Fakten-Seite; die Fragen selbst bilden einen EIGENEN Schritt
+  // (.quiz): „Los geht's!" öffnet die Quiz-Seite, auf der „Frage x von y"
+  // ÜBER der Frage steht.
   var selfcheckStep = flow.querySelector(".selfcheck");
-  var quizGroups = selfcheckStep
-    ? Array.prototype.slice.call(selfcheckStep.querySelectorAll(".selfcheck__group"))
+  var quizStep = flow.querySelector(".quiz[data-step]");
+  var quizGroups = quizStep
+    ? Array.prototype.slice.call(quizStep.querySelectorAll(".selfcheck__group"))
     : [];
-  var live = selfcheckStep ? selfcheckStep.querySelector(".selfcheck__live") : null;
+  var live = quizStep ? quizStep.querySelector(".selfcheck__live") : null;
 
   // Kleine Zahlwort-Tabelle, damit der Gate-Text die Fragenanzahl nie falsch nennt.
   var numeral = {
@@ -120,7 +124,9 @@
   var gate = null;
   var startBtn = null;
 
-  if (selfcheckStep && quizGroups.length) {
+  var quizIdx = quizStep ? steps.indexOf(quizStep) : -1;
+
+  if (selfcheckStep && quizStep && quizGroups.length) {
     var n = quizGroups.length;
 
     gate = selfcheckStep.querySelector(".quiz-gate");
@@ -174,10 +180,15 @@
         g.setAttribute("hidden", "");
       });
       quizGroups[0].removeAttribute("hidden");
-      nav.removeAttribute("hidden");
-      next.removeAttribute("hidden");
+      // Fortschritt ÜBER der ersten Frage platzieren. Der Weiter-Knopf
+      // unten erscheint erst nach der Antwort – show() macht den Schritt-
+      // wechsel auf die Quiz-Seite und fokussiert die erste Frage.
+      if (quizGroups[0].parentNode) {
+        quizGroups[0].parentNode.insertBefore(progress, quizGroups[0]);
+      }
+      progress.removeAttribute("hidden");
       setProgress("Frage 1 von " + quizGroups.length);
-      focusQuizGroup(0);
+      show(quizIdx);
     });
 
     // „Weiter" erst zeigen, wenn die aktuelle Frage beantwortet ist – die
@@ -236,7 +247,14 @@
       nav.setAttribute("hidden", "");
     }
 
-    setProgress("");
+    // Auf der Quiz-Seite erscheint der Weiter-Knopf erst nach der Antwort;
+    // der Fortschritt steht schon ÜBER der Frage und wird nicht geleert.
+    if (steps[i] === quizStep) {
+      next.setAttribute("hidden", "");
+    } else {
+      setProgress("");
+      progress.setAttribute("hidden", "");
+    }
 
     // Fokus auf die erste Überschrift/das erste Legend des Schritts.
     var focusEl = steps[i].querySelector("h1, h2, legend");
