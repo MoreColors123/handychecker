@@ -1,18 +1,18 @@
 ---
 gsd_state_version: "1.0"
-current_phase: 2
+current_phase: 02
 current_phase_name: Interactive Widgets + Reference Topic (+ Voice Spec)
 status: executing
-stopped_at: Phase 2 context gathered
-last_updated: "2026-10-01T12:38:07.011Z"
+stopped_at: Completed 02-01-PLAN.md
+last_updated: "2026-10-01T12:42:02.249Z"
 last_activity: 2026-10-01
-last_activity_desc: Phase 1 complete, transitioned to Phase 2
-state_head: 3a98f9f12897d42c081256ad8361eeef9dfbf94c
+last_activity_desc: Phase 02 execution started
+state_head: d4077d003bfdb4bbc7557450ecd3e0b5d605e0c2
 progress:
   total_phases: 4
   completed_phases: 1
   total_plans: 7
-  completed_plans: 4
+  completed_plans: 5
   percent: 25
 ---
 
@@ -23,14 +23,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-09-28)
 
 **Core value:** The site must make the dangers of smartphone overuse understandable and relatable to a child (10–12), while leaving her feeling empowered to make her own healthier choices — not scared or lectured.
-**Current focus:** Phase 01 — Foundation Shell, PWA Identity & First Deploy
+**Current focus:** Phase 02 — Interactive Widgets + Reference Topic (+ Voice Spec)
 
 ## Current Position
 
-Phase: 2 (Interactive Widgets + Reference Topic (+ Voice Spec)) — READY TO EXECUTE
-Plan: Not started
+Phase: 02 (Interactive Widgets + Reference Topic (+ Voice Spec)) — EXECUTING
+Plan: 2 of 3
 Status: Ready to execute
-Last activity: 2026-10-01 — Phase 1 complete, transitioned to Phase 2
+Last activity: 2026-10-01 — Phase 02 execution started
 
 Progress: [███░░░░░░░] 25%
 
@@ -61,6 +61,7 @@ Progress: [███░░░░░░░] 25%
 | Phase 01 P02 | 8min | 2 tasks | 4 files |
 | Phase 01 P03 | 11min | 3 tasks | 9 files |
 | Phase 01 P04 | 20min | 3 tasks | 2 files |
+| Phase 02 P01 | 2min | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -83,6 +84,9 @@ Full log in PROJECT.md Key Decisions. Recent decisions affecting current work:
 - [Phase 01]: 01-03: Task 1 svg verify refined - the xmlns identifier is a required XML namespace name (never fetched), so the check requires xmlns and tests fetchable references instead of raw http substrings (plan self-contradiction, Rule 3)
 - [Phase 01]: 01-03: manifest is the minimal member set only (no description/screenshots/share_target/shortcuts) with all-relative paths - privacy-minimal install prompt, subpath-safe by construction (T-03-04, Pattern 1)
 - [Phase 01]: 01-04: live URL derived from git origin remote (MoreColors123/handychecker -> https://morecolors123.github.io/handychecker/) - never hardcoded; retrigger used an empty commit on main because gh CLI is absent and push-to-main is the documented trigger; live checks decode HTML entities before matching (Eleventy auto-escape); Impressum placeholders stay live by design (P1) - LEGAL-02 launch gate handed to owner via 01-USER-SETUP.md
+- [Phase 02]: 02-01: Voice spec is in-repo docs/stimme-und-stil.md (outside src/, never served); its machine-parseable Verboten list is the single data source for all future copy gates
+- [Phase 02]: 02-01: topics.json is a bare JSON array (first byte '[') driving one themen.njk pagination template -> all /themen/<slug>/ routes; Phase 3 adds topics with zero template work (wrapped object form silently collapses pagination)
+- [Phase 02]: 02-01: Reference topic self-check ships ONE calibrated question (45-min deal) with three descriptive options; app.js defer tag is wired in themen.njk but the file itself ships in plan 02-02 (documented interim gap, WINDOWS.md #3)
 
 ### Pending Todos
 
@@ -102,6 +106,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-10-01T11:19:47.240Z
-Stopped at: Phase 2 context gathered
-Resume file: .planning/phases/02-interactive-widgets-reference-topic-voice-spec/02-CONTEXT.md
+Last session: 2026-10-01T12:41:57.380Z
+Stopped at: Completed 02-01-PLAN.md
+Resume file: None

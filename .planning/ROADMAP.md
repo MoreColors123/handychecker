@@ -53,9 +53,9 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. The reference topic page presents facts first in short sections (2–3 sentences per idea, at most one number per section), followed by self-check and tip box, with a clear "weiter geht's" path to the next topic.
   5. A 10–12-year-old reader can complete the reference topic end-to-end unaided on a phone, and her answers are never stored or transmitted (in-memory only).
 
-**Plans**: 3 plans
+**Plans**: 1/3 plans executed
 **Wave 1**
-- [ ] 02-01-PLAN.md — Voice spec (VOICE-01, gating artifact) + reference topic data layer & pagination tracer (SELF-01/TIPS-01 structure)
+- [x] 02-01-PLAN.md — Voice spec (VOICE-01, gating artifact) + reference topic data layer & pagination tracer (SELF-01/TIPS-01 structure)
 
 **Wave 2** *(blocked on Wave 1 completion)*
 - [ ] 02-02-PLAN.md — Widget interactivity: pure-CSS :has() reflection reveal + app.js aria-live enhancer (SELF-01/TIPS-01 live)
@@ -123,7 +123,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation Shell, PWA Identity & First Deploy | 4/4 | Complete    | 2026-10-01 |
-| 2. Interactive Widgets + Reference Topic (+ Voice Spec) | TBD | Not started | - |
+| 2. Interactive Widgets + Reference Topic (+ Voice Spec) | 1/3 | In Progress|  |
 | 3. Content Build-Out — Remaining Four Topics | TBD | Not started | - |
 | 4. Offline Decision, Polish & Real-Device QA | TBD | Not started | - |
 
