@@ -24,16 +24,30 @@ for (const file of files) {
   }
   const out = [b.subarray(0, 8)]; // PNG signature
   let i = 8;
+  let last = "";
   while (i < b.length) {
+    if (i + 8 > b.length) {
+      console.error(file + ": truncated chunk header");
+      process.exit(1);
+    }
     const len = b.readUInt32BE(i);
     const type = b.toString("ascii", i + 4, i + 8);
-    const chunk = b.subarray(i, i + 12 + len); // len + type + data + CRC
+    const end = i + 12 + len; // len + type + data + CRC
+    if (end > b.length) {
+      console.error(file + ": chunk overruns file (corrupt/truncated)");
+      process.exit(1);
+    }
+    last = type;
     if (STRIP.has(type)) {
       stripped++;
     } else {
-      out.push(chunk);
+      out.push(b.subarray(i, end));
     }
-    i += 12 + len;
+    i = end;
+  }
+  if (last !== "IEND") {
+    console.error(file + ": missing IEND - not writing");
+    process.exit(1);
   }
   fs.writeFileSync(file, Buffer.concat(out));
   console.log(file + ": clean");
