@@ -11,11 +11,11 @@ title: HandyChecker – Finde deine Balance
   <main id="inhalt">
     <div class="happi-hero">{% include "happi-illus.svg" %}</div>
     <h1>Hi, ich bin Happi 🧡</h1>
-    <p>Hier findest du fünf Themen rund um dein Handy – mit Fakten, Fragen und echten Tipps.
+    <p>Hier wächst Schritt für Schritt dein Handy-Wissen – mit Fakten, Fragen und echten Tipps.
        Nichts wird gespeichert: Diese Seite kann das gar nicht.</p>
     <ul class="topic-cards">
       {%- for topic in topics %}
-      <li><a class="card" href="{{ ('/themen/' + topic.slug + '/') | url }}">{{ topic.title }}</a></li>
+      <li><a class="card" href="{{ ('/themen/' + topic.slug + '/') | url }}">{{ topic.title }}{% if not topic.facts %}<span class="card__soon">bald</span>{% endif %}</a></li>
       {%- endfor %}
     </ul>
   </main>

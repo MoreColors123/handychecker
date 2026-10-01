@@ -63,6 +63,17 @@ p {
   background: var(--color-peach);
 }
 
+/* "bald" badge on cards whose topic has no content yet (WR-04) */
+.card__soon {
+  margin-left: auto;
+  padding: 0 var(--space-sm);
+  border: 2px solid var(--color-ginger);
+  border-radius: var(--radius-md);
+  color: var(--color-ginger-ink);
+  font-size: calc(1rem * var(--font-scale-sm));
+  font-weight: 600;
+}
+
 /* widening only — cards go two-up on larger screens (optional per plan) */
 @media (min-width: 600px) {
   .topic-cards {
