@@ -10,14 +10,10 @@ title: HandyChecker – Finde deine Balance
   {% include "header.njk" %}
   <main id="inhalt">
     <div class="happi-hero">{% include "happi-illus.svg" %}</div>
-    <h1>Hi, ich bin Happi 🧡</h1>
-    <p>Hier wächst Schritt für Schritt dein Handy-Wissen – mit Fakten, Fragen und echten Tipps.
-       Nichts wird gespeichert: Diese Seite kann das gar nicht.</p>
-    <ul class="topic-cards">
-      {%- for topic in topics %}
-      <li><a class="card" href="{{ ('/themen/' + topic.slug + '/') | url }}">{{ topic.title }}{% if not topic.facts %}<span class="card__soon">bald</span>{% endif %}</a></li>
-      {%- endfor %}
-    </ul>
+    <h1>Ich bin Happi, die Handy-Katze.</h1>
+    <p>Hier wächst Schritt für Schritt dein Handy-Wissen – mit Fakten, Fragen und echten Tipps.</p>
+    <p>Nichts wird gespeichert: Diese Seite kann das gar nicht.</p>
+    <a class="quiz-start" href="{{ '/themen/' | url }}">Start</a>
   </main>
   {% include "footer.njk" %}
 </body>

@@ -1,0 +1,26 @@
+---
+title: Themen
+suffixTitle: true
+permalink: "/themen/"
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+  {% include "head.njk" %}
+</head>
+<body>
+  {% include "header.njk" %}
+  <main id="inhalt">
+    <div class="happi-hero">{% include "happi-illus.svg" %}</div>
+    <h1>Ich bin Happi, die Handy-Katze.</h1>
+    <p>Ich hab da mal was ausprobiert: Wenn ich zu lange auf den Bildschirm schaue, werde ich ganz kribbelig im Kopf.</p>
+    <p>Deshalb schauen wir zusammen, wie das bei dir ist – ganz ohne Vorwürfe. Welches Thema möchtest du zuerst anschauen?</p>
+    <ul class="topic-cards">
+      {%- for topic in topics %}
+      <li><a class="card" href="{{ ('/themen/' + topic.slug + '/') | url }}">{{ topic.title }}{% if not topic.facts %}<span class="card__soon">bald</span>{% endif %}</a></li>
+      {%- endfor %}
+    </ul>
+  </main>
+  {% include "footer.njk" %}
+</body>
+</html>

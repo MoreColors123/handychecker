@@ -377,6 +377,8 @@ footer nav a:focus-visible {
   font-family: inherit;
   font-size: calc(1rem * var(--font-scale-md));
   font-weight: 700;
+  text-align: center;               /* also reads as a button when used on an <a> */
+  text-decoration: none;
   cursor: pointer;
 }
 
