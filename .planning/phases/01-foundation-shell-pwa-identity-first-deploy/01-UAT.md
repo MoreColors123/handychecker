@@ -34,11 +34,14 @@ note: Home-screen icon confirmed working/recognizable; user asked whether an in-
 - test: 4
   idea: "Visible Happi illustration inside the app pages (home/topic pages), not just the app icon — mascot gives the friendly guide a face; natural fit for Phase 2's voice spec + first topic page design"
   deferred_at: 2026-10-01
+- test: 5
+  idea: "LEGAL-02 launch gate: owner fills the Impressum placeholders with real parent data before sharing the URL (tracked in 01-USER-SETUP.md; prerequisite for sharing, not a Phase-1 code deliverable)"
+  deferred_at: 2026-10-01
 
 ### 5. LEGAL-02 launch gate (owner)
 expected: The four Impressum bracket placeholders ([Name der Eltern] / [Straße und Hausnummer] / [PLZ] [Ort] / [E-Mail-Adresse der Eltern]) in src/impressum.njk replaced with real parent data, rebuilt, pushed — URL only shared AFTER this
 result: skipped
-reason: "done later — owner will fill the Impressum placeholders in a future session (personal data not available now); launch gate stays OPEN until then"
+reason: "Deferred follow-up: done later — owner will fill the Impressum placeholders in a future session (personal data not available now); launch gate stays OPEN until then"
 
 ## Summary
 
