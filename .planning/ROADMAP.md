@@ -53,7 +53,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. The reference topic page presents facts first in short sections (2–3 sentences per idea, at most one number per section), followed by self-check and tip box, with a clear "weiter geht's" path to the next topic.
   5. A 10–12-year-old reader can complete the reference topic end-to-end unaided on a phone, and her answers are never stored or transmitted (in-memory only).
 
-**Plans**: TBD
+**Plans**: 3 plans
+- [ ] 02-01-PLAN.md — Voice spec (VOICE-01, gating artifact) + reference topic data layer & pagination tracer (SELF-01/TIPS-01 structure)
+- [ ] 02-02-PLAN.md — Widget interactivity: pure-CSS :has() reflection reveal + app.js aria-live enhancer (SELF-01/TIPS-01 live)
+- [ ] 02-03-PLAN.md — Happi identity site-wide: illustration include, header mark, heroes (D-11/D-12, backlog 999.1)
+
 **UI hint**: yes
 
 ### Phase 3: Content Build-Out — Remaining Four Topics
