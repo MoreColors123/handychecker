@@ -304,11 +304,11 @@ footer nav a:focus-visible {
 }
 
 /* Back control: just an arrow, still a full 48px tap target.
-   Order control: the mark renders FIRST in markup, the back arrow LAST —
-   with justify-content: space-between that puts the arrow on the RIGHT on
-   every page. On pages with NO mark (topics overview) the arrow alone sits
-   at the flex END, which is also the right edge. */
-.site-header > .back { order: 10; }
+   ALWAYS on the right edge: auto margin eats the free row space regardless
+   of how many siblings the header has. On the topics overview the arrow is
+   the ONLY in-flow item (skip link is out of flow, mark omitted) — a lone
+   space-between item would sit LEFT, the auto margin fixes exactly that. */
+.site-header > .back { margin-left: auto; }
 
 /* The mark is decoration, NOT a control: no target-size obligation, no growth. */
 .happi-mark {
