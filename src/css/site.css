@@ -8,6 +8,14 @@
   display: none !important;
 }
 
+/* Programmatic focus targets (app.js focuses each step's heading after a
+   step change). No visible ring here — the UA default renders as a heavy
+   black box on Android after every Weiter/answer tap. Real keyboard users
+   tab to links/buttons/inputs, which keep their :focus-visible rings. */
+[tabindex="-1"]:focus {
+  outline: none;
+}
+
 html {
   /* 112.5% of the browser default = 18px (--font-base) at default settings,
      while still honoring the reader's own browser font-size preference */
@@ -193,7 +201,7 @@ footer nav a:focus-visible {
   display: grid;                  /* radio + text stay on ONE row even on narrow screens */
   grid-template-columns: auto minmax(0, 1fr);
   column-gap: var(--space-sm);
-  align-items: start;
+  align-items: center;            /* radio centers against the label tap box */
   margin: 0 0 calc(var(--space-sm) / 2);
 }
 
@@ -211,7 +219,7 @@ footer nav a:focus-visible {
   width: 24px;
   height: 24px;
   accent-color: var(--color-ginger);
-  margin-top: 7px;              /* optisch zur ersten Textzeile ausgerichtet */
+  margin: 0;                    /* grid centers the radio against the label */
 }
 
 /* Locked answer: after the first choice the radios are disabled (app.js).
@@ -373,7 +381,7 @@ footer nav a:focus-visible {
   display: block;
   width: 100%;
   min-height: var(--tap-min);
-  padding: var(--space-sm) var(--space-md);
+  padding: calc(var(--space-sm) / 2) var(--space-md);   /* schmal oben/unten, Luft seitlich */
   border: 2px solid var(--color-ginger);
   border-radius: var(--radius-lg);
   background: var(--color-peach);   /* cocoa auf peach = 8.49:1 */
@@ -382,6 +390,7 @@ footer nav a:focus-visible {
   font-size: calc(1rem * var(--font-scale-md));
   font-weight: 700;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .stepper-next:hover {
@@ -396,11 +405,13 @@ footer nav a:focus-visible {
 }
 
 .quiz-start {
-  display: block;
+  display: inline-flex;        /* Text im Knopf zentriert — keine tote Fläche unten */
+  align-items: center;
+  justify-content: center;
   width: fit-content;          /* Knopf umschließt den Text – kein Strecken */
   margin-inline: auto;         /* zentriert unter der Begrüßung */
   min-height: var(--tap-min);
-  padding: var(--space-sm) var(--space-md);
+  padding: calc(var(--space-sm) / 2) var(--space-md);   /* schmal oben/unten, Luft seitlich */
   border: 2px solid var(--color-ginger);
   border-radius: var(--radius-lg);
   background: var(--color-peach);   /* cocoa auf peach = 8.49:1 */
