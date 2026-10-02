@@ -77,7 +77,8 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Every topic's facts cite named pediatric sources (AAP, Mayo Clinic, sleep research) and association-level claims are hedged ("kann dazu führen") — never "du bist süchtig".
   4. Every topic contains a "Was ist daran eigentlich gut?" balance section that counters one-sided anti-phone messaging.
 
-**Plans**: TBD
+**Plans**: 1 plan
+- [ ] 03-01-PLAN.md — Complete German content for the four remaining topics (Schlaf, Aufmerksamkeit & Fokus, Körper, Datenschutz & Daten): facts/self-check/tips/balance per topic, tracer-first (Schlaf first), voice-gate + built-page calibration gates
 
 ### Phase 4: Offline Decision, Polish & Real-Device QA
 
