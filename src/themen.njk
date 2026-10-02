@@ -16,12 +16,8 @@ suffixTitle: true
   {% include "header.njk" %}
   <main id="inhalt" data-flow>
   {%- if topic.facts %}
-    <div class="step step--intro" data-step>
-    <h1>{{ topic.title }}</h1>
-    <div class="happi-hero">{% include "happi-illus.svg" %}</div>
-    <p class="topic-intro">{{ topic.intro }}</p>
-    </div>
     <div class="step step--facts" data-step>
+    <h1>{{ topic.title }}</h1>
     {%- for fact in topic.facts %}
     <section class="fact">
       <h2>{{ fact.heading }}</h2>

@@ -1,11 +1,14 @@
 {# Shared header partial (D-12): the skip link lives on every page, the 32px
-   Happi mark is decorative (aria-hidden), and the Phase 1 in-app Start card
-   (01-02 decision) is preserved on every page EXCEPT the home page.
-   page.url is the pre-pathPrefix value, so the home guard compares against "/". #}
+   Happi mark is decorative (aria-hidden) — on the topics overview it is left
+   out because the big Happi icon sits right below. The in-app back control is
+   a compact arrow (≥48px tap target) on every page EXCEPT the home page.
+   page.url is the pre-pathPrefix value, so guards compare against "/". #}
   <header class="site-header">
     <a class="skip" href="#inhalt">Zum Inhalt</a>
+    {%- if page.url != "/themen/" %}
     <span class="happi-mark" aria-hidden="true">{% include "happi-illus.svg" %}</span>
+    {%- endif %}
     {%- if page.url != "/" %}
-    <a class="card" href="{{ '/' | url }}">← Start</a>
+    <a class="back" href="{{ '/' | url }}" aria-label="Zurück zur Startseite">←</a>
     {%- endif %}
   </header>

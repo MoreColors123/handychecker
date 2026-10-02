@@ -305,6 +305,35 @@ footer nav a:focus-visible {
   height: 32px;
 }
 
+/* Back control: just an arrow, still a full 48px tap target. */
+.back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--tap-min);
+  min-height: var(--tap-min);
+  padding: 0 var(--space-sm);
+  border-radius: var(--radius-md);
+  color: var(--color-cocoa);
+  font-size: calc(1rem * var(--font-scale-md));
+  font-weight: 700;
+  text-decoration: none;
+}
+.back:hover { background: var(--color-peach); }
+
+/* Semantics-only heading (topics overview keeps its h1 without showing it) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .happi-mark svg {
   display: block;
   width: 32px;
@@ -368,7 +397,8 @@ footer nav a:focus-visible {
 
 .quiz-start {
   display: block;
-  width: 100%;
+  width: fit-content;          /* Knopf umschließt den Text – kein Strecken */
+  margin-inline: auto;         /* zentriert unter der Begrüßung */
   min-height: var(--tap-min);
   padding: var(--space-sm) var(--space-md);
   border: 2px solid var(--color-ginger);
