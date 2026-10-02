@@ -35,6 +35,18 @@ main {
   padding: var(--space-md);
 }
 
+/* Start page (261001-mdd): greeting text + button sit centered, the icon too */
+.entry {
+  text-align: center;
+}
+.entry .happi-hero {
+  display: flex;
+  justify-content: center;
+}
+.entry .quiz-start {
+  display: inline-flex;      /* inline-level → text-align centers it */
+}
+
 h1 {
   font-size: calc(1rem * var(--font-scale-xl));
   line-height: 1.2;
