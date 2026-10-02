@@ -303,6 +303,13 @@ footer nav a:focus-visible {
   padding: var(--space-sm) var(--space-md);
 }
 
+/* Back control: just an arrow, still a full 48px tap target.
+   Order control: the mark renders FIRST in markup, the back arrow LAST —
+   with justify-content: space-between that puts the arrow on the RIGHT on
+   every page. On pages with NO mark (topics overview) the arrow alone sits
+   at the flex END, which is also the right edge. */
+.site-header > .back { order: 10; }
+
 /* The mark is decoration, NOT a control: no target-size obligation, no growth. */
 .happi-mark {
   flex: 0 0 auto;

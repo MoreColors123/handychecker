@@ -5,7 +5,7 @@
    page.url is the pre-pathPrefix value, so guards compare against "/". #}
   <header class="site-header">
     <a class="skip" href="#inhalt">Zum Inhalt</a>
-    {%- if page.url != "/themen/" %}
+    {%- if page.url != "/themen/" and page.url != "/" %}
     <span class="happi-mark" aria-hidden="true">{% include "happi-illus.svg" %}</span>
     {%- endif %}
     {%- if page.url != "/" %}
