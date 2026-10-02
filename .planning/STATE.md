@@ -4,10 +4,10 @@ current_phase: 02
 current_phase_name: Interactive Widgets + Reference Topic (+ Voice Spec)
 status: verifying
 stopped_at: Phase 2 executed + reviewed (9/9 fixed) + verified 17/19; 5 human UAT items pending (02-UAT.md)
-last_updated: "2026-10-01T14:12:14.792Z"
+last_updated: "2026-10-02T07:58:55.427Z"
 last_activity: 2026-10-01
 last_activity_desc: Phase 02 execution started
-state_head: 9111a88661a6efdc80b1f49683ceb035dc690049
+state_head: 0ff7419c99f41c91821283512d0bfab485e9dbe1
 progress:
   total_phases: 4
   completed_phases: 1
@@ -113,6 +113,7 @@ None yet.
 | 3 | merge facts into one step, selfcheck gate closes facts page | 2026-10-01 | 7e2d280 | — |
 | 4 | dedicated quiz page, progress above question, radio grid layout, hidden-attr fix | 2026-10-01 | 335d788 | — |
 | 261001-mdd | start page and topics overview page plus tighter quiz spacing | 2026-10-01 | 9111a88 | [261001-mdd-start-page-and-topics-overview-page-plus](./quick/261001-mdd-start-page-and-topics-overview-page-plus/) |
+| 6 | compact start button, arrow-only back, slim themen header, drop topic landing step | 2026-10-02 | 0ff7419 | — |
 
 ## Deferred Items
 
