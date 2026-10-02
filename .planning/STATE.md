@@ -1,19 +1,19 @@
 ---
 gsd_state_version: "1.0"
-current_phase: 02
-current_phase_name: Interactive Widgets + Reference Topic (+ Voice Spec)
-status: verifying
-stopped_at: Phase 2 executed + reviewed (9/9 fixed) + verified 17/19; 5 human UAT items pending (02-UAT.md)
-last_updated: "2026-10-02T07:58:55.427Z"
-last_activity: 2026-10-01
-last_activity_desc: Phase 02 execution started
-state_head: 0ff7419c99f41c91821283512d0bfab485e9dbe1
+current_phase: 3
+current_phase_name: Content Build-Out — Remaining Four Topics
+status: planning
+stopped_at: Phase 2 complete, ready to plan Phase 3
+last_updated: "2026-10-02T09:52:33.248Z"
+last_activity: 2026-10-02
+last_activity_desc: Phase 2 complete, transitioned to Phase 3
+state_head: 902d20f88ca42bb8a6cadd6a354acc1bece91ddf
 progress:
   total_phases: 4
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 7
   completed_plans: 7
-  percent: 25
+  percent: 50
 ---
 
 # Project State
@@ -23,22 +23,22 @@ progress:
 See: .planning/PROJECT.md (updated 2026-09-28)
 
 **Core value:** The site must make the dangers of smartphone overuse understandable and relatable to a child (10–12), while leaving her feeling empowered to make her own healthier choices — not scared or lectured.
-**Current focus:** Phase 02 — Interactive Widgets + Reference Topic (+ Voice Spec)
+**Current focus:** Phase 03 - Content Build-Out - Remaining Four Topics
 
 ## Current Position
 
-Phase: 02 (Interactive Widgets + Reference Topic (+ Voice Spec)) — EXECUTING
-Plan: 3 of 3
-Status: Phase complete — ready for verification
-Last activity: 2026-10-01 — Completed quick task 261001-mdd: start page + topics overview + tighter quiz spacing
+Phase: 3 — Content Build-Out — Remaining Four Topics
+Plan: Not started
+Status: Ready to plan
+Last activity: 2026-10-02 — Phase 2 complete, transitioned to Phase 3
 
-Progress: [███░░░░░░░] 25%
+Progress: [█████░░░░░] 50%
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 4
+- Total plans completed: 7
 - Average duration: —
 - Total execution time: —
 
@@ -51,6 +51,7 @@ Progress: [███░░░░░░░] 25%
 | 3 Content | TBD | — | — |
 | 4 QA | TBD | — | — |
 | 1 | 4 | - | - |
+| 2 | 3 | - | - |
 
 **Recent Trend:** — (no plans executed yet)
 **Per-Plan Metrics:**
@@ -114,6 +115,10 @@ None yet.
 | 4 | dedicated quiz page, progress above question, radio grid layout, hidden-attr fix | 2026-10-01 | 335d788 | — |
 | 261001-mdd | start page and topics overview page plus tighter quiz spacing | 2026-10-01 | 9111a88 | [261001-mdd-start-page-and-topics-overview-page-plus](./quick/261001-mdd-start-page-and-topics-overview-page-plus/) |
 | 6 | compact start button, arrow-only back, slim themen header, drop topic landing step | 2026-10-02 | 0ff7419 | — |
+| 7 | fix focus outline, start-button padding, radio alignment | 2026-10-02 | 0fa16d5 | — |
+| 8 | start page single icon, back arrow right-aligned everywhere | 2026-10-02 | ab39aad | — |
+| 9 | back arrow pinned right when alone in header | 2026-10-02 | 283ddb1 | — |
+| 10 | center start-page text and button | 2026-10-02 | 337be36 | — |
 
 ## Deferred Items
 
@@ -124,6 +129,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-10-01T12:58:40.812Z
-Stopped at: Phase 2 executed + reviewed (9/9 fixed) + verified 17/19; 5 human UAT items pending (02-UAT.md)
-Resume file: .planning/phases/02-interactive-widgets-reference-topic-voice-spec/02-UAT.md
+Last session: 2026-10-02
+Stopped at: Phase 2 complete (UAT 6/6, security SECURED, verification PASSED), ready to plan Phase 3
+Resume file: None

@@ -13,7 +13,7 @@ HandyChecker is a small, German-language information site for a 10–12 year old
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation Shell, PWA Identity & First Deploy** - Installable PWA shell, design tokens, legal pages, zero-data foundation, first public URL (completed 2026-10-01)
-- [ ] **Phase 2: Interactive Widgets + Reference Topic (+ Voice Spec)** - Reusable self-check + tip-box widgets, locked voice spec, one print-quality topic
+- [x] **Phase 2: Interactive Widgets + Reference Topic (+ Voice Spec)** - Reusable self-check + tip-box widgets, locked voice spec, one print-quality topic (completed 2026-10-02)
 - [ ] **Phase 3: Content Build-Out — Remaining Four Topics** - Complete German content for all five v1 topics (facts-first, sourced, balanced, hedged)
 - [ ] **Phase 4: Offline Decision, Polish & Real-Device QA** - SW decision, real-device install/update validation, shareability, zero-request verification
 
@@ -53,7 +53,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. The reference topic page presents facts first in short sections (2–3 sentences per idea, at most one number per section), followed by self-check and tip box, with a clear "weiter geht's" path to the next topic.
   5. A 10–12-year-old reader can complete the reference topic end-to-end unaided on a phone, and her answers are never stored or transmitted (in-memory only).
 
-**Plans**: 3/3 plans executed
+**Plans**: 3/3 plans complete
 **Wave 1**
 - [x] 02-01-PLAN.md — Voice spec (VOICE-01, gating artifact) + reference topic data layer & pagination tracer (SELF-01/TIPS-01 structure)
 
@@ -123,7 +123,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation Shell, PWA Identity & First Deploy | 4/4 | Complete    | 2026-10-01 |
-| 2. Interactive Widgets + Reference Topic (+ Voice Spec) | 3/3 | In Progress|  |
+| 2. Interactive Widgets + Reference Topic (+ Voice Spec) | 3/3 | Complete    | 2026-10-02 |
 | 3. Content Build-Out — Remaining Four Topics | TBD | Not started | - |
 | 4. Offline Decision, Polish & Real-Device QA | TBD | Not started | - |
 

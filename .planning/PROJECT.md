@@ -18,16 +18,15 @@ The site must make the dangers of smartphone overuse understandable and relatabl
 
 <!-- Shipped and confirmed valuable. -->
 
-(None yet — ship to validate)
+- ✓ Friendly-guide voice that informs and encourages without feeling like a lecture — Phase 2 (voice spec `docs/stimme-und-stil.md` + machine voice gate; user-confirmed via UAT)
+- ✓ Facts + interactive elements: self-check questions and "what should I do?" tip boxes — Phase 2 (widgets built; user-confirmed via UAT)
 
 ### Active
 
 <!-- Current scope. Building toward these. -->
 
-- [ ] Kid-friendly German content on the five v1 topics (screen time, sleep, attention, body, privacy) — social media & feelings deferred to v2 until the child has messaging/social access
+- [ ] Kid-friendly German content on the five v1 topics (screen time, sleep, attention, body, privacy) — social media & feelings deferred to v2 until the child has messaging/social access (screen time shipped in Phase 2; four topics remain — Phase 3)
 - [ ] Works as a home-screen app feel (installable PWA-style) on a smartphone
-- [ ] Facts + interactive elements: self-check questions and "what should I do?" tip boxes
-- [ ] Friendly-guide voice that informs and encourages without feeling like a lecture
 - [ ] German-only content, shareable with friends/classmates
 - [ ] Hosted on a free static host with a real URL she can bookmark
 
@@ -61,13 +60,17 @@ The site must make the dangers of smartphone overuse understandable and relatabl
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Fact-first topics: five in v1, social media deferred to v2 | Child has no social media access yet; topic becomes relevant when access begins | — Pending |
-| Facts + encouragement (mixed goal) | Inform her AND gently motivate healthier habits | — Pending |
-| Focused on age 10–12 | Right depth/level between playful and preachy | — Pending |
-| Friendly-guide voice | Avoids "dad lecture" feel for a parent-built site | — Pending |
-| Home-screen app feel (PWA-style) | She opens it like an app from her phone | — Pending |
-| Free static hosting | Real URL, zero cost, no backend | — Pending |
-| German only, shareable | Serves her and friends; avoids multi-language scope | — Pending |
+| Fact-first topics: five in v1, social media deferred to v2 | Child has no social media access yet; topic becomes relevant when access begins | ✓ Validated (pattern) |
+| Facts + encouragement (mixed goal) | Inform her AND gently motivate healthier habits | ✓ Phase 2 |
+| Focused on age 10–12 | Right depth/level between playful and preachy | ✓ Phase 2 |
+| Friendly-guide voice | Avoids "dad lecture" feel for a parent-built site | ✓ Phase 2 (voice spec + gate) |
+| Home-screen app feel (PWA-style) | She opens it like an app from her phone | ✓ Phase 1 (install live) |
+| Free static hosting | Real URL, zero cost, no backend | ✓ Phase 1 (GitHub Pages) |
+| German only, shareable | Serves her and friends; avoids multi-language scope | ✓ Phase 1 |
+| Voice spec gates ALL copy before writing (VOICE-01) | Anti-lecture quality must be enforceable, not aspirational — machine gate catches imperative/judging copy | ✓ Phase 2 |
+| Topics are JSON data → one template renders all topic pages | Adding topic #7 = adding JSON entries, no page surgery | ✓ Phase 2 (proven) |
+| Guided linear flow on topic pages (2026-10-02 user redesign) | App-like stepping: facts page → Start-gated quiz (own page, "Frage x von 3") → tips → balance → topic cards last; answers lock after first choice; no-JS keeps the full page | ✓ Phase 2 quick rounds |
+| Two-step entry: start page → topics overview at /themen/ (2026-10-02 user design) | Calm welcome (icon + greeting + Start), then topic choice; Happi greeting lives on the overview, not on every topic page | ✓ Phase 2 quick rounds |
 
 ## Evolution
 
@@ -87,4 +90,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-09-25 after initialization*
+*Last updated: 2026-10-02 after Phase 2*
