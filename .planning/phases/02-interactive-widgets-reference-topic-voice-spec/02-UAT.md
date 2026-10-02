@@ -22,7 +22,7 @@ result: pass
 
 ### 3. Happi visible (start + overview heroes, header mark elsewhere)
 expected: The start page and the topics overview show the big Happi illustration; every page EXCEPT the topics overview shows a small Happi mark in the header (on the overview the big icon sits right below instead); the cat is recognizable and cute at hero size, the mark reads clean at 320px width, nothing clipped
-result: [pending]
+result: pass
 
 fix_note: 2026-10-02 — fixes pushed (`ab39aad`): start page header mark removed (only the big hero remains), back arrow right-aligned via flex order. Re-check confirmed pass (283ddb1 pinned the lone arrow right).
 

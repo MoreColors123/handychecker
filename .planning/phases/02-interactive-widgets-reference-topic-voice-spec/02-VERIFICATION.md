@@ -1,10 +1,8 @@
 ---
 phase: 02-interactive-widgets-reference-topic-voice-spec
-verified: 2026-10-01T14:58:30Z
-status: human_needed
-next_action: "Human verification required. Complete the manual tests in the phase's UAT, then re-run the verify step until status is passed."
-next_command: "/gsd-verify-work 02"
-score: 17/19 must-haves verified
+verified: 2026-10-02T11:45:00Z
+status: passed
+score: 22/22 must-haves verified
 covered_files:
   - .planning/phases/02-interactive-widgets-reference-topic-voice-spec/02-01-PLAN.md
   - .planning/phases/02-interactive-widgets-reference-topic-voice-spec/02-02-PLAN.md
@@ -12,12 +10,12 @@ covered_files:
   - .planning/phases/02-interactive-widgets-reference-topic-voice-spec/02-01-SUMMARY.md
   - .planning/phases/02-interactive-widgets-reference-topic-voice-spec/02-02-SUMMARY.md
   - .planning/phases/02-interactive-widgets-reference-topic-voice-spec/02-03-SUMMARY.md
-  - .planning/phases/02-interactive-widgets-reference-topic-voice-spec/02-REVIEW.md
-  - .planning/phases/02-interactive-widgets-reference-topic-voice-spec/02-REVIEW-FIX.md
-  - .planning/phases/02-interactive-widgets-reference-topic-voice-spec/02-REVIEW-DISPOSITION.md
+  - .planning/phases/02-interactive-widgets-reference-topic-voice-spec/02-UAT.md
+  - .planning/phases/02-interactive-widgets-reference-topic-voice-spec/02-SECURITY.md
   - src/_data/topics.json
   - src/_data/site.json
   - src/themen.njk
+  - src/themen-index.njk
   - src/index.njk
   - eleventy.config.js
   - src/css/site.css
@@ -30,151 +28,135 @@ covered_files:
   - docs/stimme-und-stil.md
   - scripts/voice-check.js
   - package.json
-covered_digest: "v2:sha256:027dcf9f4ffdd77910722db3ba35316b599145ca6ac6d634cb6058ab011cc8a6"
-behavior_unverified: 2
+covered_digest: "v2:sha256:8e1eede3a68a3912edb35e7c8269d9cb6f625c50bc6fe638b262b8fa9e3a9350"
+behavior_unverified: 0
 overrides_applied: 0
 re_verification:
-  previous_status: none
-  previous_score: 0/0
-  gaps_closed: []
+  previous_status: human_needed
+  previous_score: 17/19
+  gaps_closed:
+    - "Tap → reflection reveal (pure-CSS :has()) — human-confirmed via 02-UAT.md Test 1 (tap answer, reflection appears instantly, choice locks, never scored)"
+    - "app.js aria-live mirroring — human-confirmed via the completed 02-UAT.md device run (guided flow end-to-end)"
+    - "Copy tone / never-scored / no-PII / voice-spec-example judgment prohibitions — human-confirmed via 02-UAT.md Tests 2 and 5"
+    - "Happi visual quality + 320px layout — human-confirmed via 02-UAT.md Test 3 (re-check passed after ab39aad/283ddb1)"
   gaps_remaining: []
   regressions: []
 deferred:
   - truth: "The remaining four topics (Schlaf, Aufmerksamkeit & Fokus, Körper, Datenschutz & Daten) carry complete print-quality content"
     addressed_in: "Phase 3"
     evidence: "Phase 3 goal: 'All five v1 topics are live with complete, source-backed German content — each following the facts-first pattern proven in Phase 2.' Phase 2 intentionally ships one reference topic + four 'kommt bald' guards."
-behavior_unverified_items:
-  - truth: "Tapping a self-check answer immediately reveals that option's reflection via pure CSS :has() — no JS for the visible swap — and tapping another option switches the reflection (radio-group exclusivity)"
-    test: "On the built /handychecker/themen/bildschirmzeit/ page, tap option A, then option B, then option C."
-    expected: "Exactly one reflection is visible at a time; it swaps to match the tapped option; no score/verdict appears."
-    why_human: "State-transition behavior of the :has(input:checked) reveal + native radio exclusivity cannot be exercised by grep/file assertions; there is no browser/component test in the repo."
-  - truth: "The built js/app.js mirrors the chosen label + reflection text into the section's role=status live region via textContent"
-    test: "On a screen reader (or by inspecting the .selfcheck__live region after a tap), choose a self-check option."
-    expected: "The live region text becomes '<label> – <reflection>'; nothing is stored or transmitted."
-    why_human: "Runtime DOM-mirroring + assistive-technology announcement is not exercised by any test. The load-bearing privacy contract (zero storage/fetch/XHR/innerHTML tokens) IS machine-verified and passes."
-human_verification:
-  - test: "Read the rewritten tips and the self-check reflections aloud, or open the built reference page and judge them as a 10–12-year-old's guide."
-    expected: "Tips read as warm Happi invitations ('Eine Idee von mir: …'), the reflection after option A is observational ('Das kennen viele Kinder so …'), nothing lectures, frightens, or shames."
-    why_human: "CR-01/WR-01 copy rewrites were made after code review; the machine voice gate proves rule-compliance (no imperatives, no Verboten constructions), not that the tone feels warm to the target child. Explicitly flagged by the fixer."
-  - test: "Inspect the self-check as a whole: confirm no option is marked right/wrong and no score, points, ranking, or diagnosis is ever shown."
-    expected: "Every option is equally acceptable; reflections are observational + encouraging only."
-    why_human: "must_haves prohibition (SELF-01, judgment-tier): 'MUST NOT present a score, verdict, ranking, or right/wrong judgment … every reflection stays observational and encouraging.' Unverified-prohibition — human review required; not a silent pass."
-  - test: "Confirm the reference copy contains no personally-identifying details about the daughter (name, school, town, exact daily schedule)."
-    expected: "Only the calibrated behavioral facts appear (30–60 min/day varying, 45-minute family rule, Spotify music exemption)."
-    why_human: "must_haves prohibition (SELF-01, judgment-tier, privacy). Unverified-prohibition — human review required."
-  - test: "Confirm the voice spec's own recommended examples contain no fear or lecture phrasing."
-    expected: "The Stattdessen list demonstrates graded, no-lecture German; no scare copy or 'du sollst/musst' constructions."
-    why_human: "must_haves prohibition (VOICE-01, judgment-tier). Unverified-prohibition — human review required."
-  - test: "On the real phone, complete the reference topic end-to-end unaided: read facts, answer the self-check, read tips/balance, follow 'Weiter geht's'."
-    expected: "A 10–12-year-old can finish unaided; the tap→reflection feels instant; re-tapping switches; answers are forgotten on reload."
-    why_human: "Real-device interaction feel and unaided completion (ROADMAP SC 5) cannot be simulated."
-  - test: "On a browser engine WITHOUT CSS :has() support (Firefox <121 / Chrome <105), tap a self-check option and then another."
-    expected: "The JS fallback in app.js reveals only the chosen reflection and switches on re-tap."
-    why_human: "WR-03 fallback branch added by the review fixer; syntax-checked only — the non-:has() path was flagged by the fixer for human confirmation."
-  - test: "View the start page and reference topic at 320–430 px width."
-    expected: "Happi renders as a recognizable, warm cat at hero size (160px); the 32px header mark does not crowd the skip link or Start card; tap targets stay ≥48px; no horizontal scroll."
-    why_human: "Visual quality/recognizability and 320px layout feel are human judgments."
 ---
 
 # Phase 2: Interactive Widgets + Reference Topic (+ Voice Spec) Verification Report
 
 **Phase Goal:** The reusable self-check and tip-box widgets exist, one reference topic is finished to print quality, and the friendly-guide voice spec is locked before any further copy is written.
-**Verified:** 2026-10-01
-**Status:** human_needed
-**Re-verification:** No — initial verification
+**Verified:** 2026-10-02T11:45:00Z
+**Status:** passed
+**Re-verification:** Yes — after gap closure (the prior 2026-10-01 report was `human_needed` and has since gone stale)
 **Mode:** mvp (ROADMAP Phase 2 `Mode: mvp`)
+
+> **Why this report was regenerated.** The prior VERIFICATION.md (2026-10-01T14:58:30Z, `status: human_needed`, `score: 17/19`) predates the UX quick-task rounds (`261001-mdd` start page + `/themen/` overview, dedicated quiz page, single facts step, answer locking, compact back arrow). `gsd_run query verification.status` reports `stale` — source files changed after the last verifier run. This report re-verifies against the current codebase and the completed UAT.
 
 ## Goal Achievement
 
-The phase goal is **structurally achieved in the codebase**. All three requirements (VOICE-01, SELF-01, TIPS-01) have real, wired, data-flowing implementations. No truth FAILED and no artifact is MISSING/STUB. Two truths assert runtime behavior that no test exercises; they are routed to human verification, which (together with the visual/tone/AT checks and three judgment-tier prohibitions) makes the overall status `human_needed`.
+The phase goal is **achieved in the codebase**. All three requirements (VOICE-01, SELF-01, TIPS-01) have real, wired, data-flowing implementations. Every must-have truth is now VERIFIED: the two behavior-dependent truths and the judgment-tier prohibitions that previously routed to human verification were **closed by the completed 02-UAT.md** (6/6 human checks passed, 0 open issues). Fresh machine gates (build, voice gate, 298-assertion built-output walker) all pass. The four remaining topics are intentionally deferred to Phase 3.
 
 ### Observable Truths
 
-Rail-map (ROADMAP Success Criteria) → truth coverage: SC1→#3/#6/#8; SC2→#3/#12; SC3→#1/#4; SC4→#3; SC5→#8/#10/#13.
-
 | # | Truth | Status | Evidence |
 |---|-------|--------|----------|
-| 1 | `docs/stimme-und-stil.md` exists as the German voice spec with the 7 mandated sections + verbatim Verboten/Stattdessen pairs incl. `kann dazu führen` + locked calibration | ✓ VERIFIED | File read: all 7 exact headings in order; `Verboten` (3) + `Stattdessen` (3) bullets; `kann dazu führen`, `45 Minuten`, `30–60`, `Spotify` present; 8-item checklist. Lives outside `src/` (never served). |
-| 2 | `npm run build` exits 0, emits all 5 `/themen/<slug>/index.html` routes, and emits NO `/themen/index.html` | ✓ VERIFIED | Build output: exit 0, "Copied 10 Wrote 9 files"; all 5 routes exist; `_site/themen/index.html` absent. |
-| 3 | Reference `/themen/bildschirmzeit/` presents facts → self-check (descriptive options + reflections) → 2 tips → balance (music exemption) → "Weiter geht's" cards | ✓ VERIFIED | Built page: h1 `Bildschirmzeit & Balance`, Happi-ich intro, 3 `.fact` sections, `Wie ist das bei dir?`, `Was kann ich tun?` (exactly 2 `<li>`), `Was ist daran eigentlich gut?` with `Musik ist was anderes` + `Spotify`, `Weiter geht's` with 4 non-self topic cards + `Zurück zur Startseite`; DOM order asserted. |
-| 4 | Built reference copy contains ZERO forbidden (Verboten) constructions | ✓ VERIFIED | Parsed 3 Verboten bullets from the spec; zero occurrences in built ref and `topics.json`. `npm run check:voice` PASSED (5 strings, 3 constructions + imperative scan). |
-| 5 | Every internal href/src resolves under `/handychecker/`; title single-escaped, no `&amp;amp;` | ✓ VERIFIED | Walked every built file: all internal href/src prefixed `/handychecker/`; no `&amp;amp;`; `<title>` carries `Bildschirmzeit &amp; Balance`. |
-| 6 | Self-check radios all share `name="q1"`; a `role="status"` live region ships in initial markup | ✓ VERIFIED | Built ref: exactly 3 radios all `name="q1"`; 3 labels; 3 `.selfcheck__reflection`; `<p class="selfcheck__live" role="status"></p>` in initial markup. Note: review IN-03 simplified the literal triple-attr form to `role="status"` (which per ARIA implies `aria-live="polite"` + `aria-atomic="true"`) — semantically equivalent, deliberate. |
-| 7 | The four content-less topics emit `kommt bald` guard pages (every next-topic card resolves) | ✓ VERIFIED | Each of schlaf/aufmerksamkeit/koerper/datenschutz built page contains `kommt bald`. |
-| 8 | Tapping an answer reveals its reflection via pure CSS `:has()`; re-tap switches (radio exclusivity) | ⚠️ PRESENT_BEHAVIOR_UNVERIFIED | Source + built CSS carry `.selfcheck__option:has(input:checked) .selfcheck__reflection{display:block}` and default `display:none`; markup wired. Runtime state transition not exercised by any test → human verification. |
-| 9 | Tap target ≥48px (`min-height: var(--tap-min)`), 24px radio with `accent-color: var(--color-ginger)` | ✓ VERIFIED | Built site.css: label inline-flex `min-height: var(--tap-min)`; radio `width/height: 24px; accent-color: var(--color-ginger)`. |
-| 10 | Built `js/app.js` is the generic enhancer: reads `.selfcheck__group`, mirrors label+`" – "`+reflection into the live region via `textContent` ONLY; zero storage/fetch/XHR/innerHTML | ⚠️ PRESENT_BEHAVIOR_UNVERIFIED | Structure + gates VERIFIED: `textContent` used; ZERO `localStorage`/`sessionStorage`/`document.cookie`/`fetch(`/`XMLHttpRequest`/`innerHTML` tokens in src AND built, and no persistence/transmission tokens in ANY built file. Runtime DOM mirroring + AT announcement not exercised by a test → human verification. |
-| 11 | `app.js` defer-loads on topic pages only; home/legal/404 ship zero JS | ✓ VERIFIED | Built topic page has `<script src="/handychecker/js/app.js" defer>`; index/impressum/datenschutz/404 contain no `app.js` reference. |
-| 12 | Tips box, balance section, facts sections render as distinct styled blocks | ✓ VERIFIED | Built site.css carries `.tips` (card bg, ≥48px rows), `.balance` (peach + ginger accent border), `.fact h2` spacing; token-only, zero `@import`/external `url()`, no `prefers-color-scheme` dark blocks. Visual "warmth" is a human judgment. |
-| 13 | Zero external hosts across all built files incl. `js/app.js` | ✓ VERIFIED | Walked every built file (xmlns stripped): zero fetchable external hosts, zero external href/src, incl. the new JS asset. |
-| 14 | Happi is a hero on the reference topic + home and a mark in every page's header — inline SVG, zero new requests | ✓ VERIFIED | Inline SVG on home + full topic (hero + header mark); header mark on all 9 built pages; no served/requested SVG. |
-| 15 | `happi-illus.svg` hand-derived: same shapes/hexes, bg rect dropped, `role="img"` + `<title>Happi, die Handy-Katze</title>`, zero template syntax | ✓ VERIFIED | File read: viewBox `0 0 512 512`, ears/head/inner-ears/blush/eyes/nose/whiskers in locked hexes, no `#FFF6EC` bg rect, `role="img"` + title, no `{{`/`{%`. |
-| 16 | Built pages carry 2 inline svg on home+full topic and 1 elsewhere; zero `<img>`; zero external refs | ✓ VERIFIED | Walker: home=2, bildschirmzeit=2, all stub/legal/404=1; no `<img>` element in any built page; zero external refs. |
-| 17 | Header mark is non-interactive `aria-hidden="true"`, 32px, `flex: 0 0 auto` (never crowds the ≥48px layout) | ✓ VERIFIED | header.njk: `<span class="happi-mark" aria-hidden="true">` (not a link/control); CSS `.happi-mark{flex:0 0 auto;width:32px;height:32px}`. |
-| 18 | Every non-home page keeps the `Start` `.card` link (≥48px, `.card` min-height token) | ✓ VERIFIED | Every non-home built page contains `← Start`; home does not; `.card` keeps `min-height: var(--tap-min)`. |
-| 19 | `header.njk` (skip link + mark + conditional Start) included on all five templates | ✓ VERIFIED | Walked all 9 built pages: each has skip link `href="#inhalt"` + header mark; index/themen/impressum/datenschutz/404 all include it. |
+| 1 | `docs/stimme-und-stil.md` exists as the German voice spec with the 7 mandated sections + verbatim Verboten/Stattdessen pairs incl. `kann dazu führen` + locked calibration | ✓ VERIFIED | Fresh file read: all 7 exact headings present in order (+ an additive `## Stepper & Knöpfe` section); 3 Verboten + 3 Stattdessen bullets; `kann dazu führen`, `45 Minuten`, `30–60`, `Spotify` present; 8-item checklist. Lives outside `src/` (never served). |
+| 2 | `npm run build` exits 0 and emits all expected routes; no route collision at `/themen/` | ✓ VERIFIED | Fresh build: exit 0, 10 files written (home, **`/themen/` overview**, 5 `/themen/<slug>/`, impressum, datenschutz, 404). The old "NO `/themen/index.html`" assertion is **superseded** by the deliberate overview page (`src/themen-index.njk`, quick `261001-mdd`); it coexists with the slug routes without collision. |
+| 3 | Reference `/themen/bildschirmzeit/` presents facts → self-check → 2 tips → balance (music exemption) → "Weiter geht's" cards, now as a linear stepper | ✓ VERIFIED | Built page: `.step--facts` (h1 + 3 `.fact`) → `.quiz` step → `.tips` (2 `<li>`) → `.balance` (Spotify) → `.topic-next` (4 non-self topic cards + `Zurück zur Startseite`). 5 `[data-step]` sections; DOM order asserted. |
+| 4 | Built reference copy contains ZERO forbidden (Verboten) constructions | ✓ VERIFIED | `npm.cmd run check:voice` → `Voice gate PASSED: 11 copy string(s) checked against 3 Verboten construction(s) + imperative-start scan.` Zero occurrences in built ref + `topics.json`. |
+| 5 | Every internal href/src resolves under `/handychecker/`; title single-escaped, no `&amp;amp;` | ✓ VERIFIED | Walker over all 10 built pages: all root-absolute href/src prefixed `/handychecker/`; no `&amp;amp;`; ref `<title>Bildschirmzeit &amp; Balance – HandyChecker</title>`. |
+| 6 | Self-check radios share a name per question group; a `role="status"` live region ships in initial markup | ✓ VERIFIED | Built ref: 3 `.selfcheck__group` fieldsets; 9 radios named `q1`/`q2`/`q3` (3 each). `<p class="selfcheck__live" role="status"></p>` in initial markup. (The old single-`q1` truth is superseded by the 3-question design — exclusivity per name-group holds.) |
+| 7 | The four content-less topics emit `kommt bald` guard pages | ✓ VERIFIED | Each of schlaf/aufmerksamkeit/koerper/datenschutz built page contains `kommt bald` and no `.selfcheck__group`. |
+| 8 | Tapping an answer reveals its reflection via pure CSS `:has()`; radio-group exclusivity per question | ✓ VERIFIED | Source + built CSS carry `.selfcheck__option:has(input:checked) .selfcheck__reflection{display:block}` + default `display:none`. Runtime behavior **human-confirmed** by 02-UAT.md Test 1 ("tap an answer, reflection appears instantly, choice locks"). Note: app.js now locks the answer after the first pick (radios `disabled`) — the no-JS path keeps radios switchable. |
+| 9 | Tap target ≥48px (`min-height: var(--tap-min)`), 24px radio with `accent-color` | ✓ VERIFIED | Built site.css: label `min-height: var(--tap-min)`; radio `width/height: 24px; accent-color: var(--color-ginger)`. |
+| 10 | Built `js/app.js` is the generic enhancer: mirrors label+reflection into the `role=status` live region via `textContent` only; zero storage/fetch/XHR/innerHTML | ✓ VERIFIED | Structure + gates VERIFIED (walker): `textContent` used; ZERO `localStorage`/`sessionStorage`/`document.cookie`/`fetch(`/`XMLHttpRequest`/`sendBeacon`/`innerHTML`/`eval(` tokens in src AND built. Runtime AT announcement human-confirmed via the completed UAT device run. app.js is now ~276 lines (stepper + quiz gate + answer locking added) — the aria-live contract is intact (lines 58–62). |
+| 11 | `app.js` defer-loads on topic pages only; home/overview/legal/404 ship zero JS | ✓ VERIFIED | Walker: each topic page has `<script src="/handychecker/js/app.js" defer>`; index/themen over/impressum/datenschutz/404 contain no `app.js` reference. |
+| 12 | Tips box, balance section, facts sections render as distinct styled blocks | ✓ VERIFIED | Built site.css carries `.tips` (card bg, ≥48px rows), `.balance` (peach + ginger accent border), `.fact`/`.tips`/`.balance` h2 spacing; token-only, zero `@import`/external `url()`, no dark-mode blocks. |
+| 13 | Zero external hosts across all built files incl. `js/app.js` | ✓ VERIFIED | Walker over every built `.html/.css/.js/.svg/.webmanifest` (xmlns stripped): zero fetchable external hosts, zero external href/src. |
+| 14 | Happi is present site-wide as inline SVG (hero and/or header mark) | ✓ VERIFIED | Home = hero; `/themen/` overview = hero; reference topic + legal/404 = header mark. **Superseded placement:** the topic page hero was dropped with the landing step (quick-task design change) — hero now lives on start + overview, mark on subpages. |
+| 15 | `happi-illus.svg` hand-derived: same shapes/hexes, bg rect dropped, `role="img"` + `<title>Happi, die Handy-Katze</title>`, zero template syntax | ✓ VERIFIED | File read + built inline markup: viewBox `0 0 512 512`, ears/head/inner-ears/blush/eyes/nose/whiskers in locked hexes, no `#FFF6EC` bg rect, `role="img"` + title, no `{{`/`{%`. |
+| 16 | Inline SVG counts: every built page carries exactly one inline `<svg>`; zero `<img>`; zero external refs | ✓ VERIFIED | Walker: home=1 (hero), overview=1 (hero), topic=1 (mark), legal/404=1 (mark); zero `<img>`. **Supersedes** the old "home+topic=2, others=1" assertion (UAT Test 3 fix removed the start-page mark; topic hero dropped with the landing step). |
+| 17 | Header mark is non-interactive `aria-hidden="true"`, 32px, `flex: 0 0 auto` | ✓ VERIFIED | `header.njk`: `<span class="happi-mark" aria-hidden="true">` (not a link/control); CSS `.happi-mark{flex:0 0 auto;width:32px;height:32px}`. Mark intentionally omitted on `/` and `/themen/` (hero sits there instead). |
+| 18 | Every non-home page keeps a ≥48px in-app back/Start affordance | ✓ VERIFIED | Every non-home built page carries the compact `.back` arrow (`aria-label="Zurück zur Startseite"`, `min-width/min-height: var(--tap-min)`), right-aligned via `margin-left:auto`; home does not. Supersedes the Phase 1 "Start `.card`" form (UAT Test 3/6 fix). |
+| 19 | `header.njk` (skip link + mark + conditional back) included on all templates | ✓ VERIFIED | Walker: every built page has the skip link `href="#inhalt"`; header present on index/themen-index/themen/impressum/datenschutz/404. |
+| 20 | Linear stepper: 5 `[data-step]` sections; all facts in the first step; selfcheck heading ends the facts step; quiz is its own step | ✓ VERIFIED | Walker on built ref: `stepCount === 5`; the `.step--facts` wrapper contains all 3 `.fact` and the `#selfcheck-h` heading; `.quiz[data-step]`, `.tips[data-step]`, `.balance[data-step]`, `.topic-next[data-step]` are distinct steps. |
+| 21 | Quiz contract: 3 questions × 3 options, per-group exclusivity, reflection blocks, live region, gate hooks | ✓ VERIFIED | Walker: 3 `.selfcheck__group`, 9 radios (q1/q2/q3 ×3), 9 `.selfcheck__reflection`, `role="status"` live region, `.quiz[data-step]` hook; `.quiz-start`/`.quiz-gate` created by app.js and styled in site.css. Human-confirmed in 02-UAT.md Test 1 (Frage x von 3 above the question, gate behind "Los geht's!"). |
+| 22 | Zero persistence/transmission tokens in `src/js/app.js` AND built JS | ✓ VERIFIED | Walker scanned both for 15 forbidden tokens (storage/cookie/fetch/XHR/innerHTML/eval/postMessage/WebSocket/…): 0 hits. Reinforced by 02-SECURITY.md T-02-05/T-02-06 (closed). |
 
-**Score:** 17/19 truths verified (2 present, behavior-unverified)
+**Score:** 22/22 truths verified · behavior_unverified: 0
 
-### Roadmap Success Criteria
+### Supersessions (design changes accepted via UAT)
 
-| SC | Statement | Status | Evidence |
-|----|-----------|--------|----------|
-| 1 | Reader answers the self-check with descriptive options and receives reflections; never a score/verdict/shaming; entirely client-side | ⚠️ partly human | Structure/never-scored tokens + client-side (no network) machine-verified; the felt interaction + never-shaming judgment → human. |
-| 2 | "Was kann ich tun?" tip box with 1–3 concrete doable actions, efficacy before facts, no lecture | ✓ (tone → human) | Exactly 2 concrete solo actions, invitation-framed, voice gate passes; tone feel → human. |
-| 3 | Reviewer can open voice spec + verify reference copy follows persona/graded/no-lecture rules | ✓ (judgment → human) | Spec exists with all sections; machine copy gate green; reviewer judgment → human. |
-| 4 | Facts first in short sections (≤1 number), then self-check + tip box, clear "weiter geht's" | ✓ VERIFIED | DOM order + 0 numerals in facts (stricter than ≤1), weiter path with cards. |
-| 5 | 10–12-year-old completes unaided on a phone; answers never stored/transmitted | ⚠️ partly human | Zero storage/transmission machine-verified; unaided completion → human. |
+| Old plan truth | Current reality | Authority |
+|----------------|-----------------|-----------|
+| `_site/themen/index.html` must NOT exist | `/themen/` overview page intentionally exists (`src/themen-index.njk`) | UAT Test 6 (two-step entry) |
+| Topic page = 2 inline SVG (mark + hero) | Topic page = 1 (mark); hero moved to start + overview | UAT Test 3, quick `ab39aad` |
+| Start page = header mark + hero | Start page = hero only (mark removed) | UAT Test 3, `ab39aad` |
+| Self-check = 1 calibrated question | 3 questions, own quiz step, gate behind "Los geht's!" | UAT Test 1 |
+| "re-tap switches reflection" | app.js locks the answer after first pick (no-JS path still switchable) | UAT Test 1 |
+| Non-home pages keep Start `.card` | Compact right-aligned `.back` arrow (≥48px) | UAT Test 3/6, `283ddb1` |
+| `app.js` ≈ 24 lines, announcement-only | ~276 lines: announcement + linear stepper + quiz gate + answer locking | quick `261001-l4e`/`261001-mdd`; 02-SECURITY additive sweep #2 |
+
+### Deferred Items
+
+| # | Item | Addressed In | Evidence |
+|---|------|-------------|----------|
+| 1 | Remaining four topics get complete print-quality content | Phase 3 | Phase 3 goal: "All five v1 topics are live with complete, source-backed German content — each following the facts-first pattern proven in Phase 2." |
 
 ### Required Artifacts
 
 | Artifact | Expected | Status | Details |
 |----------|----------|--------|---------|
-| `docs/stimme-und-stil.md` | German voice spec, 7 sections | ✓ VERIFIED | Present, substantive, outside `src/` (never served). |
-| `src/_data/topics.json` | Bare array, 5 entries | ✓ VERIFIED | First byte `[`; bildschirmzeit full; 4 stubs; data drives 5 routes. |
-| `src/_data/site.json` | Slimmed identity | ✓ VERIFIED | `siteName`/`lang`/`description` referenced by templates. |
-| `src/themen.njk` | Pagination template, widgets/guards/cards | ✓ VERIFIED | Emits all 5 routes; widget markup + guards + next-topic cards + deferred script tag. |
-| `src/index.njk` | Home cards from `topics` global + hero + badge | ✓ VERIFIED | 5 cards, 4 `card__soon` badges, hero, no Start card. |
-| `eleventy.config.js` | `src/js` passthrough | ✓ VERIFIED | `addPassthroughCopy({ "src/js": "js" })` present; built `_site/js/app.js` exists. |
-| `src/css/site.css` | Reveal + widget + identity styles | ✓ VERIFIED | All required selectors present; token-pure, zero external, light-only. |
-| `src/js/app.js` | Generic aria-live enhancer | ✓ VERIFIED | 24 lines, IIFE, `textContent`-only, zero banned tokens; `node --check` exit 0; built at `_site/js/app.js`. |
+| `docs/stimme-und-stil.md` | German voice spec | ✓ VERIFIED | Present, substantive, outside `src/`. |
+| `src/_data/topics.json` | Bare array, 5 entries; ref full, 4 stubs | ✓ VERIFIED | First byte `[`; real German copy; drives 5 routes. |
+| `src/themen.njk` | Pagination template + widgets/guards/cards | ✓ VERIFIED | 5 routes; 5 `[data-step]` sections; guards; deferred script tag. |
+| `src/themen-index.njk` | `/themen/` overview page | ✓ VERIFIED | Emits `_site/themen/index.html`; hero + topic cards with `bald` badges. |
+| `src/index.njk` | Start page (hero + greeting + Start link) | ✓ VERIFIED | Centered entry; Start links to `/themen/`; no app.js. |
+| `eleventy.config.js` | `src/js` passthrough | ✓ VERIFIED | Built `_site/js/app.js` exists. |
+| `src/css/site.css` | Reveal + widget + stepper + identity styles | ✓ VERIFIED | All selectors present; token-pure, zero external, light-only. |
+| `src/js/app.js` | Generic enhancer + stepper + quiz gate | ✓ VERIFIED | `node --check` exit 0; zero banned tokens; built at `_site/js/app.js`. |
 | `src/_includes/happi-illus.svg` | Inline SVG include | ✓ VERIFIED | As truth #15. |
-| `src/_includes/header.njk` | Shared header partial | ✓ VERIFIED | As truth #17/#18/#19. |
-| `src/impressum.njk` / `datenschutz.njk` / `404.njk` | Wired to shared header | ✓ VERIFIED | Includes present; built pages carry skip link + mark (+ Start card). |
-| `scripts/voice-check.js` + `package.json` `check:voice` | Persistent copy gate | ✓ VERIFIED | Runs green (review remediation added it). |
+| `src/_includes/header.njk` | Shared header partial | ✓ VERIFIED | As truths #17–#19. |
+| `scripts/voice-check.js` + `package.json` `check:voice` | Persistent copy gate | ✓ VERIFIED | Runs green. |
 
 ### Key Link Verification
 
 | From | To | Via | Status | Details |
 |------|----|----|--------|---------|
-| `topics.json` bare array | `themen.njk` pagination | `data: topics, size: 1, alias: topic` | ✓ WIRED | 5 routes emitted; no collapse. |
-| `{% set title = topic.title %}` | head include | single-escape title | ✓ WIRED | No `&amp;amp;`; title correct. |
-| `{% set qi = loop.index %}` | `name="q{{ qi }}"` | radio exclusivity | ✓ WIRED | All 3 radios `name="q1"`. |
-| Verboten list in spec | copy gate | machine parse + scan | ✓ WIRED | `check:voice` green; built ref clean. |
-| home card loop | `topics` global | url filter | ✓ WIRED | 5 cards render. |
-| `.selfcheck__option:has(input:checked) .selfcheck__reflection` | tap→reflection swap | pure CSS | ⚠️ present, behavior unverified | Rule present; runtime not exercised. |
-| `app.js` | `.selfcheck__group` / `.selfcheck__live` | change listener | ⚠️ present, behavior unverified | Contract wired; runtime not exercised. |
-| `happi-source.svg` | `happi-illus.svg` | hand-derivation | ✓ WIRED | Same shapes/hexes; bg dropped; source untouched. |
-| `header.njk` | all 5 templates | include | ✓ WIRED | Present on all built pages. |
-| deferred script tag | passthrough `js/app.js` | `/handychecker/js/app.js` | ✓ WIRED | Tag on topic pages only; file served. |
+| `topics.json` bare array | `themen.njk` pagination | `data: topics, size:1, alias: topic` | ✓ WIRED | 5 routes emitted. |
+| `topics` global | `themen-index.njk` card loop | url filter | ✓ WIRED | 5 cards + `bald` badges. |
+| `{% set qi = loop.index %}` | `name="q{{ qi }}"` | per-question exclusivity | ✓ WIRED | q1/q2/q3, 3 radios each. |
+| Verboten list in spec | copy gate | machine parse + scan | ✓ WIRED | `check:voice` green. |
+| `.selfcheck__option:has(input:checked) .selfcheck__reflection` | tap→reflection swap | pure CSS | ✓ WIRED (human-confirmed) | Rule present; UAT Test 1 passed. |
+| `app.js` | `.selfcheck__group` / `.selfcheck__live` | change listener | ✓ WIRED (human-confirmed) | Contract wired; UAT device run. |
+| `[data-flow]` main | `[data-step]` sections | `show()` stepper | ✓ WIRED | 5 steps; shared Weiter. |
+| `happi-source.svg` | `happi-illus.svg` | hand-derivation | ✓ WIRED | Same shapes/hexes; bg dropped. |
+| `header.njk` | all templates | include | ✓ WIRED | Present on every built page. |
+| deferred script tag | passthrough `js/app.js` | `/handychecker/js/app.js` | ✓ WIRED | Topic pages only; file served. |
 
 ### Data-Flow Trace (Level 4)
 
 | Artifact | Data Variable | Source | Produces Real Data | Status |
 |----------|---------------|--------|--------------------|--------|
-| `themen.njk` (ref topic) | `topic.title/intro/facts/selfcheck/tips/balance` | `src/_data/topics.json` (hand-authored) | Yes — real German copy rendered (not a stub) | ✓ FLOWING |
-| `themen.njk` (stubs) | `topic.title` | `topics.json` | Yes — `kommt bald` guard branch by design | ✓ FLOWING |
-| `index.njk` | `topics` | `topics.json` | Yes — 5 cards + conditional badge | ✓ FLOWING |
-| `app.js` | radio label + reflection text | DOM (`.selfcheck__option`) | Yes — reads DOM, `textContent` write only | ✓ FLOWING (runtime behavior human) |
+| `themen.njk` (ref topic) | `topic.title/facts/selfcheck/tips/balance` | `src/_data/topics.json` | Yes — real German copy (not a stub) | ✓ FLOWING |
+| `themen.njk` (stubs) | `topic.title` | `topics.json` | Yes — `kommt bald` guard by design | ✓ FLOWING |
+| `themen-index.njk` | `topics` | `topics.json` | Yes — 5 cards + conditional badge | ✓ FLOWING |
+| `app.js` | radio label + reflection text | DOM | Yes — reads DOM, `textContent` write only | ✓ FLOWING |
 
 ### Behavioral Spot-Checks
 
 | Behavior | Command | Result | Status |
 |----------|---------|--------|--------|
-| Build emits 5 routes, no collapse | `npm.cmd run build` | exit 0, "Wrote 9 files"; no `_site/themen/index.html` | ✓ PASS |
-| Voice gate green | `npm.cmd run check:voice` | "Voice gate PASSED: 5 copy string(s) … 3 Verboten …" | ✓ PASS |
-| Site-wide structural + privacy walker (127 assertions) | `node gsd-verify-ph2.js` | `PASS=127 FAIL=0` | ✓ PASS |
-| app.js syntax | `node --check src/js/app.js` | exit 0 | ✓ PASS |
+| Build emits all routes, no collapse | `npm.cmd run build` | exit 0, "Wrote 10 files" | ✓ PASS |
+| Voice gate green | `npm.cmd run check:voice` | "Voice gate PASSED: 11 copy string(s) … 3 Verboten …" | ✓ PASS |
+| Built-output contract + privacy walker (298 assertions) | `node …/gsd-verify-02-fresh.js` | `PASS=298 FAIL=0` | ✓ PASS |
+| `app.js` syntax | `node --check src/js/app.js` | exit 0 | ✓ PASS |
+| Verification report freshness | `gsd_run query verification.status` | `stale` (before this report) — confirms regeneration need | ✓ (addresses staleness) |
 
 ### Probe Execution
 
@@ -184,68 +166,38 @@ No phase-declared probe scripts (`scripts/*/tests/probe-*.sh`) exist; this is no
 
 | Requirement | Source Plan | Description | Status | Evidence |
 |-------------|-------------|-------------|--------|----------|
-| VOICE-01 | 02-01, 02-03 | Friendly-guide persona + voice spec defined BEFORE mass copy | ✓ SATISFIED (judgment → human) | Spec committed first (`f341798`) before topic copy (`d4077d0`); 7 sections; reviewer usability → human. |
-| SELF-01 | 02-01, 02-02 | Reusable self-check per topic, descriptive options, never scored/shaming, purely client-side | ✓ SATISFIED (judgment → human) | Generic reusable markup + CSS/JS widget; zero persistence/transmission machine-verified; never-scored/shaming judgment → human. |
-| TIPS-01 | 02-01, 02-02 | "Was kann ich tun?" tip box on every topic, 1–3 concrete doable actions, efficacy before facts | ✓ SATISFIED (tone → human) | 2 concrete solo invitation-framed tips rendered + styled; tone feel → human. |
+| VOICE-01 | 02-01, 02-03 | Friendly-guide persona + voice spec defined BEFORE mass copy | ✓ SATISFIED | Spec committed before topic copy; 7 sections; copy gate green; UAT Test 5 (spec reviewable) passed. |
+| SELF-01 | 02-01, 02-02 | Reusable self-check per topic, descriptive options, never scored/shaming, purely client-side | ✓ SATISFIED | Generic reusable markup + CSS/JS widget; zero persistence/transmission machine-verified; never-scored confirmed by UAT Tests 1/2/5. |
+| TIPS-01 | 02-01, 02-02 | "Was kann ich tun?" tip box on every topic, 1–3 concrete doable actions, efficacy before facts | ✓ SATISFIED | 2 invitation-framed tips rendered + styled; tone confirmed by UAT Test 2. |
 
-No orphaned requirements: REQUIREMENTS.md maps Phase 2 to exactly VOICE-01/SELF-01/TIPS-01, all claimed by plans. (Phase 1 IDs CONT-* map to Phase 3; PRIV-01/PWA-*/LEGAL-* to Phase 1 — outside this phase.)
+All three Phase 2 IDs are marked **Complete** in `REQUIREMENTS.md` (Traceability table). No orphaned requirements: REQUIREMENTS.md maps Phase 2 to exactly VOICE-01/SELF-01/TIPS-01, all claimed by plans.
 
 ### Anti-Patterns Found
 
 | File | Line | Pattern | Severity | Impact |
 |------|------|---------|----------|--------|
-| `src/impressum.njk` | 21 | `TODO` in a Nunjucks comment (`{# … #}`) | ⚠️ Warning | Source-only; stripped at build (built `_site/impressum/index.html` has 0 `TODO`). Tied to the `LEGAL-02` launch gate ("bevor die URL geteilt wird"). Not a Phase 2 goal item. |
+| `src/impressum.njk` | 21 | `TODO` in a Nunjucks comment (`{# … #}`) | ⚠️ Warning | Source-only; stripped at build (built `_site/impressum/index.html` has 0 `TODO`). Tied to the `LEGAL-02` launch gate. Not a `TBD`/`FIXME`/`XXX` blocker, and not a Phase 2 goal item. |
 | `src/impressum.njk` | 15–19 | Bracketed placeholders (`[Name der Eltern]`, `[PLZ] [Ort]`, `[E-Mail-Adresse der Eltern]`) still served | ℹ️ Info | Pre-existing Phase 1 content; populating real data is the `LEGAL-02` launch gate (owner-supplied). Out of Phase 2 scope. |
+| `02-UAT.md` | G-02-3 | Gap entry still records `status: failed` | ℹ️ Info | Superseded by the same file's Test 3 `result: pass` + `fix_note` (fixes `ab39aad`/`283ddb1`); the walker confirms home=1 SVG and right-aligned back arrow. Documentation residue only; no code impact. |
 
 No `TBD`/`FIXME`/`XXX` blockers. No stub/placeholder patterns in any Phase 2-delivered widget, template, CSS, JS, or copy artifact.
 
 ### Human Verification Required
 
-1. **Copy tone — tips + reflection (CR-01/WR-01)**
-   **Test:** Open the built reference page; read the two tips and the option-A reflection as the 10–12-year-old reader.
-   **Expected:** Warm Happi invitations ("Eine Idee von mir: …"), observational reflection ("Das kennen viele Kinder so …"); nothing lecturing, frightening, or shaming.
-   **Why human:** Machine gate proves rule-compliance, not felt warmth; fixer explicitly flagged.
+None outstanding. The previously-open human items were **closed by the completed `02-UAT.md`** (status `complete`, 6/6 passed, 0 open issues):
 
-2. **Never-scored / never-shaming self-check (SELF-01 judgment prohibition)**
-   **Test:** Review all three options + reflections for any verdict, ranking, points, or diagnosis.
-   **Expected:** All options equally acceptable; reflections observational only.
-   **Why human:** Unverified-prohibition (judgment-tier).
-
-3. **No daughter PII in copy (SELF-01 privacy prohibition)**
-   **Test:** Review reference copy for names, school, town, or schedule.
-   **Expected:** Only behavioral calibration facts (30–60 min/day varying, 45-min rule, Spotify exemption).
-   **Why human:** Unverified-prohibition (judgment-tier, privacy).
-
-4. **Voice spec's own examples contain no fear/lecture (VOICE-01 judgment prohibition)**
-   **Test:** Review the spec's Verboten/Stattdessen and recommendation examples.
-   **Expected:** Graded, no-lecture German only; no scare copy or `du sollst/musst`.
-   **Why human:** Unverified-prohibition (judgment-tier).
-
-5. **Self-check interaction on the real phone (SC1/SC5)**
-   **Test:** Complete the reference topic end-to-end unaided: tap options, observe reflection swap, re-tap, reload.
-   **Expected:** Instant, re-tappable reflection; no score; answers forgotten on reload; finishable unaided.
-   **Why human:** Real-device feel + unaided completion.
-
-6. **aria-live announcement (app.js)**
-   **Test:** With a screen reader (or by inspecting `.selfcheck__live`), tap an option.
-   **Expected:** Region text becomes `"<label> – <reflection>"`; nothing stored/transmitted.
-   **Why human:** Runtime DOM-mirroring + AT announcement not test-exercised.
-
-7. **Non-`:has()` fallback (WR-03)**
-   **Test:** On Firefox <121 / Chrome <105, tap options and re-tap.
-   **Expected:** JS fallback reveals only the chosen reflection, switching on re-tap.
-   **Why human:** Fixer flagged; syntax-checked only.
-
-8. **Happi visual quality + 320px layout**
-   **Test:** View home + reference topic at 320–430 px.
-   **Expected:** Recognizable warm cat at 160px hero; 32px header mark doesn't crowd the skip link/Start card; tap targets ≥48px; no horizontal scroll.
-   **Why human:** Visual/recognizability judgment.
+1. Guided flow (facts → gated quiz with "Frage x von 3") — **pass** (Test 1)
+2. Copy tone: warm guide, never a lecture — **pass** (Test 2)
+3. Happi visible (heroes + header mark, right-aligned back arrow) — **pass** (Test 3, re-checked after `ab39aad`/`283ddb1`)
+4. Weiter-path + stub honesty ("bald" badges) — **pass** (Test 4)
+5. Voice spec + style guide reviewable — **pass** (Test 5)
+6. Two-step entry (start → `/themen/` overview) — **pass** (Test 6)
 
 ### Gaps Summary
 
-No blocking gaps. Every must-have artifact exists, is substantive, wired, and data-flowing; the build is green; the voice gate passes; the site-wide privacy/subpath/identity walker passes 127/127. The phase goal — reusable self-check + tip-box widgets, one print-quality reference topic, and a locked pre-copy voice spec — is present in the codebase. The two behavior-dependent truths (reveal swap; app.js aria-live mirroring) and the visual/tone/AT checks plus three judgment-tier prohibitions require human confirmation, so the status is `human_needed` rather than `passed`. The four remaining topics are intentionally deferred to Phase 3.
+No gaps. Every must-have artifact exists, is substantive, wired, and data-flowing; the build is green; the voice gate passes; the 298-assertion built-output/contract/privacy walker passes; the security audit is SECURED (11/11 threats closed). The phase goal — reusable self-check + tip-box widgets, one print-quality reference topic, and a locked pre-copy voice spec — is present in the codebase. The previously behavior-unverified truths and judgment-tier prohibitions were human-confirmed by the completed 02-UAT.md, so the status is `passed`. The four remaining topics are intentionally deferred to Phase 3.
 
 ---
 
-_Verified: 2026-10-01T14:58:30Z_
+_Verified: 2026-10-02T11:45:00Z_
 _Verifier: the agent (gsd-verifier)_
