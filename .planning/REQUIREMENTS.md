@@ -9,10 +9,10 @@ Anforderungen für den ersten Launch. Jede Anforderung mappt auf Roadmap-Phasen.
 
 ### Inhalt (CONT)
 
-- [ ] **CONT-01**: Die Website bietet Kind-gerechte deutsche Inhalte zu den fünf Themenbereichen – Bildschirmzeit & Balance, Schlaf, Aufmerksamkeit & Fokus, Körper (Haltung/Augen), Datenschutz & Daten
-- [ ] **CONT-02**: Jedes Thema folgt dem Muster „Fakten zuerst, kurze Abschnitte" – 2–3 Sätze pro Idee, maximal eine Zahl pro Abschnitt, keine Textwände
-- [ ] **CONT-03**: Fakten pro Thema sind quellenbasiert (pädiatrische Quellen wie AAP/Mayo/Schlaf-Forschung), abgesicherte und Relativierungs-Hedging bei Korrelationsaussagen
-- [ ] **CONT-04**: Jedes Thema enthält einen Balance-Abschnitt („Was ist daran eigentlich gut?") gegen einseitige Anti-Handy-Botschaften
+- [x] **CONT-01**: Die Website bietet Kind-gerechte deutsche Inhalte zu den fünf Themenbereichen – Bildschirmzeit & Balance, Schlaf, Aufmerksamkeit & Fokus, Körper (Haltung/Augen), Datenschutz & Daten
+- [x] **CONT-02**: Jedes Thema folgt dem Muster „Fakten zuerst, kurze Abschnitte" – 2–3 Sätze pro Idee, maximal eine Zahl pro Abschnitt, keine Textwände
+- [x] **CONT-03**: Fakten pro Thema sind quellenbasiert (pädiatrische Quellen wie AAP/Mayo/Schlaf-Forschung), abgesicherte und Relativierungs-Hedging bei Korrelationsaussagen
+- [x] **CONT-04**: Jedes Thema enthält einen Balance-Abschnitt („Was ist daran eigentlich gut?") gegen einseitige Anti-Handy-Botschaften
 
 ### Selbstcheck (SELF)
 
@@ -93,10 +93,10 @@ Welche Phasen welche Anforderungen abdecken. Wird bei der Roadmap-Erstellung akt
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CONT-01 | Phase 3 | Pending |
-| CONT-02 | Phase 3 | Pending |
-| CONT-03 | Phase 3 | Pending |
-| CONT-04 | Phase 3 | Pending |
+| CONT-01 | Phase 3 | Complete |
+| CONT-02 | Phase 3 | Complete |
+| CONT-03 | Phase 3 | Complete |
+| CONT-04 | Phase 3 | Complete |
 | SELF-01 | Phase 2 | Complete |
 | TIPS-01 | Phase 2 | Complete |
 | PWA-01 | Phase 1 | Complete |
