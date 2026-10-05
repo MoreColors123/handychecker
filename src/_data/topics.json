@@ -188,7 +188,193 @@
       "text": "Guter Schlaf schenkt dir Kraft für den nächsten Tag: Du bist ausgeruhter, meist besser gelaunt und kannst dich leichter konzentrieren. Bei euch geht es nicht darum, dass das Handy schlecht wäre – sondern darum, dass dein Schlaf seinen ruhigen Platz bekommt. Genau das darfst du genießen."
     }
   },
-  { "slug": "aufmerksamkeit", "title": "Aufmerksamkeit & Fokus" },
-  { "slug": "koerper", "title": "Körper" },
+  {
+    "slug": "aufmerksamkeit",
+    "title": "Aufmerksamkeit & Fokus",
+    "facts": [
+      {
+        "heading": "Konzentration hat einen Vorrat",
+        "text": "Sich konzentrieren kostet Kraft, und dieser Vorrat ist nicht unendlich. Nach einer Weile wird es für viele Kinder schwerer, bei einer Sache zu bleiben. Eine kurze Pause kann dann helfen, wieder frisch weiterzumachen."
+      },
+      {
+        "heading": "Mitteilungen unterbrechen",
+        "text": "Wenn zwischendurch eine Mitteilung auftaucht, springt die Aufmerksamkeit kurz woandershin. Danach kann es einen Moment dauern, bis du wieder richtig im Thema bist. Das kennen viele Kinder – auch Erwachsene."
+      },
+      {
+        "heading": "Deine Hausaufgaben-Regel ist stark",
+        "text": "Bei den Hausaufgaben bleibt dein Handy weg, bis du fertig bist – das machst du schon. Dadurch kommen oft weniger Unterbrechungen an, und dein Kopf kann die Aufgabe bis zum Ende denken. Das ist eine Gewohnheit, die dir richtig gut hilft."
+      }
+    ],
+    "selfcheck": {
+      "heading": "Wie ist das bei dir?",
+      "questions": [
+        {
+          "text": "Wie gehst du bei den Hausaufgaben vor?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Ich arbeite in einem Zug bis zum Ende",
+              "reflection": "Das kennen viele – durcharbeiten gibt manchen Kindern ein gutes Gefühl."
+            },
+            {
+              "id": "b",
+              "text": "Ich mache zwischendurch eine kurze Pause",
+              "reflection": "Pausen kennen viele – danach geht es oft wieder leichter weiter."
+            },
+            {
+              "id": "c",
+              "text": "Kommt drauf an, wie die Aufgabe ist",
+              "reflection": "So ist es bei fast allen – nicht jede Aufgabe braucht dasselbe Tempo."
+            }
+          ]
+        },
+        {
+          "text": "Wie fühlt sich dein Kopf nach dem Lernen an?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Frisch, ich könnte gleich weitermachen",
+              "reflection": "Schön – dann hat dein Kopf zwischendurch genug Erholung bekommen."
+            },
+            {
+              "id": "b",
+              "text": "Müde, aber zufrieden",
+              "reflection": "Das kennen viele Kinder – müde und zufrieden dürfen zusammen gehören."
+            },
+            {
+              "id": "c",
+              "text": "Manchmal ganz schön voll",
+              "reflection": "Auch das kennen viele – ein voller Kopf darf sich nach viel Arbeit so anfühlen."
+            }
+          ]
+        },
+        {
+          "text": "Was machst du, wenn du an einer Aufgabe hängst?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Ich schaue nochmal in Ruhe drüber",
+              "reflection": "Das ist eine gute Idee – ein zweiter Blick öffnet oft eine neue Tür."
+            },
+            {
+              "id": "b",
+              "text": "Ich frage jemanden um Rat",
+              "reflection": "Das kennen viele – gemeinsam finden sich manche Lösungen leichter."
+            },
+            {
+              "id": "c",
+              "text": "Ich lasse es kurz liegen und komme später wieder",
+              "reflection": "Auch das ist eine schöne Idee – manchmal löst sich eine Aufgabe nach einer Pause fast von selbst."
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "heading": "Was kann ich tun?",
+      "items": [
+        { "text": "Eine Idee von mir: Wenn du an einer Stelle hängst, darfst du kurz aufstehen und dir ein Glas Wasser holen – danach sieht die Aufgabe oft schon freundlicher aus." },
+        { "text": "Eine Idee von mir: Wenn deine Gedanken wandern, darfst du dich einmal strecken oder ans Fenster treten – frische Luft kann den Kopf wieder klar machen." }
+      ]
+    },
+    "balance": {
+      "heading": "Was ist daran eigentlich gut?",
+      "text": "Dein Handy ist nicht nur eine Ablenkung: Musik über Spotify kann vielen Kindern helfen, sich besser zu konzentrieren – und die zählt bei euch nicht zum Handy-Deal dazu. Auch Pausen sind etwas Gutes, denn sie gehören zum Denken dazu. Deine Hausaufgaben-Regel ist schon eine starke Gewohnheit, auf die du dich verlassen kannst."
+    }
+  },
+  {
+    "slug": "koerper",
+    "title": "Körper",
+    "facts": [
+      {
+        "heading": "Deine Augen brauchen Abwechslung",
+        "text": "Wenn du lange nah auf einen Bildschirm schaust, müssen deine Augen sehr angestrengt arbeiten. Bei vielen Kindern fühlen sich die Augen danach müde oder ein bisschen trocken an. Ein Blick in die Weite kann den Augen dann eine kleine Erholung schenken."
+      },
+      {
+        "heading": "Auch der Nacken mag Abwechslung",
+        "text": "Wenn du längere Zeit nach unten aufs Handy schaust, kann der Nacken diese Haltung irgendwann spüren. Bei vielen Kindern wird die Schulter oder der Nacken dann ein bisschen steif. Eine andere Sitzposition kann da schnell Erleichterung bringen."
+      },
+      {
+        "heading": "Dein Körper mag Bewegung",
+        "text": "Dein Körper freut sich über Abwechslung: aufstehen, strecken oder ein paar Schritte gehen. Frische Luft tut vielen Kindern dabei richtig gut. So kann sich dein Körper schnell wieder wach und locker anfühlen."
+      }
+    ],
+    "selfcheck": {
+      "heading": "Wie ist das bei dir?",
+      "questions": [
+        {
+          "text": "Wie fühlt sich dein Körper an, wenn du lange am Handy warst?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Ganz normal, ich merke nichts",
+              "reflection": "Das kennen viele – nicht jede lange Handy-Zeit meldet sich gleich."
+            },
+            {
+              "id": "b",
+              "text": "Ein bisschen verspannt im Nacken",
+              "reflection": "Das kennen viele Kinder – der Nacken meldet sich manchmal als Erstes."
+            },
+            {
+              "id": "c",
+              "text": "Manchmal ein bisschen unruhig",
+              "reflection": "Auch das ist ganz normal – der Körper darf sich unterschiedlich anfühlen."
+            }
+          ]
+        },
+        {
+          "text": "Wie fühlen sich deine Augen an, wenn du eine Weile auf den Bildschirm geschaut hast?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Frisch, ich merke kaum etwas",
+              "reflection": "Schön – deine Augen halten offenbar gut durch."
+            },
+            {
+              "id": "b",
+              "text": "Müde oder ein bisschen trocken",
+              "reflection": "Das kennen viele Kinder – ein Blick in die Weite kann den Augen guttun."
+            },
+            {
+              "id": "c",
+              "text": "Kommt drauf an, wie lange",
+              "reflection": "So ist es bei fast allen – die Augen merken die Zeit am Bildschirm verschieden stark."
+            }
+          ]
+        },
+        {
+          "text": "Was tut deinem Körper richtig gut?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Mich bewegen und strecken",
+              "reflection": "Das kennen viele – Bewegung weckt den Körper wieder auf."
+            },
+            {
+              "id": "b",
+              "text": "Frische Luft und draußen sein",
+              "reflection": "Draußen sein tut vielen Kindern gut – die frische Luft weckt die Sinne."
+            },
+            {
+              "id": "c",
+              "text": "Einfach mal die Position wechseln",
+              "reflection": "Auch das ist eine schöne Idee – eine neue Haltung kann sich gleich besser anfühlen."
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "heading": "Was kann ich tun?",
+      "items": [
+        { "text": "Eine Idee von mir: Wenn deine Augen sich müde anfühlen, darfst du kurz aus dem Fenster in die Weite schauen – das entspannt die Augen." },
+        { "text": "Eine Idee von mir: Wenn dein Nacken sich steif anfühlt, darfst du dich einmal aufrichten und die Schultern lockern." }
+      ]
+    },
+    "balance": {
+      "heading": "Was ist daran eigentlich gut?",
+      "text": "Dein Handy macht viele Dinge leichter und bringt dir Musik, Karten und Nachrichten. Wenn sich dein Körper mal meldet, ist das kein Warnzeichen – sondern ein freundlicher Hinweis, dass ihm eine kleine Pause oder Bewegung guttut. Bewegung und frische Luft tun dir einfach gut."
+    }
+  },
   { "slug": "datenschutz", "title": "Datenschutz & Daten" }
 ]
