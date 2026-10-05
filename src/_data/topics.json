@@ -376,5 +376,98 @@
       "text": "Dein Handy macht viele Dinge leichter und bringt dir Musik, Karten und Nachrichten. Wenn sich dein Körper mal meldet, ist das kein Warnzeichen – sondern ein freundlicher Hinweis, dass ihm eine kleine Pause oder Bewegung guttut. Bewegung und frische Luft tun dir einfach gut."
     }
   },
-  { "slug": "datenschutz", "title": "Datenschutz & Daten" }
+  {
+    "slug": "datenschutz",
+    "title": "Datenschutz & Daten",
+    "facts": [
+      {
+        "heading": "Apps geben dir etwas – und wissen etwas",
+        "text": "Jede App, die du benutzt, gibt dir etwas: Musik, einen Weg oder eine Antwort. Dafür merkt sie sich oft auch etwas über dich. Das, was sie sich merkt, nennt man Daten."
+      },
+      {
+        "heading": "Deine Apps kennen dich ein bisschen",
+        "text": "Maps kennt den Weg zu deinem Ziel – und merkt sich, welche Orte du suchst. Spotify kennt deinen Musikgeschmack und schlägt dir Lieder vor, die dir gefallen könnten. So wird jede App mit der Zeit ein bisschen persönlicher."
+      },
+      {
+        "heading": "Manche speichern fast nichts",
+        "text": "Es gibt Apps, die sich sehr wenig merken: Signal legt zum Beispiel kaum etwas über dich ab, und Wikipedia sammelt fast nur, was du gerade liest. Bei Google kannst du mit der sicheren Suche unterwegs sein. Das ist der Unterschied: Manche wissen viel, andere fast nichts."
+      }
+    ],
+    "selfcheck": {
+      "heading": "Wie ist das bei dir?",
+      "questions": [
+        {
+          "text": "Welche App magst du am liebsten?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Musik hören mit Spotify",
+              "reflection": "Schön – Musik kann viele Stimmungen begleiten."
+            },
+            {
+              "id": "b",
+              "text": "Wege finden mit Maps",
+              "reflection": "Praktisch – Maps kennt sich in der Gegend gut aus."
+            },
+            {
+              "id": "c",
+              "text": "Nachschauen mit Wikipedia",
+              "reflection": "Das kennen viele – Wikipedia hat Antworten auf fast alles."
+            }
+          ]
+        },
+        {
+          "text": "Wie fühlt es sich an, wenn eine App etwas über dich weiß?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Eigentlich ganz praktisch",
+              "reflection": "Das kennen viele – wenn eine App dich gut kennt, wird sie oft bequemer."
+            },
+            {
+              "id": "b",
+              "text": "Manchmal ein bisschen komisch",
+              "reflection": "Auch das kennen viele Kinder – es darf sich komisch anfühlen, wenn etwas über dich mitläuft."
+            },
+            {
+              "id": "c",
+              "text": "Kommt drauf an, was sie weiß",
+              "reflection": "So ist es bei fast allen – der Unterschied liegt oft darin, was eine App wirklich braucht."
+            }
+          ]
+        },
+        {
+          "text": "Was ist dir bei einer App wichtig?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Dass sie einfach funktioniert",
+              "reflection": "Das kennen viele – eine App soll vor allem gut helfen."
+            },
+            {
+              "id": "b",
+              "text": "Dass sie mir etwas Gutes gibt",
+              "reflection": "Schön – gute Apps geben dir etwas, das du wirklich nutzen kannst."
+            },
+            {
+              "id": "c",
+              "text": "Dass sie nicht zu viel über mich merkt",
+              "reflection": "Auch das ist eine gute Idee – manche Apps merken sich bewusst fast nichts."
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "heading": "Was kann ich tun?",
+      "items": [
+        { "text": "Eine Idee von mir: Wenn dich neugierig macht, was eine App weiß, darfst du in ihren Einstellungen nach dem Bereich für Privatsphäre schauen – dort steht oft, was sie sich merkt." },
+        { "text": "Eine Idee von mir: Du darfst bei zwei Apps mal vergleichen, welche sich mehr und welche sich weniger merkt – das ist oft ganz spannend." }
+      ]
+    },
+    "balance": {
+      "heading": "Was ist daran eigentlich gut?",
+      "text": "Daten sind das, was Apps nützlich macht: Maps findet den Weg, Spotify findet Musik, die dir gefällt – und beide kennen dich dafür ein bisschen. Manche Apps schützen dabei sehr viel und merken sich fast nichts, andere wissen mehr. Du darfst selbst wählen, welche Apps du magst."
+    }
+  }
 ]
