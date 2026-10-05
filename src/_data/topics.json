@@ -94,7 +94,100 @@
       "text": "Handys sind nicht nur schlecht: Du kannst Musik hören, mit Freundinnen schreiben oder für die Schule lernen. Musik ist was anderes – die zählt nicht zur Bildschirmzeit dazu. Wenn du über Spotify Musik hörst, darfst du das länger machen als andere Apps."
     }
   },
-  { "slug": "schlaf", "title": "Schlaf" },
+  {
+    "slug": "schlaf",
+    "title": "Schlaf",
+    "facts": [
+      {
+        "heading": "Schlaf ist wie Aufräumen für deinen Kopf",
+        "text": "Wenn du schläfst, sortiert dein Gehirn alles, was du am Tag gelernt und erlebt hast. Dein Körper nutzt die Nacht, um sich zu erholen und neue Kraft zu sammeln. Deshalb fühlst du dich nach einer guten Nacht oft klarer im Kopf."
+      },
+      {
+        "heading": "So viel Schlaf braucht dein Körper",
+        "text": "Kinderärzte sagen: In deinem Alter braucht der Körper ungefähr zehn Stunden Schlaf. Das klingt nach viel, und genau das darf es auch sein. Mit genug Schlaf kann es dir leichter fallen, dich zu konzentrieren und gut gelaunt zu sein."
+      },
+      {
+        "heading": "Deine Regel ist schon eine echte Stärke",
+        "text": "Bei dir schläft das Handy draußen vor deinem Zimmer, und deine Einschlafzeit ist immer gleich. Das ist eine Regel, die deiner Familie wichtig ist – und sie hilft dir, weil dein Zimmer so ein ruhiger Ort bleibt. Dein Körper weiß dann ganz genau: Jetzt kommt die Nacht."
+      }
+    ],
+    "selfcheck": {
+      "heading": "Wie ist das bei dir?",
+      "questions": [
+        {
+          "text": "Wenn es Zeit zum Schlafen ist – wie kommst du am besten zur Ruhe?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Ich lese noch ein bisschen",
+              "reflection": "Lesen lässt viele Kinder gut abschalten – der Kopf wandert dabei langsam in die Ruhe."
+            },
+            {
+              "id": "b",
+              "text": "Ich denke noch über den Tag nach",
+              "reflection": "Das kennen viele Kinder – der Tag will manchmal erst noch zu Ende gedacht werden."
+            },
+            {
+              "id": "c",
+              "text": "Ich brauche manchmal ein bisschen, bis ich müde werde",
+              "reflection": "Auch das ist ganz normal – bis die Müdigkeit kommt, darf es einen Moment dauern."
+            }
+          ]
+        },
+        {
+          "text": "Wie fühlst du dich meistens am Morgen?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Ausgeschlafen und fit",
+              "reflection": "Schön – dann hat dein Körper in der Nacht genau das bekommen, was er braucht."
+            },
+            {
+              "id": "b",
+              "text": "Manchmal noch ein bisschen müde",
+              "reflection": "Das kennen viele Kinder – manche Nächte sind einfach ruhiger als andere."
+            },
+            {
+              "id": "c",
+              "text": "Kommt drauf an – mal so, mal so",
+              "reflection": "So ist es bei fast allen – nicht jeder Morgen fühlt sich gleich an."
+            }
+          ]
+        },
+        {
+          "text": "Was hilft dir, wenn du abends nicht gleich müde wirst?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Ich kuschele mich in meine Decke",
+              "reflection": "Das kennen viele – eine warme Decke fühlt sich wie ein Zeichen zum Ausruhen an."
+            },
+            {
+              "id": "b",
+              "text": "Ich mag ruhige Musik",
+              "reflection": "Ruhige Musik kennen viele Kinder als Begleitung – Musik ist etwas ganz Eigenes."
+            },
+            {
+              "id": "c",
+              "text": "Ich weiß nicht so genau",
+              "reflection": "Deine feste Einschlafzeit gibt deinem Körper ein gutes Signal – das ist eine echte Stärke, die du schon hast."
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "heading": "Was kann ich tun?",
+      "items": [
+        { "text": "Eine Idee von mir: Wenn du abends nicht gleich müde wirst, darf dein Zimmer noch ein bisschen dunkler werden – und ein Buch kann dich in den Schlaf begleiten." },
+        { "text": "Eine Idee von mir: Wenn der Kopf noch zu wach ist, darfst du an etwas Schönes vom Tag denken – für morgen ist später auch noch Platz." }
+      ]
+    },
+    "balance": {
+      "heading": "Was ist daran eigentlich gut?",
+      "text": "Guter Schlaf schenkt dir Kraft für den nächsten Tag: Du bist ausgeruhter, meist besser gelaunt und kannst dich leichter konzentrieren. Bei euch geht es nicht darum, dass das Handy schlecht wäre – sondern darum, dass dein Schlaf seinen ruhigen Platz bekommt. Genau das darfst du genießen."
+    }
+  },
   { "slug": "aufmerksamkeit", "title": "Aufmerksamkeit & Fokus" },
   { "slug": "koerper", "title": "Körper" },
   { "slug": "datenschutz", "title": "Datenschutz & Daten" }
