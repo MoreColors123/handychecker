@@ -180,12 +180,12 @@
       "heading": "Was kann ich tun?",
       "items": [
         { "text": "Eine Idee von mir: Wenn du abends nicht gleich müde wirst, darf dein Zimmer noch ein bisschen dunkler werden – und ein Buch kann dich in den Schlaf begleiten." },
-        { "text": "Oder auch das: Wenn der Kopf noch zu wach ist, darfst du an etwas Schönes vom Tag denken – für morgen ist später auch noch Platz." }
+        { "text": "Oder auch das: Wenn der Kopf noch zu wach ist, kannst du an etwas Schönes vom Tag denken – für morgen ist später auch noch Platz." }
       ]
     },
     "balance": {
       "heading": "Was ist daran eigentlich gut?",
-      "text": "Guter Schlaf schenkt dir Kraft für den nächsten Tag: Du bist ausgeruhter, meist besser gelaunt und kannst dich leichter konzentrieren. Es geht nicht darum, dass das Handy schlecht wäre – sondern darum, dass dein Schlaf seinen ruhigen Platz bekommt. Genau das darfst du genießen."
+      "text": "Guter Schlaf schenkt dir Kraft für den nächsten Tag: Du bist ausgeruhter, meist besser gelaunt und kannst dich leichter konzentrieren. Es geht nicht darum, dass das Handy schlecht wäre – sondern darum, dass dein Schlaf seinen ruhigen Platz bekommt. Genau das kannst du genießen."
     }
   },
   {
@@ -274,12 +274,12 @@
       "heading": "Was kann ich tun?",
       "items": [
         { "text": "Eine Idee von mir: Wenn du an einer Stelle hängst, kannst du kurz aufstehen und dir ein Glas Wasser holen – danach sieht die Aufgabe oft schon freundlicher aus." },
-        { "text": "Oder auch das: Wenn deine Gedanken wandern, darfst du dich einmal strecken oder ans Fenster treten – frische Luft kann den Kopf wieder klar machen." }
+        { "text": "Oder auch das: Wenn deine Gedanken wandern, kannst du dich einmal strecken oder ans Fenster treten – frische Luft kann den Kopf wieder klar machen." }
       ]
     },
     "balance": {
       "heading": "Was ist daran eigentlich gut?",
-      "text": "Dein Handy ist nicht nur eine Ablenkung: Ruhige Musik kann vielen Kindern beim Lernen helfen – das darfst du für dich ausprobieren. Auch Pausen gehören zum Denken dazu, sie machen den Kopf wieder klar. Und Konzentrieren kann man üben – mit jedem Mal wird es ein bisschen leichter."
+      "text": "Dein Handy ist nicht nur eine Ablenkung: Ruhige Musik kann vielen Kindern beim Lernen helfen – das kannst du für dich ausprobieren. Auch Pausen gehören zum Denken dazu, sie machen den Kopf wieder klar. Und Konzentrieren kann man üben – mit jedem Mal wird es ein bisschen leichter."
     }
   },
   {
@@ -367,8 +367,8 @@
     "tips": {
       "heading": "Was kann ich tun?",
       "items": [
-        { "text": "Eine Idee von mir: Wenn deine Augen sich müde anfühlen, darfst du kurz aus dem Fenster in die Weite schauen – das entspannt die Augen." },
-        { "text": "Oder auch das: Wenn dein Nacken sich steif anfühlt, darfst du dich einmal aufrichten und die Schultern lockern." }
+        { "text": "Eine Idee von mir: Wenn deine Augen sich müde anfühlen, kannst du kurz aus dem Fenster in die Weite schauen – das entspannt die Augen." },
+        { "text": "Oder auch das: Wenn dein Nacken sich steif anfühlt, kannst du dich einmal aufrichten und die Schultern lockern." }
       ]
     },
     "balance": {
@@ -461,13 +461,13 @@
     "tips": {
       "heading": "Was kann ich tun?",
       "items": [
-        { "text": "Eine Idee von mir: Wenn dich neugierig macht, was eine App weiß, darfst du in ihren Einstellungen nach dem Bereich für Privatsphäre schauen – dort steht oft, was sie sich merkt." },
-        { "text": "Oder auch das: Du darfst bei zwei Apps mal vergleichen, welche sich mehr und welche sich weniger merkt – das ist oft ganz spannend." }
+        { "text": "Eine Idee von mir: Wenn dich neugierig macht, was eine App weiß, kannst du in ihren Einstellungen nach dem Bereich für Privatsphäre schauen – dort steht oft, was sie sich merkt." },
+        { "text": "Oder auch das: Du kannst bei zwei Apps mal vergleichen, welche sich mehr und welche sich weniger merkt – das ist oft ganz spannend." }
       ]
     },
     "balance": {
       "heading": "Was ist daran eigentlich gut?",
-      "text": "Daten sind das, was Apps nützlich macht: Maps findet den Weg, Spotify findet Musik, die dir gefällt – und beide kennen dich dafür ein bisschen. Manche Apps schützen dabei sehr viel und merken sich fast nichts, andere wissen mehr. Du darfst selbst wählen, welche Apps du magst."
+      "text": "Daten sind das, was Apps nützlich macht: Maps findet den Weg, Spotify findet Musik, die dir gefällt – und beide kennen dich dafür ein bisschen. Manche Apps schützen dabei sehr viel und merken sich fast nichts, andere wissen mehr. Du kannst selbst wählen, welche Apps du magst."
     }
   }
 ]
