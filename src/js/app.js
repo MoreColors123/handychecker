@@ -15,8 +15,11 @@
 //      per „Weiter" zur nächsten Frage bzw. am Ende zu den Tipps. Der
 //      „Weiter"-Knopf erscheint erst, wenn die aktuelle Frage beantwortet ist.
 //
-// Keine Speicherung, kein Senden: Antworten und Schrittstand leben im DOM
-// (Radio checked / hidden-Attribut), Reload = vergessen. Text wird nur per
+// Keine dauerhafte Speicherung, kein Senden: Antworten und Schrittstand leben
+// im DOM (Radio checked / hidden-Attribut), Reload = vergessen. Einzige
+// Ausnahme ist ein generischer, sitzungsgebundener Merker („hc-done"), der nur
+// festhält, ob dieses Thema in diesem Besuch schon geschafft ist – er endet mit
+// dem Schließen des Browsers. Text wird nur per
 // textContent geschrieben, neue Knoten nur per createElement/appendChild.
 (function () {
   // --- 1. Selbstcheck-Ankündigung (unverändert) -----------------------------
@@ -216,6 +219,11 @@
       quizGroups.forEach(function (g) {
         g.setAttribute("hidden", "");
       });
+      // Dieses Thema ist für diesen Besuch geschafft: ein einziger, generischer
+      // Merker, kein Personenbezug, kein Senden.
+      try {
+        sessionStorage.setItem("hc-done", "1");
+      } catch (e) {}
       if (current < steps.length - 1) show(current + 1);
     }
   }
@@ -272,5 +280,37 @@
     if (current < steps.length - 1) show(current + 1);
   });
 
-  show(0);
+  // --- 4. Sitzungs-Merker: fertiges Thema direkt am Ende öffnen (B1–B2) ------
+  // Nur ein Schlüssel, nur für diesen Besuch, ohne Personenbezug. Ist er da,
+  // springt die Seite direkt zum letzten Schritt und bietet „Noch einmal" an;
+  // der Knopf leert den Merker und lädt neu (frisches DOM = sauberer Neustart).
+  var done = null;
+  try {
+    done = sessionStorage.getItem("hc-done");
+  } catch (e) {
+    done = null;
+  }
+
+  if (done) {
+    var lastStep = steps[steps.length - 1];
+    var cards = lastStep.querySelector(".topic-cards");
+    var replay = document.createElement("button");
+    replay.type = "button";
+    replay.className = "quiz-start replay";
+    replay.textContent = "Noch einmal";
+    replay.addEventListener("click", function () {
+      try {
+        sessionStorage.removeItem("hc-done");
+      } catch (e) {}
+      location.reload();
+    });
+    if (cards && cards.parentNode) {
+      cards.parentNode.insertBefore(replay, cards.nextSibling);
+    } else {
+      lastStep.appendChild(replay);
+    }
+    show(steps.length - 1);
+  } else {
+    show(0);
+  }
 })();

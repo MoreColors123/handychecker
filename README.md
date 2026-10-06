@@ -18,7 +18,7 @@ Die Themenseiten sind bewusst wie eine kleine App aufgebaut:
 ### Datenschutz
 
 - Keine Accounts, keine Cookies, kein Tracking, keine Analyse-Werkzeuge
-- Es wird **nichts gespeichert und nichts gesendet** — auch die Selbstcheck-Antworten nicht (sie leben nur im aktuellen Seitenbesuch)
+- Es wird **nichts dauerhaft gespeichert und nichts gesendet** — auch die Selbstcheck-Antworten nicht (sie leben nur im aktuellen Seitenbesuch). Ein kleiner Marker merkt sich für die Dauer dieses Besuchs, welche Themen schon geschafft sind — beim Schließen des Browsers ist er wieder weg.
 - Keine einzigen externen Anfragen (keine CDN-Schriften, keine Dritten) — Systemfonts only
 - Die Seite kann wie eine App auf dem Smartphone installiert werden (PWA) und funktioniert nach dem ersten Besuch auch offline
 
@@ -38,7 +38,7 @@ The topic pages deliberately feel like a small app:
 ### Privacy
 
 - No accounts, no cookies, no tracking, no analytics
-- **Nothing is stored and nothing is sent** — not even self-check answers (they live only in the current visit)
+- **Nothing durable is stored and nothing is sent** — not even self-check answers (they live only in the current visit). A small session-only marker remembers which topics you finished this visit — gone when the browser closes.
 - Zero third-party requests (no CDN fonts, no external services) — system fonts only
 - Installable on a phone like an app (PWA); works offline after the first visit
 
