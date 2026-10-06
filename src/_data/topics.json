@@ -10,7 +10,7 @@
       },
       {
         "heading": "Manchmal verliert man die Zeit",
-        "text": "Kennst du das? Du schaust kurz rein und plötzlich ist eine Stunde weg. Das kann dazu führen, dass du gar nicht merkst, wie lange du schon am Bildschirm bist."
+        "text": "Kennst du das? Du schaust kurz rein und plötzlich ist eine halbe Stunde weg. Das kann dazu führen, dass du gar nicht merkst, wie lange du schon am Bildschirm bist."
       },
       {
         "heading": "Dein Kopf braucht Pausen",
@@ -21,7 +21,7 @@
       "heading": "Wie ist das bei dir?",
       "questions": [
         {
-          "text": "Wenn dein Handy-Deal (45 Minuten) für heute durch ist – wie fühlt sich das an?",
+          "text": "Wenn deine Handyzeit für heute durch ist – wie fühlt sich das an?",
           "options": [
             {
               "id": "a",
@@ -71,7 +71,7 @@
             {
               "id": "b",
               "text": "Musik hören, z. B. mit Spotify",
-              "reflection": "Musik ist was anderes – die zählt nicht zum Handy-Deal dazu."
+              "reflection": "Musik ist was anderes – die zählt nicht zu deiner Handyzeit dazu."
             },
             {
               "id": "c",
@@ -86,12 +86,12 @@
       "heading": "Was kann ich tun?",
       "items": [
         { "text": "Eine Idee von mir: Nach der Schule darf dein Handy eine Stunde in der Küche wohnen." },
-        { "text": "Eine Idee von mir: Abends darf dein Handy außerhalb deines Zimmers schlafen." }
+        { "text": "Oder auch das: Abends darf dein Handy außerhalb deines Zimmers schlafen." }
       ]
     },
     "balance": {
       "heading": "Was ist daran eigentlich gut?",
-      "text": "Handys sind nicht nur schlecht: Du kannst Musik hören, mit Freundinnen schreiben oder für die Schule lernen. Musik ist was anderes – die zählt nicht zur Bildschirmzeit dazu. Wenn du über Spotify Musik hörst, darfst du das länger machen als andere Apps."
+      "text": "Handys sind nicht nur schlecht: Du kannst Musik hören, mit Freundinnen schreiben oder für die Schule lernen. Musik ist was anderes – die zählt nicht zur Bildschirmzeit dazu. Wenn du über Spotify Musik hörst, darf sie bei dir länger laufen – Musik ist zum Zuhören da, nicht zum Dranschauen."
     }
   },
   {
@@ -104,11 +104,11 @@
       },
       {
         "heading": "So viel Schlaf braucht dein Körper",
-        "text": "Kinderärzte sagen: In deinem Alter braucht der Körper ungefähr zehn Stunden Schlaf. Das klingt nach viel, und genau das darf es auch sein. Mit genug Schlaf kann es dir leichter fallen, dich zu konzentrieren und gut gelaunt zu sein."
+        "text": "Kinderärzte sagen: Zehn- bis Zwölfjährige brauchen 9 bis 10 Stunden Schlaf. Das klingt nach viel, und genau das darf es auch sein. Mit genug Schlaf kann es dir leichter fallen, dich zu konzentrieren und gut gelaunt zu sein."
       },
       {
         "heading": "Deine Regel ist schon eine echte Stärke",
-        "text": "Bei dir schläft das Handy draußen vor deinem Zimmer, und deine Einschlafzeit ist immer gleich. Das ist eine Regel, die deiner Familie wichtig ist – und sie hilft dir, weil dein Zimmer so ein ruhiger Ort bleibt. Dein Körper weiß dann ganz genau: Jetzt kommt die Nacht."
+        "text": "Eine gute Regel fürs Handy ist wie ein Schutzschild: Sie hält dein Zimmer ruhig, und dein Körper kann sich darauf verlassen. Wenn er sie kennt, weiß er ganz genau: Jetzt kommt die Nacht."
       }
     ],
     "selfcheck": {
@@ -170,7 +170,7 @@
             {
               "id": "c",
               "text": "Ich weiß nicht so genau",
-              "reflection": "Deine feste Einschlafzeit gibt deinem Körper ein gutes Signal – das ist eine echte Stärke, die du schon hast."
+              "reflection": "Eine feste Zeit gibt deinem Körper ein gutes Signal – so eine Stärke wächst mit jeder Nacht."
             }
           ]
         }
@@ -180,12 +180,12 @@
       "heading": "Was kann ich tun?",
       "items": [
         { "text": "Eine Idee von mir: Wenn du abends nicht gleich müde wirst, darf dein Zimmer noch ein bisschen dunkler werden – und ein Buch kann dich in den Schlaf begleiten." },
-        { "text": "Eine Idee von mir: Wenn der Kopf noch zu wach ist, darfst du an etwas Schönes vom Tag denken – für morgen ist später auch noch Platz." }
+        { "text": "Oder auch das: Wenn der Kopf noch zu wach ist, darfst du an etwas Schönes vom Tag denken – für morgen ist später auch noch Platz." }
       ]
     },
     "balance": {
       "heading": "Was ist daran eigentlich gut?",
-      "text": "Guter Schlaf schenkt dir Kraft für den nächsten Tag: Du bist ausgeruhter, meist besser gelaunt und kannst dich leichter konzentrieren. Bei euch geht es nicht darum, dass das Handy schlecht wäre – sondern darum, dass dein Schlaf seinen ruhigen Platz bekommt. Genau das darfst du genießen."
+      "text": "Guter Schlaf schenkt dir Kraft für den nächsten Tag: Du bist ausgeruhter, meist besser gelaunt und kannst dich leichter konzentrieren. Es geht nicht darum, dass das Handy schlecht wäre – sondern darum, dass dein Schlaf seinen ruhigen Platz bekommt. Genau das darfst du genießen."
     }
   },
   {
@@ -201,8 +201,8 @@
         "text": "Wenn zwischendurch eine Mitteilung auftaucht, springt die Aufmerksamkeit kurz woandershin. Danach kann es einen Moment dauern, bis du wieder richtig im Thema bist. Das kennen viele Kinder – auch Erwachsene."
       },
       {
-        "heading": "Deine Hausaufgaben-Regel ist stark",
-        "text": "Bei den Hausaufgaben bleibt dein Handy weg, bis du fertig bist – das machst du schon. Dadurch kommen oft weniger Unterbrechungen an, und dein Kopf kann die Aufgabe bis zum Ende denken. Das ist eine Gewohnheit, die dir richtig gut hilft."
+        "heading": "Ohne Unterbrechungen denkt der Kopf zu Ende",
+        "text": "Bei den Hausaufgaben bleibt dein Handy besser weg, bis du fertig bist. So kommen oft weniger Unterbrechungen an, und dein Kopf kann die Aufgabe bis zum Ende denken."
       }
     ],
     "selfcheck": {
@@ -273,13 +273,13 @@
     "tips": {
       "heading": "Was kann ich tun?",
       "items": [
-        { "text": "Eine Idee von mir: Wenn du an einer Stelle hängst, darfst du kurz aufstehen und dir ein Glas Wasser holen – danach sieht die Aufgabe oft schon freundlicher aus." },
-        { "text": "Eine Idee von mir: Wenn deine Gedanken wandern, darfst du dich einmal strecken oder ans Fenster treten – frische Luft kann den Kopf wieder klar machen." }
+        { "text": "Eine Idee von mir: Wenn du an einer Stelle hängst, kannst du kurz aufstehen und dir ein Glas Wasser holen – danach sieht die Aufgabe oft schon freundlicher aus." },
+        { "text": "Oder auch das: Wenn deine Gedanken wandern, darfst du dich einmal strecken oder ans Fenster treten – frische Luft kann den Kopf wieder klar machen." }
       ]
     },
     "balance": {
       "heading": "Was ist daran eigentlich gut?",
-      "text": "Dein Handy ist nicht nur eine Ablenkung: Musik über Spotify kann vielen Kindern helfen, sich besser zu konzentrieren – und die zählt bei euch nicht zum Handy-Deal dazu. Auch Pausen sind etwas Gutes, denn sie gehören zum Denken dazu. Deine Hausaufgaben-Regel ist schon eine starke Gewohnheit, auf die du dich verlassen kannst."
+      "text": "Dein Handy ist nicht nur eine Ablenkung: Ruhige Musik kann vielen Kindern beim Lernen helfen – das darfst du für dich ausprobieren. Auch Pausen gehören zum Denken dazu, sie machen den Kopf wieder klar. Und Konzentrieren kann man üben – mit jedem Mal wird es ein bisschen leichter."
     }
   },
   {
@@ -368,7 +368,7 @@
       "heading": "Was kann ich tun?",
       "items": [
         { "text": "Eine Idee von mir: Wenn deine Augen sich müde anfühlen, darfst du kurz aus dem Fenster in die Weite schauen – das entspannt die Augen." },
-        { "text": "Eine Idee von mir: Wenn dein Nacken sich steif anfühlt, darfst du dich einmal aufrichten und die Schultern lockern." }
+        { "text": "Oder auch das: Wenn dein Nacken sich steif anfühlt, darfst du dich einmal aufrichten und die Schultern lockern." }
       ]
     },
     "balance": {
@@ -462,7 +462,7 @@
       "heading": "Was kann ich tun?",
       "items": [
         { "text": "Eine Idee von mir: Wenn dich neugierig macht, was eine App weiß, darfst du in ihren Einstellungen nach dem Bereich für Privatsphäre schauen – dort steht oft, was sie sich merkt." },
-        { "text": "Eine Idee von mir: Du darfst bei zwei Apps mal vergleichen, welche sich mehr und welche sich weniger merkt – das ist oft ganz spannend." }
+        { "text": "Oder auch das: Du darfst bei zwei Apps mal vergleichen, welche sich mehr und welche sich weniger merkt – das ist oft ganz spannend." }
       ]
     },
     "balance": {
