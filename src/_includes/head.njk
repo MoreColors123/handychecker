@@ -5,7 +5,7 @@
   <title>{{ title }}{% if suffixTitle %} – {{ site.siteName }}{% endif %}</title>
   <meta name="description" content="{{ site.description }}">
   <link rel="stylesheet" href="{{ '/css/tokens.css' | url }}">
-  <link rel="stylesheet" href="{{ '/css/site.css' | url }}">
+  <link rel="stylesheet" href="{{ ('/css/site.css?v=' + site.cacheVersion) | url }}">
   <link rel="manifest" href="{{ '/manifest.webmanifest' | url }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/icons/favicon-32.png' | url }}">
   <link rel="icon" href="{{ '/icons/favicon.svg' | url }}" type="image/svg+xml">

@@ -79,7 +79,7 @@ suffixTitle: true
     <p><a class="card" href="{{ '/' | url }}">← zurück zur Startseite</a></p>
   {%- endif %}
   </main>
-  <script src="{{ '/js/app.js' | url }}" defer></script>
+  <script src="{{ ('/js/app.js?v=' + site.cacheVersion) | url }}" defer></script>
   {% include "footer.njk" %}
 </body>
 </html>
