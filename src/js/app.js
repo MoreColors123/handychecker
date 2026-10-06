@@ -17,9 +17,10 @@
 //
 // Keine dauerhafte Speicherung, kein Senden: Antworten und Schrittstand leben
 // im DOM (Radio checked / hidden-Attribut), Reload = vergessen. Einzige
-// Ausnahme ist ein generischer, sitzungsgebundener Merker („hc-done"), der nur
-// festhält, ob dieses Thema in diesem Besuch schon geschafft ist – er endet mit
-// dem Schließen des Browsers. Text wird nur per
+// Ausnahme sind sitzungsgebundene Merker („hc-done-<thema>"), die nur
+// festhalten, ob DIESES Thema in diesem Besuch schon geschafft ist – sie enden
+// mit dem Schließen des Browsers und gelten pro Thema (nicht seitenweit).
+// Text wird nur per
 // textContent geschrieben, neue Knoten nur per createElement/appendChild.
 (function () {
   // --- 1. Selbstcheck-Ankündigung (unverändert) -----------------------------
@@ -219,10 +220,10 @@
       quizGroups.forEach(function (g) {
         g.setAttribute("hidden", "");
       });
-      // Dieses Thema ist für diesen Besuch geschafft: ein einziger, generischer
-      // Merker, kein Personenbezug, kein Senden.
+      // Dieses Thema ist für diesen Besuch geschafft: ein Merker PRO THEMA
+      // (aus der URL abgeleitet), kein Personenbezug, kein Senden.
       try {
-        sessionStorage.setItem("hc-done", "1");
+        sessionStorage.setItem(topicKey, "1");
       } catch (e) {}
       if (current < steps.length - 1) show(current + 1);
     }
@@ -281,12 +282,22 @@
   });
 
   // --- 4. Sitzungs-Merker: fertiges Thema direkt am Ende öffnen (B1–B2) ------
-  // Nur ein Schlüssel, nur für diesen Besuch, ohne Personenbezug. Ist er da,
-  // springt die Seite direkt zum letzten Schritt und bietet „Noch einmal" an;
-  // der Knopf leert den Merker und lädt neu (frisches DOM = sauberer Neustart).
+  // Ein Schlüssel PRO THEMA (aus der URL), nur für diesen Besuch, ohne
+  // Personenbezug. Ist er da, springt die Seite direkt zum letzten Schritt und
+  // bietet „Noch einmal" an; der Knopf leert den Merker und lädt neu (frisches
+  // DOM = sauberer Neustart). Der alte generische Schlüssel "hc-done" wird
+  // beim Laden entfernt (Migration aus der ersten Version).
+  var slugMatch = location.pathname.match(/themen\/([^\/]+)/);
+  var topicKey = "hc-done-" + (slugMatch ? slugMatch[1] : "topic");
+  try {
+    if (sessionStorage.getItem("hc-done")) {
+      sessionStorage.removeItem("hc-done");
+    }
+  } catch (e) {}
+
   var done = null;
   try {
-    done = sessionStorage.getItem("hc-done");
+    done = sessionStorage.getItem(topicKey);
   } catch (e) {
     done = null;
   }
@@ -300,7 +311,7 @@
     replay.textContent = "Noch einmal";
     replay.addEventListener("click", function () {
       try {
-        sessionStorage.removeItem("hc-done");
+        sessionStorage.removeItem(topicKey);
       } catch (e) {}
       location.reload();
     });
