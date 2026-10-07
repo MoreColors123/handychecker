@@ -116,6 +116,20 @@ p {
   }
 }
 
+/* Erledigte Themen: warmer Hinweis, wenn die Runde komplett ist (Text vom
+   Nutzer). Sitzt zwischen Karten-Liste und Noch-einmal-Knopf. */
+.done-note {
+  margin: var(--space-lg) 0 var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-peach);
+  border-radius: var(--radius-md);
+}
+
+/* Der Noch-einmal-Knopf klebt nicht an der Liste/dem Hinweis */
+.quiz-start.replay {
+  margin-top: var(--space-lg);
+}
+
 /* --- skip link: visually hidden until keyboard focus --- */
 
 .skip {

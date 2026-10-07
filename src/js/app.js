@@ -227,6 +227,7 @@
       } catch (e) {}
       // „Noch einmal" ab sofort auf dem Endscreen – und erledigte Themen
       // (inklusive diesem) verschwinden dort aus der Karten-Liste.
+      addDoneNote(steps[steps.length - 1]);
       addReplay(steps[steps.length - 1]);
       if (current < steps.length - 1) show(current + 1);
     }
@@ -318,6 +319,24 @@
     });
   } catch (e) {}
 
+  // Alle Themen durchgespielt? Dann ein warmer Hinweis über dem
+  // Noch-einmal-Knopf (Text vom Nutzer, 2026-10-06 — wörtlich).
+  function addDoneNote(lastStep) {
+    if (lastStep.querySelector(".done-note")) return;
+    var cards = lastStep.querySelector(".topic-cards");
+    if (!cards) return;
+    var anyOpen = false;
+    cards.querySelectorAll("a").forEach(function (a) {
+      var li = a.closest("li");
+      if (li && !li.hasAttribute("hidden") && (a.getAttribute("href") || "").indexOf("themen/") > -1) anyOpen = true;
+    });
+    if (anyOpen) return;
+    var note = document.createElement("p");
+    note.className = "done-note";
+    note.textContent = "Du hast alle Themen durchgemacht – richtig stark! Wenn du möchtest, kannst du die Runde gerne nochmal drehen – oder jemand anderer!";
+    cards.parentNode.insertBefore(note, cards.nextSibling);
+  }
+
   // Knopf-Erzeugung in einer Funktion: genutzt beim Endscreen-Sprung (Merker
   // vorhanden) und direkt nach dem Durchspielen (advanceQuiz). Idempotent.
   function addReplay(lastStep) {
@@ -343,14 +362,16 @@
       var cut = location.pathname.indexOf("themen/");
       location.href = cut > -1 ? location.pathname.slice(0, cut) + "themen/" : location.pathname;
     });
-    if (cards && cards.parentNode) {
-      cards.parentNode.insertBefore(replay, cards.nextSibling);
+    var anchor = lastStep.querySelector(".done-note") || cards;
+    if (anchor && anchor.parentNode) {
+      anchor.parentNode.insertBefore(replay, anchor.nextSibling);
     } else {
       lastStep.appendChild(replay);
     }
   }
 
   if (done) {
+    addDoneNote(steps[steps.length - 1]);
     addReplay(steps[steps.length - 1]);
     show(steps.length - 1);
   } else {
