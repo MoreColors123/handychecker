@@ -287,9 +287,9 @@
   // --- 4. Sitzungs-Merker: fertiges Thema direkt am Ende öffnen (B1–B2) ------
   // Ein Schlüssel PRO THEMA (aus der URL), nur für diesen Besuch, ohne
   // Personenbezug. Ist er da, springt die Seite direkt zum letzten Schritt und
-  // bietet „Noch einmal" an; der Knopf leert den Merker und lädt neu (frisches
-  // DOM = sauberer Neustart). Der alte generische Schlüssel "hc-done" wird
-  // beim Laden entfernt (Migration aus der ersten Version).
+  // bietet „Noch einmal" an; der Knopf leert ALLE Themen-Merker und führt zur
+  // Themenübersicht (./themen/) — die Runde beginnt von vorn. Der alte
+  // generische Schlüssel "hc-done" wird beim Laden entfernt (Migration).
   var slugMatch = location.pathname.match(/themen\/([^\/]+)/);
   var topicKey = "hc-done-" + (slugMatch ? slugMatch[1] : "topic");
   try {
@@ -328,10 +328,20 @@
     replay.className = "quiz-start replay";
     replay.textContent = "Noch einmal";
     replay.addEventListener("click", function () {
+      // Noch einmal = die ganze Runde von vorn: alle Themen-Merker löschen
+      // und zurück zur Themenübersicht (./themen/), von wo sie neu wählt.
       try {
-        sessionStorage.removeItem(topicKey);
+        var kill = [];
+        for (var i = 0; i < sessionStorage.length; i++) {
+          var k = sessionStorage.key(i);
+          if (k && k.indexOf("hc-done-") === 0) kill.push(k);
+        }
+        kill.forEach(function (key) {
+          sessionStorage.removeItem(key);
+        });
       } catch (e) {}
-      location.reload();
+      var cut = location.pathname.indexOf("themen/");
+      location.href = cut > -1 ? location.pathname.slice(0, cut) + "themen/" : location.pathname;
     });
     if (cards && cards.parentNode) {
       cards.parentNode.insertBefore(replay, cards.nextSibling);

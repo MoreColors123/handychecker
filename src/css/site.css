@@ -16,6 +16,14 @@
   outline: none;
 }
 
+/* Tap-activated buttons show no focus ring either (the tap itself is the
+   signal); keyboard users keep their ring via :focus-visible. */
+.quiz-start:focus:not(:focus-visible),
+.stepper-next:focus:not(:focus-visible),
+.back:focus:not(:focus-visible) {
+  outline: none;
+}
+
 html {
   /* 112.5% of the browser default = 18px (--font-base) at default settings,
      while still honoring the reader's own browser font-size preference */
@@ -137,6 +145,7 @@ footer {
 footer nav {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;      /* Impressum/Datenschutz sitzen zentriert */
   gap: var(--space-md);
 }
 
@@ -145,7 +154,8 @@ footer nav a {
   min-height: var(--tap-min);
   padding: var(--space-sm) var(--space-md);
   color: var(--color-ginger-ink); /* 4.74:1 on cream — ginger-deep is only 3.39:1 */
-  text-decoration: underline;
+  font-size: calc(1rem * var(--font-scale-sm));  /* eine Spur kleiner */
+  text-decoration: none;         /* ohne Unterstreichung */
 }
 
 footer nav a:focus-visible {
@@ -401,7 +411,7 @@ footer nav a:focus-visible {
   width: 100%;
   min-height: var(--tap-min);
   padding: calc(var(--space-sm) / 2) var(--space-md);   /* schmal oben/unten, Luft seitlich */
-  border: 2px solid var(--color-ginger);
+  border: none;                /* keine orange Umrandung */
   border-radius: var(--radius-lg);
   background: var(--color-peach);   /* cocoa auf peach = 8.49:1 */
   color: var(--color-cocoa);
@@ -431,7 +441,7 @@ footer nav a:focus-visible {
   margin-inline: auto;         /* zentriert unter der Begrüßung */
   min-height: var(--tap-min);
   padding: calc(var(--space-sm) / 2) var(--space-md);   /* schmal oben/unten, Luft seitlich */
-  border: 2px solid var(--color-ginger);
+  border: none;                /* keine orange Umrandung */
   border-radius: var(--radius-lg);
   background: var(--color-peach);   /* cocoa auf peach = 8.49:1 */
   color: var(--color-cocoa);
