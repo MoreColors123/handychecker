@@ -225,6 +225,9 @@
       try {
         sessionStorage.setItem(topicKey, "1");
       } catch (e) {}
+      // „Noch einmal" ab sofort auf dem Endscreen – und erledigte Themen
+      // (inklusive diesem) verschwinden dort aus der Karten-Liste.
+      addReplay(steps[steps.length - 1]);
       if (current < steps.length - 1) show(current + 1);
     }
   }
@@ -302,8 +305,23 @@
     done = null;
   }
 
-  if (done) {
-    var lastStep = steps[steps.length - 1];
+  // Erledigte Themen (hc-done-<slug>) fliegen aus der End-Kartenliste:
+  // jede Sektion wird nur einmal gemacht; „Noch einmal" bietet das
+  // Wiederholen an (Knopf kommt separat, siehe addReplay).
+  try {
+    flow.querySelectorAll(".topic-cards a").forEach(function (a) {
+      var m = (a.getAttribute("href") || "").match(/themen\/([^\/]+)/);
+      if (m && sessionStorage.getItem("hc-done-" + m[1])) {
+        var li = a.closest("li");
+        if (li) li.setAttribute("hidden", "");
+      }
+    });
+  } catch (e) {}
+
+  // Knopf-Erzeugung in einer Funktion: genutzt beim Endscreen-Sprung (Merker
+  // vorhanden) und direkt nach dem Durchspielen (advanceQuiz). Idempotent.
+  function addReplay(lastStep) {
+    if (lastStep.querySelector(".replay")) return;
     var cards = lastStep.querySelector(".topic-cards");
     var replay = document.createElement("button");
     replay.type = "button";
@@ -320,6 +338,10 @@
     } else {
       lastStep.appendChild(replay);
     }
+  }
+
+  if (done) {
+    addReplay(steps[steps.length - 1]);
     show(steps.length - 1);
   } else {
     show(0);
