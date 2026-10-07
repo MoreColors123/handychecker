@@ -1,44 +1,44 @@
 ---
 gsd_state_version: "1.0"
-current_phase: 03
-current_phase_name: Content Build-Out - Remaining Four Topics
-status: verifying
-stopped_at: Phase 3 executed + reviewed (4/4 fixed) + verified 7/7; 6 human UAT items pending (03-UAT.md)
-last_updated: "2026-10-06T09:51:57.368Z"
-last_activity: 2026-10-05
-last_activity_desc: Phase 03 execution started
-state_head: b4c70f9966c27b3989b8078bd744645fdea342d9
+current_phase: 4
+current_phase_name: Offline Decision, Polish & Real-Device QA
+status: planning
+stopped_at: Phase 3 complete, ready to plan Phase 4
+last_updated: "2026-10-07T08:27:12.377Z"
+last_activity: 2026-10-07
+last_activity_desc: Phase 3 complete, transitioned to Phase 4
+state_head: 88fd020241ee6a769887cbe260980dfc364cd60e
 progress:
   total_phases: 4
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 8
   completed_plans: 8
-  percent: 50
+  percent: 75
 ---
 
 # Project State
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-09-28)
+See: .planning/PROJECT.md (updated 2026-10-07)
 
 **Core value:** The site must make the dangers of smartphone overuse understandable and relatable to a child (10–12), while leaving her feeling empowered to make her own healthier choices — not scared or lectured.
-**Current focus:** Phase 03 — Content Build-Out - Remaining Four Topics
+**Current focus:** Phase 04 — Offline Decision, Polish & Real-Device QA
 
 ## Current Position
 
-Phase: 03 (Content Build-Out - Remaining Four Topics) — EXECUTING
-Plan: 1 of 1
-Status: Phase complete — ready for verification
-Last activity: 2026-10-05 — Phase 03 execution started
+Phase: 4 — Offline Decision, Polish & Real-Device QA
+Plan: Not started
+Status: Ready to plan
+Last activity: 2026-10-07 — Phase 3 complete, transitioned to Phase 4
 
-Progress: [█████░░░░░] 50%
+Progress: [████████░░] 75%
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 7
+- Total plans completed: 8
 - Average duration: —
 - Total execution time: —
 
@@ -52,6 +52,7 @@ Progress: [█████░░░░░] 50%
 | 4 QA | TBD | — | — |
 | 1 | 4 | - | - |
 | 2 | 3 | - | - |
+| 3 | 1 | - | - |
 
 **Recent Trend:** — (no plans executed yet)
 **Per-Plan Metrics:**
@@ -126,6 +127,11 @@ None yet.
 | 9 | back arrow pinned right when alone in header | 2026-10-02 | 283ddb1 | — |
 | 10 | center start-page text and button | 2026-10-02 | 337be36 | — |
 | 261006-g9i | content polish round plus once-per-session topic completion | 2026-10-06 | b4c70f9 | [261006-g9i-content-polish-round-plus-once-per-sessi](./quick/261006-g9i-content-polish-round-plus-once-per-sessi/) |
+| 12 | fix: per-topic done marker (hc-done-slug) - cross-topic end-skip bug | 2026-10-06 | 61ab209 | — |
+| 13 | darfst to kannst everywhere; cache-bust css/js via site.cacheVersion | 2026-10-06 | b078f5d | — |
+| 14 | filter done topics from end list + replay after completion (research finding) | 2026-10-07 | 007c0e2 | — |
+| 15 | replay goes to themen overview, footer smaller centered, borderless buttons | 2026-10-07 | e49734a | — |
+| 16 | done-note for completed rounds + replay spacing | 2026-10-07 | 850bd2a | — |
 
 ## Deferred Items
 
@@ -136,6 +142,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-10-05T08:17:58.201Z
-Stopped at: Phase 3 executed + reviewed (4/4 fixed) + verified 7/7; 6 human UAT items pending (03-UAT.md)
-Resume file: .planning/phases/03-content-build-out-remaining-four-topics/03-UAT.md
+Last session: 2026-10-07T10:27:42.816Z
+Stopped at: Phase 3 complete, ready to plan Phase 4
+Resume file: None

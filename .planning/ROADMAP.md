@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation Shell, PWA Identity & First Deploy** - Installable PWA shell, design tokens, legal pages, zero-data foundation, first public URL (completed 2026-10-01)
 - [x] **Phase 2: Interactive Widgets + Reference Topic (+ Voice Spec)** - Reusable self-check + tip-box widgets, locked voice spec, one print-quality topic (completed 2026-10-02)
-- [ ] **Phase 3: Content Build-Out — Remaining Four Topics** - Complete German content for all five v1 topics (facts-first, sourced, balanced, hedged)
+- [x] **Phase 3: Content Build-Out — Remaining Four Topics** - Complete German content for all five v1 topics (facts-first, sourced, balanced, hedged) (completed 2026-10-07)
 - [ ] **Phase 4: Offline Decision, Polish & Real-Device QA** - SW decision, real-device install/update validation, shareability, zero-request verification
 
 ## Phase Details
@@ -77,7 +77,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Every topic's facts cite named pediatric sources (AAP, Mayo Clinic, sleep research) and association-level claims are hedged ("kann dazu führen") — never "du bist süchtig".
   4. Every topic contains a "Was ist daran eigentlich gut?" balance section that counters one-sided anti-phone messaging.
 
-**Plans**: 1/1 plans executed
+**Plans**: 1/1 plans complete
 - [x] 03-01-PLAN.md — Complete German content for the four remaining topics (Schlaf, Aufmerksamkeit & Fokus, Körper, Datenschutz & Daten): facts/self-check/tips/balance per topic, tracer-first (Schlaf first), voice-gate + built-page calibration gates
 
 ### Phase 4: Offline Decision, Polish & Real-Device QA
@@ -125,7 +125,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 |-------|----------------|--------|-----------|
 | 1. Foundation Shell, PWA Identity & First Deploy | 4/4 | Complete    | 2026-10-01 |
 | 2. Interactive Widgets + Reference Topic (+ Voice Spec) | 3/3 | Complete    | 2026-10-02 |
-| 3. Content Build-Out — Remaining Four Topics | 1/1 | In Progress|  |
+| 3. Content Build-Out — Remaining Four Topics | 1/1 | Complete    | 2026-10-07 |
 | 4. Offline Decision, Polish & Real-Device QA | TBD | Not started | - |
 
 ## Backlog

@@ -20,12 +20,12 @@ The site must make the dangers of smartphone overuse understandable and relatabl
 
 - ✓ Friendly-guide voice that informs and encourages without feeling like a lecture — Phase 2 (voice spec `docs/stimme-und-stil.md` + machine voice gate; user-confirmed via UAT)
 - ✓ Facts + interactive elements: self-check questions and "what should I do?" tip boxes — Phase 2 (widgets built; user-confirmed via UAT)
+- ✓ Kid-friendly German content on all five v1 topics (Bildschirmzeit, Schlaf, Aufmerksamkeit & Fokus, Körper, Datenschutz & Daten) — Phase 3 (3 facts → 3×3 observational self-check → 2 tips → 1 balance section per topic; source-informed and hedged; human UAT 6/6). Social media & feelings stays deferred to v2 until the child has messaging/social access.
 
 ### Active
 
 <!-- Current scope. Building toward these. -->
 
-- [ ] Kid-friendly German content on the five v1 topics (screen time, sleep, attention, body, privacy) — social media & feelings deferred to v2 until the child has messaging/social access (screen time shipped in Phase 2; four topics remain — Phase 3)
 - [ ] Works as a home-screen app feel (installable PWA-style) on a smartphone
 - [ ] German-only content, shareable with friends/classmates
 - [ ] Hosted on a free static host with a real URL she can bookmark
@@ -71,6 +71,9 @@ The site must make the dangers of smartphone overuse understandable and relatabl
 | Topics are JSON data → one template renders all topic pages | Adding topic #7 = adding JSON entries, no page surgery | ✓ Phase 2 (proven) |
 | Guided linear flow on topic pages (2026-10-02 user redesign) | App-like stepping: facts page → Start-gated quiz (own page, "Frage x von 3") → tips → balance → topic cards last; answers lock after first choice; no-JS keeps the full page | ✓ Phase 2 quick rounds |
 | Two-step entry: start page → topics overview at /themen/ (2026-10-02 user design) | Calm welcome (icon + greeting + Start), then topic choice; Happi greeting lives on the overview, not on every topic page | ✓ Phase 2 quick rounds |
+| Uniform facts-first format across all five topics: 3 facts → 3×3 observational self-check → 2 tips → 1 balance section ("Was ist daran eigentlich gut?") | One proven reference format scaled to content; the balance section counters one-sided anti-phone framing with what phones genuinely give her | ✓ Phase 3 (UAT 6/6) |
+| Session-only completion markers (`sessionStorage` `hc-done-<slug>`) | Finished topics hide from the end-screen list within a visit without persistent storage, cookies, or transmission; cleared when the browser closes | ✓ Phase 3 quick rounds |
+| De-personalize and hedge all copy; vary reflection/tip openers (quick 261006-g9i) | Keep copy behavioral (no PII), grade correlation claims, and avoid repetitive/judging openers so nothing reads as a verdict | ✓ Phase 3 quick rounds |
 
 ## Evolution
 
@@ -90,4 +93,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-10-02 after Phase 2*
+*Last updated: 2026-10-07 after Phase 3*
